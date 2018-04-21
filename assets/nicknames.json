@@ -1,0 +1,63 @@
+[
+    {
+        "nick": [
+            "ivan",
+            "iherman"
+        ],
+        "name": "Ivan Herman",
+        "github": "iherman"
+    },
+    {
+        "nick": [
+            "azaroth"
+        ],
+        "name": "Rob Sanderson",
+        "github": "azaroth42"
+    },
+    {
+        "nick": [
+            "prototypo",
+            "dwood"
+        ],
+        "name": "David Wood",
+        "github": "prototypo"
+    },
+    {
+        "nick": [
+            "bigbluehat",
+            "benjamin"
+        ],
+        "name": "Benjamin Young",
+        "github": "bigbluehat"
+    },
+    {
+        "nick": [
+            "gkellogg"
+        ],
+        "name": "Gregg Kellogg",
+        "github": "gkellogg"
+    },
+    {
+        "nick": [
+            "davidlehn"
+        ],
+        "name": "David I. Lehn",
+        "github": "davidlehn"
+    },
+    {
+        "nick" : [
+            "niklasl"
+        ],
+        "name" : "Niklas Lindström"
+    },
+    {
+        "nick": [
+            "PaoloC"
+        ],
+        "name": "Paolo Ciccarese"
+    },
+    {
+        "nick": [],
+        "name": "Herm Fisher"
+    }
+]
