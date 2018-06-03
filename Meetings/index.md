@@ -11,7 +11,7 @@ layout: default
 ## Teleconferences
 
 
-The weekly teleconferences are held <span class="todo">_every week on Mondays_, at *noon US Eastern time*</span> (see the [time zone calculator](https://goo.gl/ujkGY1) for the exact timing for your time zone). See the [separate page](./webex) for the dial-in information.
+The weekly teleconferences are held _every week on Fridays_, at *noon US Eastern time* (see the [time zone calculator](https://tinyurl.com/y8vzfzgp) for the exact timing for your time zone). See the [separate page](./webex) for the dial-in information.
 
 The Group also uses IRC for during the calls for minute taking, queue control, and general chit-chat. See the [separate page at W3C](https://www.w3.org/Project/IRC/) for further details. This Working Group uses the `#json-ld` channel, and makes use of two bots on IRC:
 
