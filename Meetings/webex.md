@@ -7,7 +7,7 @@ layout: default
 
 The group uses MIT’s WebEx Instance for the calls.
 
-**Joining the call is restricted to the official members of the Publishing Working Group.** Joining the group for representatives of W3C Members can be done via the [join form](#) (this form must be filled by the AC representative of the Member organization).
+**Joining the call is restricted to the official members of the Publishing Working Group.** Joining the group for representatives of W3C Members can be done via the [join form](https://www.w3.org/2004/01/pp-impl/107714/join) (this form must be filled by the AC representative of the Member organization).
 
 ---
 
@@ -17,7 +17,7 @@ The group uses MIT’s WebEx Instance for the calls.
 * One can also use the Web address and that leads to a choice of either starting up Skype-like application or stay within the browser using WebRTC. There is also the possibility to use dedicated [WebEx clients](https://www.w3.org/2006/tools/wiki/InstallingWebEx) on, e.g., mobile phones.
 * If one logs in, the application also offers a dial back to another number (internationally)
 
-In all cases you will need a a 9 digit code and/or a dedicated Web address. These have been announced on a WG-only email, see the <span class="todo">[archived copy](https://lists.w3.org/Archives/Member/member-json-ld-wg/XXXX)</span> for details. ***These data should never be sent out on a public channel, email, irc, etc.*** (the MIT WebEx instance gets regularly hacked, and Cisco can decide to deactivate the call).
+In all cases you will need a a 9 digit code and/or a dedicated Web address, and possibly a password. These have been announced on a WG-only email, see the [archived copy](https://lists.w3.org/Archives/Member/member-json-ld-wg/2018Jun/0000.html) for details. ***These data should never be sent out on a public channel, email, irc, etc.*** (the MIT WebEx instance gets regularly hacked, and Cisco can decide to deactivate the call).
 
 
 
