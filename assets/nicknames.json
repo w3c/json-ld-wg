@@ -39,7 +39,8 @@
     },
     {
         "nick": [
-            "davidlehn"
+            "davidlehn",
+            "dlehn"
         ],
         "name": "David I. Lehn",
         "github": "davidlehn"
@@ -59,5 +60,13 @@
     {
         "nick": [],
         "name": "Herm Fisher"
+    },
+    {
+        "nick": [],
+        "name": "David Newbury"
+    },
+    {
+        "nick": [],
+        "name": "Harold Solbrig"
     }
 ]
