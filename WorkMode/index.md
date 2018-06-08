@@ -7,7 +7,7 @@ layout: default
 
 This document defines and describes the JSON-LD WG's *Real Work Modes*, including Participation and Communication, Meetings, Calls for Consensus, Mail List usage, and links to important resources.
 
-Note that the <span class="todo">[WG's Charter](https://www.w3.org/2017/04/publ-wg-charter/)</span> formally defines the general framework of the group's working mode. In all cases, the Charter and/or the [W3C Process Document](//www.w3.org/Consortium/Process/) overrides the information in this document. Nevertheless, this document contains additional information about how the group *really* works, so this information may be particularly useful to new members of the group.
+Note that the [WG's Charter](https://www.w3.org/2018/03/jsonld-wg-charter.html) formally defines the general framework of the group's working mode. In all cases, the Charter and/or the [W3C Process Document](//www.w3.org/Consortium/Process/) overrides the information in this document. Nevertheless, this document contains additional information about how the group *really* works, so this information may be particularly useful to new members of the group.
 
 This document is a *Living Document* and as such will change. Members of the group are encouraged to edit (e.g. to update, correct, etc.) the information. Comments about this document are welcome via issues and pull request on the [group’s “admin” repository](https://github.com/w3c/json-ld-wg/) or via emails sent to the group’s [`public-json-ld-wg@w3.org`](mailto:public-json-ld-wg@w3.org) e-mail list, using a subject prefix of <code>[WorkMode]…</code>.
 
@@ -19,15 +19,15 @@ This document is a *Living Document* and as such will change. Members of the gro
 
 ## Participation and Communication
 
-The group's formal Participation and Communication models are documented in the <span class="todo"> [Participation](https://www.w3.org/2017/04/publ-wg-charter/#participation) and [Communications](https://www.w3.org/2017/04/publ-wg-charter/#communication)</span> sections of its Charter, respectively.
+The group's formal Participation and Communication models are documented in the <span class="todo"> [Participation](https://www.w3.org/2018/03/jsonld-wg-charter.html#participation) and [Communications](https://www.w3.org/2018/03/jsonld-wg-charter.html#communication)</span> sections of its Charter, respectively.
 
 A WG member may participate in various ways including:
 
 * Attending any of the group‘s [weekly teleconferences or F2F meetings](../Meetings/)
 * Participating in discussions on the group’s primary mail lists (see below), and/or a specification’s GitHub repository (see the [list of all repositories](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories) of this Group)
 * Participating in discussions on the group’s `#json-ld` IRC channel
-* Being an Editor of one or more of the group’s <span class="todo">[active specifications](https://www.w3.org/publishing/groups/publ-wg/PublStatus)</span>
-* Contributing tests for the group’s <span class="todo">[specifications](https://www.w3.org/publishing/groups/publ-wg/PublStatus)</span>
+* Being an Editor of one or more of the group’s [active specifications](https://www.w3.org/2018/json-ld-wg/PublStatus)
+* Contributing tests for the group’s [specifications](https://www.w3.org/2018/json-ld-wg/PublStatus)
 
 A WG member is added to the group’s lists `public-json-ld-wg@w3.org` and `member-json-ld-wg@w3.org`; see the [separate section](#communications) for more details. Other mailing lists may be set up for task forces or other sub-committees; signing up to those list must be done manually.
 
@@ -64,7 +64,7 @@ It is possible for people who are not members of the Publishing WG to attend mee
 
 Observers may listen, and participate in general discussions during the meeting. However, they must not make technical contributions, or attempt to influence an approach to a feature that may become part of the specification being discussed.
 
-If the attendee works for a W3C member company, they are encouraged to ask their Advisory Committee (AC) representative to make them a Web Platform WG participant. Alternatively, their AC representative can make a formal <span class="todo">[royalty-free licensing commitment](https://www.w3.org/2004/01/pp-impl/100074/join)</span>. They can then fully participate in the meeting.
+If the attendee works for a W3C member company, they are encouraged to ask their Advisory Committee (AC) representative to make them a Web Platform WG participant. Alternatively, their AC representative can make a formal [royalty-free licensing commitment](https://www.w3.org/2004/01/pp-impl/107714/join). They can then fully participate in the meeting.
 
 Please note that this is to provide as much protection as possible through the W3C Patent Policy. We take the royalty-free status of W3C standards very seriously, and any attempt to work-around these basic requirements would be considered a serious breech of meeting participation.
 
