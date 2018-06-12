@@ -68,5 +68,15 @@
     {
         "nick": [],
         "name": "Harold Solbrig"
+    },
+    {
+        "nick": [],
+        "name": "A Soroka"
+    },
+    {
+        "nick": [
+            "danbri"
+        ],
+        "name": "Dan Brickley"
     }
 ]
