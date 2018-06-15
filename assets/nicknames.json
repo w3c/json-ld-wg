@@ -1,82 +1,79 @@
-[
-    {
-        "nick": [
-            "ivan",
-            "iherman"
-        ],
-        "name": "Ivan Herman",
-        "github": "iherman"
-    },
-    {
-        "nick": [
-            "azaroth"
-        ],
-        "name": "Rob Sanderson",
-        "github": "azaroth42"
-    },
-    {
-        "nick": [
-            "prototypo",
-            "dwood"
-        ],
-        "name": "David Wood",
-        "github": "prototypo"
-    },
-    {
-        "nick": [
-            "bigbluehat",
-            "benjamin"
-        ],
-        "name": "Benjamin Young",
-        "github": "bigbluehat"
-    },
-    {
-        "nick": [
-            "gkellogg"
-        ],
-        "name": "Gregg Kellogg",
-        "github": "gkellogg"
-    },
-    {
-        "nick": [
-            "davidlehn",
-            "dlehn"
-        ],
-        "name": "David I. Lehn",
-        "github": "davidlehn"
-    },
-    {
-        "nick" : [
-            "niklasl"
-        ],
-        "name" : "Niklas Lindström"
-    },
-    {
-        "nick": [
-            "PaoloC"
-        ],
-        "name": "Paolo Ciccarese"
-    },
-    {
-        "nick": [],
-        "name": "Herm Fisher"
-    },
-    {
-        "nick": [],
-        "name": "David Newbury"
-    },
-    {
-        "nick": [],
-        "name": "Harold Solbrig"
-    },
-    {
-        "nick": [],
-        "name": "A Soroka"
-    },
-    {
-        "nick": [
-            "danbri"
-        ],
-        "name": "Dan Brickley"
-    }
-]
+[{
+    "nick": [],
+    "name": "Alejandra Gonzalez Beltran"
+},
+{
+    "nick": [
+        "danbri"
+    ],
+    "name": "Dan Brickley",
+    "github": "danbri"
+},
+{
+    "nick": [
+        "timCole",
+        "tcole"
+    ],
+    "name": "Tim Cole",
+    "github": "tcole3"
+},
+{
+    "nick": [
+        "ivan",
+        "iherman"
+    ],
+    "name": "Ivan Herman",
+    "github": "iherman"
+},
+{
+    "nick": [
+        "gkellogg"
+    ],
+    "name": "Gregg Kellogg",
+    "github": "gkellogg"
+},
+{
+    "nick": [
+        "davidlehn",
+        "dlehn"
+    ],
+    "name": "David I. Lehn",
+    "github": "davidlehn"
+},
+{
+    "nick": [],
+    "name": "Dave Longley",
+    "github": "dlongley"
+},
+{
+    "nick": [],
+    "name": "David Newbury"
+},
+{
+    "nick": [
+        "azaroth"
+    ],
+    "name": "Rob Sanderson",
+    "github": "azaroth42"
+},
+{
+    "nick": [],
+    "name": "Harold Solbrig"
+},
+{
+    "nick": [],
+    "name": "A Soroka"
+},
+{
+    "nick": [],
+    "name": "Manu Sporny",
+    "github": "msporny"
+},
+{
+    "nick": [
+        "bigbluehat",
+        "benjamin"
+    ],
+    "name": "Benjamin Young",
+    "github": "bigbluehat"
+}]
