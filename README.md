@@ -11,7 +11,9 @@ https://www.w3.org/2018/json-ld-wg/
 
 ## Specifications
 
-GitHub repositories are linked from each specification.
+GitHub repositories are linked from each specification. There is a separate [list of repos of this WG](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories).
+
+All repositories for spec development share the same set of labels; inspired by the [labels organized for W3C specification](https://w3c.github.io/issue-metadata.html).
 
 ## Contributing to the JSON-LD Working Group Repositories
 
