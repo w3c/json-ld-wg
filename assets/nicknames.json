@@ -50,11 +50,19 @@
     "name": "David Newbury"
 },
 {
+    "nick": [],
+    "name": "Axel Polleres"
+},
+{
     "nick": [
         "azaroth"
     ],
     "name": "Rob Sanderson",
     "github": "azaroth42"
+},
+{
+    "nick": [],
+    "name": "Simon Steyskal"
 },
 {
     "nick": [],
