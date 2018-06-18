@@ -11,7 +11,7 @@ Members of the WG, **especially new members** are encouraged to help maintain th
 * TOC
 {:toc}
 
-The Working Group’s home page is: <span class="todo">[https://www.w3.org/publishing/groups/publ-wg/](https://www.w3.org/publishing/groups/publ-wg/)</span>. Looking at the left and right column of the page gives you lots of further information. Especially, the group's *Work Mode* is described in the [*WorkMode*](index) document and it includes information about how the WG operates, including links to the WG's various resources.
+The Working Group’s home page is: [https://www.w3.org/2018/json-ld-wg/](https://www.w3.org/2018/json-ld-wg/). Looking at the left and right column of the page gives you lots of further information. Especially, the group's *Work Mode* is described in the [*WorkMode*](index) document and it includes information about how the WG operates, including links to the WG's various resources.
 
 ## Meetings
 
@@ -27,11 +27,11 @@ You should also "link" your GitHub account to your W3C account; this can be done
 
 ## IRC
 
-Meetings usually use [IRC](index#irc) as a tool for queue control and minute taking (and general chit-chat). You should also send to ivan@w3.org your preferred IRC nickname (or nicknames, if you use several of those). The goal is to improve the readability of the meeting minutes, so that third parties could also understand whose comments and remarks are in the minutes. Actually, in case you are already a seasoned Github user: the nicknames are stored (of course:-) in [file on GitHub](https://github.com/w3c/json-ld-wg/blob/master/assets/nicknames.json), meaning that you can simply make a pull request providing with with your nickname(s) instead of a mail.
+Meetings usually use [IRC](index#irc) as a tool for queue control and minute taking (and general chit-chat). **You should also send to ivan@w3.org your preferred IRC nickname (or nicknames, if you use several of those).** The goal is to improve the readability of the meeting minutes, so that third parties could also understand whose comments and remarks are in the minutes. Actually, in case you are already a seasoned Github user: the nicknames are stored (of course:-) in [file on GitHub](https://github.com/w3c/json-ld-wg/blob/master/assets/nicknames.json), meaning that you can simply make a pull request providing with with your nickname(s) instead of a mail.
 
 ## Specifications in Progress
 
-A list of the group’s specifications, including the publication status of each spec, can be found in the group’s <span class="todo">[*PubStatus*](https://www.w3.org/publishing/groups/publ-wg/PublStatus)</span> document.
+A list of the group’s specifications, including the publication status of each spec, can be found in the group’s [*PubStatus*](https://www.w3.org/2018/json-ld-wg/PublStatus) document.
 
 ## New WG Member Introductions
 
