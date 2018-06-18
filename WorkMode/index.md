@@ -24,9 +24,10 @@ The group's formal Participation and Communication models are documented in the 
 A WG member may participate in various ways including:
 
 * Attending any of the group‘s [weekly teleconferences or F2F meetings](../Meetings/)
-* Participating in discussions on the group’s primary mail lists (see below), and/or a specification’s GitHub repository (see the [list of all repositories](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories) of this Group)
+* Participating in discussions on the group’s primary mail lists (see below), and/or a specification’s GitHub repository by way of Issues and Pull Requests. (See the [list of all repositories](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories) of this Group.) 
 * Participating in discussions on the group’s `#json-ld` IRC channel
 * Being an Editor of one or more of the group’s [active specifications](https://www.w3.org/2018/json-ld-wg/PublStatus)
+* Being an implementer for one of the specifications (proof-of-concept implementations are fine!)
 * Contributing tests for the group’s [specifications](https://www.w3.org/2018/json-ld-wg/PublStatus)
 
 A WG member is added to the group’s lists `public-json-ld-wg@w3.org` and `member-json-ld-wg@w3.org`; see the [separate section](#communications) for more details. Other mailing lists may be set up for task forces or other sub-committees; signing up to those list must be done manually.
@@ -66,7 +67,7 @@ Observers may listen, and participate in general discussions during the meeting.
 
 If the attendee works for a W3C member company, they are encouraged to ask their Advisory Committee (AC) representative to make them a Web Platform WG participant. Alternatively, their AC representative can make a formal [royalty-free licensing commitment](https://www.w3.org/2004/01/pp-impl/107714/join). They can then fully participate in the meeting.
 
-Please note that this is to provide as much protection as possible through the W3C Patent Policy. We take the royalty-free status of W3C standards very seriously, and any attempt to work-around these basic requirements would be considered a serious breech of meeting participation.
+Please note that this is to provide as much protection as possible through the W3C Patent Policy. We take the royalty-free status of W3C standards very seriously, and any attempt to work-around these basic requirements would be considered a serious breach of meeting participation.
 
 ### GitHub
 {: #github}
@@ -81,24 +82,24 @@ In line with the spirit of the asynchronous decision procedures outlined above, 
 
 #### Issue labels
 
-GitHub issues are also used as a records of wide reviews, of horizontal reviews, etc. The Working Group will define a number of labels (e.g., labeling an issue as part of the Horizontal Security review). Chairs, staff, and editors are responsible to set those labels accordingly. Similarly, when issues are waiting for external reviewers to react, labels will be used to signal the status of the issue.
+GitHub issues are also used as a records of wide reviews, of horizontal reviews, etc. The Working Group will define a number of labels (e.g., labeling an issue as part of the Horizontal Security review). Chairs, staff, and editors are responsible to set those labels accordingly. Similarly, when issues are waiting for external reviewers to react, labels will be used to signal the status of the issue. (See the [current set of labels](https://github.com/w3c/json-ld-syntax/labels).)
 
 ### Mailing lists (Policy, Usage, Etiquette, etc.)
 
 Although it is expected that a large portion of the technical discussion will happen via the issues mechanism of GitHub, the primary mailing list may also be used for overarching technical as well as business, outreach, administrative, etc, topics. We expect our mail list participants to adhere to the following email etiquette:
 
 * Messages should be encoded using [plain text](http://en.wikipedia.org/wiki/Plain_text). Formats using [*rich text*](https://en.wikipedia.org/wiki/Rich_Text_Format) will be lost by the list archives and appear poorly to many readers before they get that far.
-* Subjects should be prefaced with the *short name* of the spec, if applicable (for example: * [WP] Blah, Blah, Blah*)
+* Subjects should be prefaced with the *short name* of the spec, if applicable (for example: `[Syntax] Blah, Blah, Blah`)
 * When you reply to a message, please use “> ” as your quotation character.
 * Do not prefix your content with something like “[myname]”. Your content will be visible to everyone because it will *not* be prefixed by the quotation character (“> ”).
 * Do strip quoted text which is not relevant to your reply.
-* Do not write in ALL CAPS. It is considered bad form. If you need to _underscore_ something, you can do so as such, if you wanted to *strengthen* something you can similarly, and if you want to provide a certain /italic/ style, you may do that as well.
+* Do not write in ALL CAPS. It is considered bad form. If you need to \_underscore\_ something, you can do so as such, if you wanted to \*strengthen\* something you can similarly, and if you want to provide a certain \/italics\/ style, you may do that as well.
 * Your messages are archived. If you need to include links within your message, please use `[n]` notation inline (f.e.x [1]), and include the relevant links at the end of the message. (Just like in a scholarly paper…)
 * Attachments must follow the [W3C Guidelines for Email Attachment Formats](https://www.w3.org/2002/03/email_attachment_formats.html), in particular:
-** Avoid unnecessary email attachments.
-** Use an attachment only when it is likely to benefit to recipients. Otherwise, place the information (in plain text format) in the body of your message.
-** If an attachment is necessary, avoid formats that are virus prone, proprietary or platform dependent.  For example, whenever possible you should use HTML instead of MS Word, PowerPoint or PDF.
-** Follow [Web Content Accessibility Guidelines](//www.w3.org/TR/WAI-WEBCONTENT/) (WCAG)
+	* Avoid unnecessary email attachments.
+	* Use an attachment only when it is likely to benefit to recipients. Otherwise, place the information (in plain text format) in the body of your message.
+	* If an attachment is necessary, avoid formats that are virus prone, proprietary or platform dependent.  For example, whenever possible you should use HTML instead of MS Word, PowerPoint or PDF.
+	* Follow [Web Content Accessibility Guidelines](//www.w3.org/TR/WAI-WEBCONTENT/) (WCAG)
 
 ### IRC
 {: #irc}

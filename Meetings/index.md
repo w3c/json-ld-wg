@@ -41,6 +41,6 @@ Minute taking and cleanup is greatly helped by:
 
 ### Updating the minutes
 
-The minutes themselves are stored, in Markdown (more exactly in “Kremdown”) on the WG’s core [github repository](https://github.com/w3c/json-ld-wg) in the `Meetings/Minutes/2018`, `Meetings/Minutes/2019`, etc., folders.
+The minutes themselves are stored, in Markdown (more exactly in “Kramdown”) on the WG’s core [github repository](https://github.com/w3c/json-ld-wg) in the `Meetings/Minutes/2018`, `Meetings/Minutes/2019`, etc., folders.
 
 As described in the [separate page on our working mode](../WorkMode/index#telco), meeting minutes are considered as “Draft” until officially approved after five business days, usually at the subsequent meeting. During that period, if a participant requests a change in the minutes, he/she can issue, for example, a Pull Request with the proposed changes.
