@@ -19,7 +19,7 @@ This document is a *Living Document* and as such will change. Members of the gro
 
 ## Participation and Communication
 
-The group's formal Participation and Communication models are documented in the <span class="todo"> [Participation](https://www.w3.org/2018/03/jsonld-wg-charter.html#participation) and [Communications](https://www.w3.org/2018/03/jsonld-wg-charter.html#communication)</span> sections of its Charter, respectively.
+The group's formal Participation and Communication models are documented in the [Participation](https://www.w3.org/2018/03/jsonld-wg-charter.html#participation) and [Communications](https://www.w3.org/2018/03/jsonld-wg-charter.html#communication) sections of its Charter, respectively.
 
 A WG member may participate in various ways including:
 
