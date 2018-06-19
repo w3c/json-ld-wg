@@ -77,8 +77,11 @@
     "name": "Harold Solbrig"
 },
 {
-    "nick": [],
-    "name": "A Soroka"
+    "nick": [
+        "ajs6f"
+    ],
+    "name": "Adam Soroka",
+    "github": "ajs6f"
 },
 {
     "nick": [],
