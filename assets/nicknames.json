@@ -46,12 +46,17 @@
     "github": "dlongley"
 },
 {
+    "nick" : [],
+    "name": "Jeff Mixter"
+},
+{
     "nick": [],
     "name": "David Newbury"
 },
 {
     "nick": [],
-    "name": "Axel Polleres"
+    "name": "Axel Polleres",
+    "github": "AxelPolleres"
 },
 {
     "nick": [
@@ -70,7 +75,8 @@
 },
 {
     "nick": [],
-    "name": "Simon Steyskal"
+    "name": "Simon Steyskal",
+    "github": "simonstey"
 },
 {
     "nick": [],
@@ -78,7 +84,8 @@
 },
 {
     "nick": [],
-    "name": "A Soroka"
+    "name": "Adam Soroka",
+    "github": "ajs6f"
 },
 {
     "nick": [],
