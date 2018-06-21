@@ -1,27 +1,35 @@
 ---
 layout: home
 json-ld: |
-  {"@context": "http://schema.org/",
-   "@type": "Organization",
-   "name": "JSON-LD Working Group",
-   "member": {
-    "@type": "OrganizationRole",
-    "roleName": "Co-Chair",
-    "member": [
-      {"@type": "Person",
-       "name": "Rob Sanderson",
-       "email": "azaroth42@gmail.com"},
-      {"@type": "Person",
-       "name": "Benjamin Young",
-       "email": "byoung@bigbluehat.com"}
-     ]
-   },
-   "contactPoint": {
-     "@type": "ContactPoint",
-     "name": "Ivan Herman",
-     "email": "ivan@w3.org",
-     "contactType": "W3C Staff Contact"
-   }
+  {
+      "@context": "http://schema.org/",
+      "@type": "Organization",
+      "name": "JSON-LD Working Group",
+      "url": "https://www.w3.org/2018/json-ld-wg/",
+      "parentOrganization": {
+          "@type": "Organization",
+          "name": "World Wide Web Consortium",
+          "url": "https://www.w3.org"
+      },
+      "member": {
+          "@type": "OrganizationRole",
+          "roleName": "Co-Chair",
+          "member": [{
+              "@type": "Person",
+              "name": "Rob Sanderson",
+              "email": "azaroth42@gmail.com"
+          },{
+              "@type": "Person",
+              "name": "Benjamin Young",
+              "email": "byoung@bigbluehat.com"
+          }]
+      },
+      "contactPoint": {
+          "@type": "ContactPoint",
+          "name": "Ivan Herman",
+          "email": "ivan@w3.org",
+          "contactType": "W3C Staff Contact"
+      }
   }
 ---
 
