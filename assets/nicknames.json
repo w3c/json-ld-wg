@@ -50,7 +50,9 @@
     "name": "Jeff Mixter"
 },
 {
-    "nick": [],
+    "nick": [
+        "workergnome"
+    ],
     "name": "David Newbury"
 },
 {
@@ -68,18 +70,23 @@
 },
 {
     "nick": [
-        "azaroth"
+        "azaroth",
+        "azaroth42"
     ],
     "name": "Rob Sanderson",
     "github": "azaroth42"
 },
 {
-    "nick": [],
+    "nick": [
+        "simonstey"
+    ],
     "name": "Simon Steyskal",
     "github": "simonstey"
 },
 {
-    "nick": [],
+    "nick": [
+        "hsolbrig"
+    ],
     "name": "Harold Solbrig"
 },
 {

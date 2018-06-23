@@ -9,3 +9,5 @@ layout: default
 {:toc}
 
 ## 2018
+
+* 23 June: [Telco Minutes](2018/2018-06-22-json-ld.md)
