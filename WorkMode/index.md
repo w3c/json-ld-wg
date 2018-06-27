@@ -61,7 +61,7 @@ The consortium usually has an annual [“Technical Plenary and All Working Group
 For the minutes, resolutions, and consensus achieved at the f2f meetings the same [rules](#telco) as for teleconferences apply.
 
 ### Meeting observers
-It is possible for people who are not members of the Publishing WG to attend meetings as observers. Non-members have not made any commitment to provide standard W3C royalty-free licensing, so non-members are restricted to observer status only.
+It is possible for people who are not members of the JSON-LD WG to attend meetings as observers. Non-members have not made any commitment to provide standard W3C royalty-free licensing, so non-members are restricted to observer status only.
 
 Observers may listen, and participate in general discussions during the meeting. However, they must not make technical contributions, or attempt to influence an approach to a feature that may become part of the specification being discussed.
 
@@ -114,7 +114,7 @@ Each repository, including the “core” WG repository, has a wiki instance. Me
 
 ## Patent Policy
 
-The WG's Charter defines the [Patent Policy for this group](https://www.w3.org/2017/04/publ-wg-charter/#patentpolicy):
+The WG's Charter defines the [Patent Policy for this group](https://www.w3.org/2018/03/jsonld-wg-charter.html#patentpolicy):
 
 > This Working Group operates under the [W3C Patent Policy](//www.w3.org/Consortium/Patent-Policy-20040205/) (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis. For more information about disclosure obligations for this group, please see the [W3C Patent Policy Implementation](//www.w3.org/2004/01/pp-impl/).
 
