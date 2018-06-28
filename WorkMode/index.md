@@ -76,7 +76,7 @@ The group makes an extensive usage of GitHub. Each major deliverables is managed
 
 Editors of the documents (as well as the chairs and the W3C staff) have the necessary access right to make editorial changes on the specifications directly using the standard Git(Hub) commits and merging pull requests. Other members of the group are encouraged to use the [“fork and pull model”](https://help.github.com/articles/about-collaborative-development-models/) when contributing to the text: work on a forked repository and issue a pull request on the main repository for that document when the contribution is ready. Editors should use the pull request mechanism (except for obvious, grammatical or stylistic changes), albeit they can choose to do that directly on the core repository.
 
-(If you are new to Github, the [*“Introduction to Basic GitHub Contribution”*](https://iherman.github.io/misc-notes/docs/BasicGitHubContributionIntro) may be of help.)
+(If you are new to GitHub, the [*“Introduction to Basic GitHub Contribution”*](https://iherman.github.io/misc-notes/docs/BasicGitHubContributionIntro) may be of help.)
 
 In line with the spirit of the asynchronous decision procedures outlined above, significant pull requests, as well as the closure of open issues, should be marked with a special label (to be defined) and leave it open for a week. If no objection is raised during that time the issue can be closed or the pull request can be merged, respectively.
 
