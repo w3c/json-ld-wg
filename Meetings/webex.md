@@ -7,7 +7,7 @@ layout: default
 
 The group uses MIT’s WebEx Instance for the calls.
 
-**Joining the call is restricted to the official members of the Publishing Working Group.** Joining the group for representatives of W3C Members can be done via the [join form](https://www.w3.org/2004/01/pp-impl/107714/join) (this form must be filled by the AC representative of the Member organization).
+**Joining the call is restricted to the official members of the JSON-LD Working Group.** Joining the group for representatives of W3C Members can be done via the [join form](https://www.w3.org/2004/01/pp-impl/107714/join) (this form must be filled by the AC representative of the Member organization).
 
 ---
 
