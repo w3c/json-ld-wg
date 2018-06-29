@@ -114,7 +114,7 @@ Each repository, including the “core” WG repository, has a wiki instance. Me
 
 ## Patent Policy
 
-The WG's Charter defines the [Patent Policy for this group](https://www.w3.org/2018/03/jsonld-wg-charter.html#patentpolicy):
+The WG's Charter defines the [Patent Policy for this group](https://www.w3.org/2017/04/publ-wg-charter/#patentpolicy):
 
 > This Working Group operates under the [W3C Patent Policy](//www.w3.org/Consortium/Patent-Policy-20040205/) (5 February 2004 Version). To promote the widest adoption of Web standards, W3C seeks to issue Recommendations that can be implemented, according to this policy, on a Royalty-Free basis. For more information about disclosure obligations for this group, please see the [W3C Patent Policy Implementation](//www.w3.org/2004/01/pp-impl/).
 
