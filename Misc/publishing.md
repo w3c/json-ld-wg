@@ -44,6 +44,6 @@ Note that, if the ECHIDNA file is incomplete (i.e., some resources are _not_ lis
 
 ## Merge the `master` branch into the `publish_wd` branch
 
-You should probably do this on your local machine, using your preferred GitHub interface. Commit the changes onto Github.
+You should probably do this on your local machine, using your preferred GitHub interface. Commit the changes onto GitHub.
 
 You are done; the new version should appear as [https://www.w3.org/TR/json-ld-syntax/](https://www.w3.org/TR/json-ld-syntax/). It is worth checking the [`public-tr-notifications`](https://lists.w3.org/Archives/Public/public-tr-notifications/) mailing list archive to see if everything is o.k.; successful publications or errors are sent to that list.
