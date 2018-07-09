@@ -51,33 +51,33 @@ A simpler solution (to understand, implement and use) is better than a more comp
 
 Simplicity is considered in aggregate for the set of features defined by a specification, not independently.  If the same set of features can be accomplished by a smaller number of more consistent patterns, then that method is (very likely) simpler. Memorizing exceptions is harder than memorizing and applying rules.
 
-**Notes**
 
-* The WG discussed up to this point on 2018-07-06.
+`The WG discussed up to this point on 2018-07-06.`
+<!-- Is there a {: .note} or similar? -->
 
-## Simplicity is determined by end users, not library implementers.
+## Proposed: Simplicity is determined by end users, not library implementers.
 
 Simplicity (or usability) is determined by the target audience (data producers and consumers) based on their experience of understanding and applying the specification via existing implementations, not by the experience of implementers of the specification text directly. If there is a feature that makes it harder for implementations, but easier/better for end users, then that is a worthwhile trade off.
 
-## Provide on-ramps.
+## Proposed: Provide on-ramps.
 
 A solution that can be implemented in incremental stages is better than a
 solution that is all or nothing, as not everyone needs every feature but
 many people need various parts.
 
-## Define success, not failure.
+## Proposed: Define success, not failure.
 
 We should define things in terms of what it means to be conformant, rather
 than what is not conformant.  The fewer constraints we require, the easier
 to have non-breaking changes in the future and the easier it is to have
 experimentation.
 
-## Follow existing standards and best practices, where possible and where they do not conflict with other principles.
+## Proposed: Follow existing standards and best practices, where possible and where they do not conflict with other principles.
 
 Between invention and reuse, pick reuse... unless that reuse would
 demonstrably harm adoption by being more complicated than necessary.
 
-## The underlying data model is RDF.
+## Proposed: The underlying data model is RDF.
 
 If a feature comes up that can't be modeled with RDF as the underlying abstract data model, then we refer the feature to a future RDF Working Group for potential inclusion at that time. Similarly, we should ensure that the features of RDF are expressed in JSON-LD, to ensure that data can be round-tripped with confidence through different serializations.
 
