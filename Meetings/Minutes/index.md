@@ -10,5 +10,6 @@ layout: default
 
 ## 2018
 
+* 06 July: [Telco Minutes](./2018/2018-07-06-json-ld)
 * 29 June: [Telco Minutes](./2018/2018-06-29-json-ld)
 * 23 June: [Telco Minutes](./2018/2018-06-22-json-ld)
