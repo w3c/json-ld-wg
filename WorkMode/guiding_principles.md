@@ -51,36 +51,39 @@ A simpler solution (to understand, implement and use) is better than a more comp
 
 Simplicity is considered in aggregate for the set of features defined by a specification, not independently.  If the same set of features can be accomplished by a smaller number of more consistent patterns, then that method is (very likely) simpler. Memorizing exceptions is harder than memorizing and applying rules.
 
+## Usability is determined by end users, not library implementers.
 
-`The WG discussed up to this point on 2018-07-06.`
-<!-- Is there a {: .note} or similar? -->
+Usability is determined by the target audience (data producers and consumers) based on their experience of understanding and applying the specification via existing implementations, not by the experience of implementers of the specification text directly. If there is a feature that makes it harder for implementations, but easier/better for end users, then that is a worthwhile trade off. We follow the HTML Design Pattern documents notion of the [Priority of Constituencies](https://www.w3.org/TR/html-design-principles/#priority-of-constituencies), with an emphasis on trying to make things better for everyone. 
 
-## Proposed: Simplicity is determined by end users, not library implementers.
+**Notes**
 
-Simplicity (or usability) is determined by the target audience (data producers and consumers) based on their experience of understanding and applying the specification via existing implementations, not by the experience of implementers of the specification text directly. If there is a feature that makes it harder for implementations, but easier/better for end users, then that is a worthwhile trade off.
+* Issues might arise where we need to prioritize between producers and consumers of the JSON-LD. The general feeling is that, in that situation, we should prioritize consumer happiness over producer happiness... the usability of the data, rather than ease of creation.
+* The WG is explicitly unopinionated about the many JSON API design patterns that have arisen. We endeavour to allow the context and frame designers to be as specific as possible, to ensure that compaction and framing algorithms can produce the precise structure desired, avoiding having to post-process the resulting JSON.
 
-## Proposed: Provide on-ramps.
+## Provide on-ramps.
 
 A solution that can be implemented in incremental stages is better than a
 solution that is all or nothing, as not everyone needs every feature but
-many people need various parts.
+many people need various parts. Complex patterns should build upon simple ones, sometimes making them patterns more complicated than if they were built in isolation.
 
-## Proposed: Define success, not failure.
+## Define success, not failure.
 
-We should define things in terms of what it means to be conformant, rather
-than what is not conformant.  The fewer constraints we require, the easier
-to have non-breaking changes in the future and the easier it is to have
-experimentation.
+The specifications are defined in terms of what it means to be conformant, and not patterns that are not conformant.  The fewer constraints we require, the easier to have non-breaking changes in the future and the easier it is to have experimentation. In a similar way to the distinction between Open World and Closed World, if something is not defined by the specification then it is permissible (just not standardized) rather than being disallowed.
 
-## Proposed: Follow existing standards and best practices, where possible and where they do not conflict with other principles.
+**Notes**
+* This is hard to judge when it is appropriate to be prescriptive, and when it is appropriate to be silent. Several issues have arisen on both sides -- sometimes 1.0 is too prescriptive, sometimes the definition is not precise enough.
+
+## Follow existing standards and best practices, where possible and where they do not conflict with other principles.
 
 Between invention and reuse, pick reuse... unless that reuse would
 demonstrably harm adoption by being more complicated than necessary.
 
-## Proposed: The underlying data model is RDF.
+## New features should be compatible with the RDF Data Model.
 
-If a feature comes up that can't be modeled with RDF as the underlying abstract data model, then we refer the feature to a future RDF Working Group for potential inclusion at that time. Similarly, we should ensure that the features of RDF are expressed in JSON-LD, to ensure that data can be round-tripped with confidence through different serializations.
+It is noted that the RDF data model is the W3C standard for graph models on the web, and has been for a long time. Consistency and following existing standards are noted above as important ... as is usability and general adoption by developers that are unaware of RDF at all. JSON-LD should be able to serialize all of the RDF data model (enabling a RDF to JSON-LD to RDF round trip, without loss of data). New features that are not present in the RDF data model would not survive a round trip in the other direction (JSON-LD to RDF to JSON-LD), and thus must be carefully considered as to their value.
 
-**Notes**
+**Notes** 
 
-* Objections: There is a more generic data model in JSON-LD, and we have the flexibility to add to it if we want to as long as we're not breaking backwards compatibility with JSON-LD 1.0. We don't want to box ourselves into a corner that will prevent us from thinking creatively about solutions.
+* We will assess the usage and usability of JSON-LD 1.0 features that are not compatible with RDF, with a view to putting in warnings if their usage is not able to be demonstrated.
+* We will prioritize work on features that prevent JSON-LD from being a complete serialization of the RDF data model.
+
