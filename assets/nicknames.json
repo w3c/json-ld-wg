@@ -50,15 +50,17 @@
     "github": "dlongley"
 },
 {
-    "nick" : ["jeff"],
-    "name": "Jeff Mixter"
+    "nick" : ["jeff_mixter", "mixterj"],
+    "name": "Jeff Mixter",
+    "github": "mixterj"
 },
 {
     "nick": [
         "workergnome",
         "david_newbury"
     ],
-    "name": "David Newbury"
+    "name": "David Newbury",
+    "github": "workergnome"
 },
 {
     "nick": [],
