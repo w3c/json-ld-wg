@@ -5,7 +5,8 @@
   "description": "Node tooling for the JSON-LD Working Group site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scribejs": "scribejs -c .scribejs.json"
+    "scribejs": "scribejs -c .scribejs.json",
+    "serve": "jekyll serve --incremental"
   },
   "repository": {
     "type": "git",

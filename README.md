@@ -61,3 +61,9 @@ $ npm run scribejs -- 2018-07-06-json-ld-irc.txt -d 2018-07-06 -o Meetings/Minut
 Edit the .txt file and repeat the `npm run scribejs` line as necessary. Once
 finished, you can commit the `.md` file and delete the `.txt` file (or keep it
 for your records).
+
+### Jekyll
+
+This site is built for [Jekyll](https://jekyllrb.com/). If you have Jekyll
+and npm installed, you can run `npm run serve` to have Jekyll watch the
+working directory for changes and compile the templates (etc) incrementally.
