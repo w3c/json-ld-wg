@@ -55,14 +55,16 @@
         "mixterj",
         "jeff_mixter"
     ],
-    "name": "Jeff Mixter"
+    "name": "Jeff Mixter",
+    "github": "mixterj"
 },
 {
     "nick": [
         "workergnome",
         "david_newbury"
     ],
-    "name": "David Newbury"
+    "name": "David Newbury",
+    "github": "workergnome"
 },
 {
     "nick": [],
