@@ -50,7 +50,11 @@
     "github": "dlongley"
 },
 {
-    "nick" : ["jeff_mixter", "mixterj"],
+    "nick" : [
+        "jeff",
+        "mixterj",
+        "jeff_mixter"
+    ],
     "name": "Jeff Mixter",
     "github": "mixterj"
 },

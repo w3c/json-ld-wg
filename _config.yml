@@ -7,3 +7,6 @@ highlighter: rouge
 exclude:
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - node_modules/
