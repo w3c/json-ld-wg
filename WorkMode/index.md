@@ -112,6 +112,13 @@ An [HTML interface to the W3C's IRC system](http://irc.w3.org/) is available. Se
 
 Each repository, including the “core” WG repository, has a wiki instance. Members of the Working Groups are encouraged to use those for temporary discussions, documents, etc. Pages on the repository Wikis have no formal status.
 
+## Process
+
+The [Charter](https://www.w3.org/2018/03/jsonld-wg-charter.html) and the [W3C Process Document](//www.w3.org/Consortium/Process/) are the final arbiters of any process question, however the Working Group has adopted some complimentary, additional processes to aid in its productivity.
+
+* Adoption of [guiding technical principles](guiding_principles) towards quickly coming to consensus
+
+
 ## Patent Policy
 
 The WG's Charter defines the [Patent Policy for this group](https://www.w3.org/2017/04/publ-wg-charter/#patentpolicy):
