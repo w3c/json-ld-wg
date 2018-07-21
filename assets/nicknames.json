@@ -1,5 +1,7 @@
 [{
-    "nick": [],
+    "nick": [
+        "ChristopherA"
+    ],
     "name": "Christopher Allen"
 },
 {
@@ -45,7 +47,9 @@
     "github": "davidlehn"
 },
 {
-    "nick": [],
+    "nick": [
+        "dlongley"
+    ],
     "name": "Dave Longley",
     "github": "dlongley"
 },
@@ -67,7 +71,9 @@
     "github": "workergnome"
 },
 {
-    "nick": [],
+    "nick": [
+        "AxelPolleres"
+    ],
     "name": "Axel Polleres",
     "github": "AxelPolleres"
 },
