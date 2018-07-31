@@ -16,6 +16,10 @@
     "github": "danbri"
 },
 {
+    "nick": [],
+    "name": "Victor Charpenay"
+},
+{
     "nick": [
         "timCole",
         "tcole"
@@ -32,11 +36,19 @@
     "github": "iherman"
 },
 {
+    "nick": [],
+    "name": "Sebastian Käbisch"
+},
+{
     "nick": [
         "gkellogg"
     ],
     "name": "Gregg Kellogg",
     "github": "gkellogg"
+},
+{
+    "nick" : [],
+    "name" : "Matthias Kovatsch"
 },
 {
     "nick": [
