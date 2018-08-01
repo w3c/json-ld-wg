@@ -52,6 +52,21 @@
             text-align: center;
             color: red;
         }
+        nav.pagination {
+            border: none;
+            font-weight: bold;
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+        nav.pagination > * {
+            flex: 1;
+        }
+        nav.pagination time {
+            text-align: center;
+        }
+        nav.pagination a:last-child {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +74,19 @@
     <main>
         {% include nav.html %}
         <section id='content'>
+            <nav class="pagination">
+                {% if page.previous %}
+                <a rel="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.date | date: "%Y-%m-%d" }}</a>
+                {% else %}
+                <a rel="up" href="../">&#9650;</a>
+                {% endif %}
+                <time>{{ page.date | date: "%Y-%m-%d" }}</time>
+                {% if page.next %}
+                <a rel="next" href="{{ page.next.url }}">{{ page.next.date | date: "%Y-%m-%d" }} &raquo;</a>
+                {% else %}
+                <a rel="up" href="../">&#9650;</a>
+                {% endif %}
+            </nav>
             {{ content }}
         </section>
     </main>
