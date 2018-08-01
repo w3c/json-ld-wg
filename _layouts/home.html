@@ -24,6 +24,14 @@
             background: yellow;
             font-style: italic;
         }
+        ul.inline {
+            margin: 0;
+            display: inline-block;
+        }
+        ul.inline li {
+            float: left;
+            margin-right: 2em;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +44,14 @@
             </h1>
             <section id="mission">
                 {{ content }}
+            </section>
+            <section id="minutes">
+                <h2>Telco Minutes</h2>
+                <ul class="inline">
+                {% for item in site.minutes reversed %}
+                    <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.date | date: '%d %B' }}</a></li>
+                {% endfor %}
+                </ul>
             </section>
             <section id='articles'>
     			<h2>Latest activity news</h2>
