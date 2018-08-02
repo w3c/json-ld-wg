@@ -24,6 +24,14 @@
             background: yellow;
             font-style: italic;
         }
+        ul.inline {
+            margin: 0;
+            display: inline-block;
+        }
+        ul.inline li {
+            float: left;
+            margin-right: 2em;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +44,18 @@
             </h1>
             <section id="mission">
                 {{ content }}
+            </section>
+            <section id="minutes">
+                <h2><a href="Meetings/Minutes/">Telco Minutes</a></h2>
+                <ul class="inline">
+                {% assign minutes_length = site.minutes | size %}
+                {% for item in site.minutes reversed limit:5 %}
+                    <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.date | date: '%d %B' }}</a></li>
+                {% endfor %}
+                {% if minutes_length > 5 %}
+                    <li><a href="Meetings/Minutes/">more...</a></li>
+                {% endif %}
+                </ul>
             </section>
             <section id='articles'>
     			<h2>Latest activity news</h2>
