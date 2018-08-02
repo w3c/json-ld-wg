@@ -76,13 +76,13 @@
         <section id='content'>
             <nav class="pagination">
                 {% if page.previous %}
-                <a rel="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.date | date: "%Y-%m-%d" }}</a>
+                <a rel="prev" href="{{ site.baseurl }}{{ page.previous.url }}">&laquo; {{ page.previous.date | date: "%Y-%m-%d" }}</a>
                 {% else %}
                 <a rel="up" href="../">&#9650;</a>
                 {% endif %}
                 <time>{{ page.date | date: "%Y-%m-%d" }}</time>
                 {% if page.next %}
-                <a rel="next" href="{{ page.next.url }}">{{ page.next.date | date: "%Y-%m-%d" }} &raquo;</a>
+                <a rel="next" href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.date | date: "%Y-%m-%d" }} &raquo;</a>
                 {% else %}
                 <a rel="up" href="../">&#9650;</a>
                 {% endif %}

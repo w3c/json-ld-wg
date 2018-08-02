@@ -1,3 +1,5 @@
+baseurl: /2018/json-ld-wg
+
 #theme: jekyll-theme-minimal
 markdown: kramdown
 kramdown:

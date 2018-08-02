@@ -67,3 +67,6 @@ for your records).
 This site is built for [Jekyll](https://jekyllrb.com/). If you have Jekyll
 and npm installed, you can run `npm run serve` to have Jekyll watch the
 working directory for changes and compile the templates (etc) incrementally.
+
+Once run, you can browse the site at `http://localhost:4000/2018/json-ld-wg/`
+(the extra path information is *required* to match the w3.org hosting location).
