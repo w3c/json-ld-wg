@@ -50,7 +50,7 @@
                 <ul class="inline">
                 {% assign minutes_length = site.minutes | size %}
                 {% for item in site.minutes reversed limit:5 %}
-                    <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.date | date: '%d %B' }}</a></li>
+                    <li><a href="{{ item.url }}">{{ item.date | date: '%d %B' }}</a></li>
                 {% endfor %}
                 {% if minutes_length > 5 %}
                     <li><a href="Meetings/Minutes/">more...</a></li>
