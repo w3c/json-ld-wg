@@ -9,8 +9,25 @@
             </ul>
 
             <h3>GitHub repositories</h3>
-            <ul>
+            <ul id="github-repositories-list">
                 <li><a href="https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories">List of WG repositories</a>.</li>
             </ul>
-
+            <script async defer>
+let repos_list = document.getElementById('github-repositories-list');
+fetch('https://api.github.com/search/repositories?q=topic:json-ld-wg')
+  .then((r) => r.json())
+  .then((repos) => {
+    if ('items' in repos) {
+      // empty list
+      while (repos_list.firstChild) {
+        repos_list.removeChild(repos_list.firstChild);
+      }
+      repos.items.forEach((repo) => {
+        repos_list.insertAdjacentHTML('beforeend', `
+<li><strong><a href="${repo.html_url}">${repo.name}</a></strong>
+<br />${repo.description}</li>`);
+      });
+    }
+  });
+            </script>
         </aside>
