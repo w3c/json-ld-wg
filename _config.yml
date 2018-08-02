@@ -10,3 +10,8 @@ exclude:
   - package.json
   - package-lock.json
   - node_modules/
+
+collections:
+  minutes:
+    output: true
+    permalink: /Meetings/Minutes/:year/:name
