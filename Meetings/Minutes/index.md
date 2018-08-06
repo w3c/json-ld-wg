@@ -8,12 +8,19 @@ layout: default
 * TOC
 {:toc}
 
-## 2018
+
+{% assign yearly_minutes = site.minutes | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+{% for year in yearly_minutes %}
+
+## {{ year.name }}
 
 <ul>
-{% for item in site.minutes reversed %}
+{% for item in year.items reversed %}
   <li>{{ item.date | date: '%d %B' }}:
     <a href="{{ site.baseurl }}{{ item.url }}">Telco Minutes</a>
   </li>
 {% endfor %}
 </ul>
+
+{% endfor %}
