@@ -56,7 +56,7 @@ For example:
 
 ```bash
 $ curl https://www.w3.org/2018/07/06-json-ld-irc.txt > 2018-07-06-json-ld-irc.txt
-$ npm run scribejs -- 2018-07-06-json-ld-irc.txt -d 2018-07-06 -o Meetings/Minutes/2018/2018-07-06-pwg.md
+$ npm run scribejs -- 2018-07-06-json-ld-irc.txt -d 2018-07-06 -o _minutes/2018-07-06-json-ld.md
 ```
 Edit the .txt file and repeat the `npm run scribejs` line as necessary. Once
 finished, you can commit the `.md` file and delete the `.txt` file (or keep it
