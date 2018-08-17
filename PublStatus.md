@@ -21,11 +21,11 @@ The Editors’ drafts are managed in GitHub repositories; the list of those repo
 ## Major planned milestones (from the charter)
 
 * JSON-LD 1.1:
-    * First Public Working Draft (FPWD): July 2018
-    * Recommendation (REC): December 2019.
+    * First Public Working Draft (FPWD): September 2018
+    * Recommendation (REC): June 2020.
 * JSON-LD 1.1 Processing Algorithms and API:
-    * First Public Working Draft (FPWD): July 2018
-    * Recommendation (REC): December 2019.
+    * First Public Working Draft (FPWD): September 2018
+    * Recommendation (REC): June 2020.
 * JSON-LD 1.1 Framing:
-    * First Public Working Draft (FPWD): July 2018
-    * Recommendation (REC): December 2019.
+    * First Public Working Draft (FPWD): September 2018
+    * Recommendation (REC): June 2020.
