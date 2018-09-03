@@ -1,0 +1,25 @@
+% To be sent to Denis as soon as the documents pass pubrules
+----
+
+Denis,
+
+This is just a preliminary publication request. The JSON LD Working Group has requested a FPWD transition for three documents[1], to be published on the Tuesday, 11 of September. The three documents, with their current location, are:
+
+* JSON-LD 1.1:  
+    * Document: https://rawgit.com/w3c/json-ld-syntax/fpwd/publication-snapshots/FPWD/Overview.html
+
+* JSON-LD 1.1 Processing Algorithms and API:
+    * Document: https://rawgit.com/w3c/json-ld-api/fpwd/publicationsnapshots/FPWD/Overview.html
+
+* JSON-LD 1.1 Framing:
+    * Document: https://rawgit.com/w3c/json-ld-framing/fpwd/publication-snapshots/FPWD/Overview.html
+
+All three documents go through pubrule's checker as well as the link checker.
+
+I will put them on the /TR/2018/ as soon as we have the Director's decision alongside the official publication request.
+
+Thank you!
+
+Ivan
+
+[1] https://lists.w3.org/Archives/Member/chairs/@@@@

@@ -1,0 +1,38 @@
+% To be sent to the webmaster, comm team, coralie, xueyuan, & WG chairs when the DD is available.
+
+----
+
+(Coralie, Xueyuan, this is for information only; I will send you the HPN news draft separately)
+
+Denis,
+
+This is an official publication request for the publication of three JSON-LD 1.1 Documents as First Public Working Drafts. The publication date is the 11 of September, 2018. The transition request for FPWD has been issued in:
+	- https://lists.w3.org/Archives/Member/chairs/@@@@@@
+
+the Director's approval is in:
+	- https://lists.w3.org/Archives/Member/chairs/@@@@@
+
+
+The documents are as follows
+----------------------------
+
+- JSON-LD 1.1:
+    - https://www.w3.org/TR/2018/WD-json-ld11-20180911/
+- JSON-LD 1.1 Processing Algorithms and API:
+    - https://www.w3.org/TR/2018/WD-json-ld11-api-20180911/
+- JSON-LD 1.1 Framing
+    - https://www.w3.org/TR/2018/WD-json-ld11-framing-20180911/
+
+
+Abstract and Status Sections
+----------------------------
+
+See the previous URL-s
+
+The document have already been installed; they all pass pubrules and the link checker.
+
+The right 'bucket' on our TR page for the documents is "Data". 
+
+Thanks!
+
+Ivan
