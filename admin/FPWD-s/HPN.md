@@ -11,4 +11,3 @@ The [W3C JSON-LD Working Group](https://www.w3.org/2018/json-ld-wg/) has publish
 All three documents are derived from Community Group Reports published by the [JSON for Linking Data W3C Community Group](https://www.w3.org/community/json-ld/).
 
 The Working Group welcomes comments via the GitHub repository issues (see the respective documents’ headers for the reference of the repositories).
-
