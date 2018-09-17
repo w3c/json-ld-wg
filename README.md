@@ -39,7 +39,7 @@ Then run the following (with date
 information changed to match your scenario):
 
 ```bash
-$ npm run scribejs -- -d 2018-07-06 -o Meetings/Minutes/2018/2018-07-06-json-ld.md
+$ npm run scribejs -- -d 2018-07-06 -o _minutes/2018-07-06-json-ld.md
 ```
 
 This will request the IRC logs for the correct channel and convert them into
