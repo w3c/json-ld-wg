@@ -145,16 +145,22 @@ require(["core/pubsubhub"], (respecEvents) => {
 require(["core/pubsubhub"], (respecEvents) => {
   "use strict";
   respecEvents.sub('beforesave', (documentElement) => {
-    for (const anchor of document.querySelectorAll("dd a[href]")) {
-      const href = anchor.attributes.href;
-      if (anchor.closest('dd').previousElementSibling.textContent(.match(/Latest editor|Test suite|Implementation report/))) return;
+    for (const anchor of document.querySelectorAll("a[href]")) {
+      const dd = anchor.closest('dd');
+
+      // Don't replace specific anchors
+      if (dd) {
+        const dt = dd.previousElementSibling;
+        if (dt.textContent.match(/Latest editor|Test suite|Implementation report/)) return;
+      }
       if (anchor.closest('section.preserve')) return;
-      if (href === undefined) return;
+
+      if (anchor.href === undefined) return;
 
       for (const toReplace in jsonld.conversions) {
-        if (href.indexOf(toReplace) !== -1) {
+        if (anchor.href.indexOf(toReplace) !== -1) {
           const replacement = jsonld.conversions[toReplace];
-          const newHref = href.replace(toReplace, replacement);
+          const newHref = anchor.href.replace(toReplace, replacement);
           anchor.setAttribute('href', newHref);
           if (anchor.textContent().indexOf(toReplace) !== -1) {
             anchor.innerText = anchor.textContent().replace(toReplace, replacement);
