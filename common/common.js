@@ -193,11 +193,21 @@ require(["core/pubsubhub"], (respecEvents) => {
       // First pre element of aside
       const pre = link.closest("aside").querySelector("pre");
       const content = unComment(document, pre.textContent)
-        .replace(/(\*\*\*\*|####)/g, '');
+        .replace(/\*\*\*\*/g, '')
+        .replace(/####([^#]*)####/g, '');
       link.setAttribute('aria-label', 'playground link');
       link.setAttribute('href',
         'https://json-ld.org/playground-dev/#startTab=tab-expanded&json-ld=' +
         encodeURI(content));
+    }
+
+    // Add highlighting and remove comment from pre elements
+    for (const pre of document.querySelectorAll("pre")) {
+      // First pre element of aside
+      const content = pre.innerHTML
+        .replace(/\*\*\*\*([^*]*)\*\*\*\*/g, '<span class="hl-bold">$1</span>')
+        .replace(/####([^#]*)####/g, '<span class="comment">$1</span>');
+      pre.innerHTML = content;
     }
   });
 });
@@ -222,9 +232,7 @@ function reindent(text) {
 
 function updateExample(doc, content) {
   // perform transformations to make it render and prettier
-  return _esc(reindent(unComment(doc, content)))
-    .replace(/\*\*\*\*([^*]*)\*\*\*\*/g, '<span class="hl-bold">$1</span>')
-    .replace(/####([^#]*)####/g, '<span class="comment">$1</span>');
+  return _esc(reindent(unComment(doc, content)));
 }
 
 
