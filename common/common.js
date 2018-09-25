@@ -196,9 +196,14 @@ require(["core/pubsubhub"], (respecEvents) => {
         .replace(/\*\*\*\*/g, '')
         .replace(/####([^#]*)####/g, '');
       link.setAttribute('aria-label', 'playground link');
+      link.innerText = "Open in playground";
       link.setAttribute('href',
         'https://json-ld.org/playground-dev/#startTab=tab-expanded&json-ld=' +
         encodeURI(content));
+      // Wrap in a button
+      const button = document.createElement('button');
+      link.parentNode.insertBefore(button, link);
+      button.appendChild(link);
     }
 
     // Add highlighting and remove comment from pre elements
