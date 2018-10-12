@@ -122,6 +122,9 @@ a:hover, a:focus {
  	text-decoration: underline;
 }
 
+a[rel="external"]:after {
+  content: " 🗗"
+}
 
 /*** header ***/
 header {
@@ -181,12 +184,12 @@ main > * {
 /* --- */
 main nav {
 	font-size: 		0.9em;
-	order:			1;
 	margin-top:		1rem;
 	margin-bottom:	1rem;
 	padding-top:	0.5ex;
 	padding-bottom:	0.5ex;
 	border-top: 	2px solid #ccc;
+	min-width: 13em;
 }
 
 main nav h3 {
