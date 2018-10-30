@@ -292,6 +292,12 @@ footer a, footer a:visited, footer a:focus, footer a:hover {
   font-weight:	bold;
 }
 
+.inline_image {
+	max-width: 100%;
+	height: auto;
+}
+
+
 @media screen and (min-width: 78rem) {
 	main {
 		flex-flow: 			row;
