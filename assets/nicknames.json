@@ -13,6 +13,10 @@
     "name" : "Steve Blackmon"
 },
 {
+    "nick": ["pchampin"],
+    "name": "Pierre-Antoine Champin"
+},
+{
     "nick": [
         "danbri"
     ],
