@@ -48,6 +48,10 @@ class Vocab
       when 'rdfs:seeAlso'   then @seeAlso << entry[:subClassOf]
       else                       @instances[entry[:id]] = entry
       end
+
+      if entry[:@container].to_s.match?(/\s*,\s*/)
+        entry[:@container] = entry[:@container].split(/\s*,\s*/)
+      end
     end
 
   end
@@ -91,18 +95,14 @@ class Vocab
 
     terms.each do |id, entry|
       next if entry[:@type] == '@null'
-      context[id] = if [:@container, :@type].any? {|k| entry[k]}
-        {'@id' => entry[:subClassOf]}.
-        merge(entry[:@container] ? {'@container' => entry[:@container]} : {}).
-        merge(entry[:@type] ? {'@type' => entry[:@type]} : {})
-      else
-        entry[:subClassOf]
-      end
+      context[id] = {'@id' => entry[:subClassOf]}
+      context[id]['@type'] = entry[:@type] if entry[:@type]
+      context[id]['@container'] = entry[:@container] if entry[:@container]
     end
 
     classes.each do |id, entry|
       term = entry[:term] || id
-      context[term] = namespaced(id) unless entry[:@type] == '@null'
+      context[term] = {"@id" => namespaced(id)} unless entry[:@type] == '@null'
 
       # Class definition
       node = {
@@ -160,7 +160,7 @@ class Vocab
     end
 
     datatypes.each  do |id, entry|
-      context[id] = namespaced(id) unless entry[:@type] == '@null'
+      context[id] = {"@id" => namespaced(id)} unless entry[:@type] == '@null'
 
       # Datatype definition
       node = {
@@ -175,7 +175,7 @@ class Vocab
     end
 
     instances.each do |id, entry|
-      context[id] = namespaced(id) unless entry[:@type] == '@null'
+      context[id] = {"@id" => namespaced(id)} unless entry[:@type] == '@null'
       # Instance definition
       node = {
         '@id' => namespaced(id),
