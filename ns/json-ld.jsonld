@@ -1,47 +1,158 @@
 {
   "@context": {
+    "jsonld": "http://www.w3.org/ns/json-ld#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "label": "rdfs:label",
-    "description": "rdfs:comment",
-    "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id" },
-    "isDefinedBy": { "@id": "rdfs:isDefinedBy", "@type": "@id" },
-    "@language": "en"
-  },
-  "@graph": [
-    {
-      "@id": "http://www.w3.org/ns/json-ld",
-      "@type": "http://www.w3.org/2002/07/owl#Ontology",
-      "label": "The JSON-LD Vocabulary",
-      "description": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "compacted": {
+      "@id": "jsonld:compacted"
     },
-    {
-      "@id": "http://www.w3.org/ns/json-ld#context",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "label": "JSON-LD context",
-      "description": "This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD.",
-      "seeAlso": "http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld",
-      "isDefinedBy": "http://www.w3.org/ns/json-ld"
+    "context": {
+      "@id": "jsonld:context"
     },
-    {
-      "@id": "http://www.w3.org/ns/json-ld#expanded",
-      "label": "Expanded JSON-LD document form",
-      "description": "This profile URI is used to request or specify expanded JSON-LD document form.",
-      "seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations",
-      "isDefinedBy": "http://www.w3.org/ns/json-ld"
+    "expanded": {
+      "@id": "jsonld:expanded"
     },
-    {
-      "@id": "http://www.w3.org/ns/json-ld#compacted",
-      "label": "Compacted JSON-LD document form",
-      "description": "This profile URI is used to request or specify compacted JSON-LD document form.",
-      "seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations",
-      "isDefinedBy": "http://www.w3.org/ns/json-ld"
-    },
-    {
-      "@id": "http://www.w3.org/ns/json-ld#flattened",
-      "label": "Flattened JSON-LD document form",
-      "description": "This profile URI is used to request or specify flattened JSON-LD document form.",
-      "seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations",
-      "isDefinedBy": "http://www.w3.org/ns/json-ld"
+    "flattened": {
+      "@id": "jsonld:flattened"
     }
-  ]
+  },
+  "@graph": {
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "dc:title": {
+        "@container": "@language"
+      },
+      "dc:description": {
+        "@container": "@language"
+      },
+      "dc:date": {
+        "@type": "xsd:date"
+      },
+      "rdfs:comment": {
+        "@container": "@language"
+      },
+      "rdfs:domain": {
+        "@type": "@id"
+      },
+      "rdfs:label": {
+        "@container": "@language"
+      },
+      "rdfs:range": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "rdfs:subClassOf": {
+        "@type": "@id"
+      },
+      "rdfs:subPropertyOf": {
+        "@type": "@id"
+      },
+      "owl:equivalentClass": {
+        "@type": "@vocab"
+      },
+      "owl:equivalentProperty": {
+        "@type": "@vocab"
+      },
+      "owl:oneOf": {
+        "@container": "@list",
+        "@type": "@vocab"
+      },
+      "owl:imports": {
+        "@type": "@id"
+      },
+      "owl:versionInfo": {
+        "@type": "@id"
+      },
+      "owl:inverseOf": {
+        "@type": "@vocab"
+      },
+      "owl:unionOf": {
+        "@type": "@vocab",
+        "@container": "@list"
+      },
+      "rdfs_classes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_properties": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_datatypes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_instances": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      }
+    },
+    "@id": "http://www.w3.org/ns/json-ld#",
+    "@type": "owl:Ontology",
+    "dc": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc:title": {
+      "en": "The JSON-LD Vocabulary"
+    },
+    "dc:description": {
+      "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
+    },
+    "dc:date": "2018-11-12",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/uncommitted",
+    "rdfs:seeAlso": [
+      "http://www.w3.org/TR/json-ld11"
+    ],
+    "rdfs_properties": [
+      {
+        "@id": "jsonld:compacted",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "compacted"
+        },
+        "rdfs:comment": {
+          "en": "This profile URI is used to request or specify expanded JSON-LD document form."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+      },
+      {
+        "@id": "jsonld:context",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "context"
+        },
+        "rdfs:comment": {
+          "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
+        },
+        "rdfs:seeAlso": "http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld"
+      },
+      {
+        "@id": "jsonld:expanded",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "expanded"
+        },
+        "rdfs:comment": {
+          "en": "This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+      },
+      {
+        "@id": "jsonld:flattened",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "flattened"
+        },
+        "rdfs:comment": {
+          "en": "This profile URI is used to request or specify flattened JSON-LD document form."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+      }
+    ]
+  }
 }

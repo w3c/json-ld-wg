@@ -1,0 +1,10 @@
+id,type,label,subClassOf,domain,range,@type,@container,ForwardMultiplicity,ReverseMultiplicity,seeAlso,term,comment
+,rdfs:seeAlso,,http://www.w3.org/TR/json-ld11,,,,,,,,,
+rdf,prefix,,http://www.w3.org/1999/02/22-rdf-syntax-ns#,,,,,,,,,
+rdfs,prefix,,http://www.w3.org/2000/01/rdf-schema#,,,,,,,,,
+jsonld,prefix,,http://www.w3.org/ns/json-ld#,,,,,,,,,
+xsd,prefix,,http://www.w3.org/2001/XMLSchema#,,,,,,,,,
+context,rdf:Property,context,,,,,,,,http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld,,This is a vocabulary document and is used to achieve certain features of the JSON-LD language.
+expanded,rdf:Property,expanded,,,,,,,,https://www.w3.org/TR/json-ld11/#iana-considerations,,This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD.
+compacted,rdf:Property,compacted,,,,,,,,https://www.w3.org/TR/json-ld11/#iana-considerations,,This profile URI is used to request or specify expanded JSON-LD document form.
+flattened,rdf:Property,flattened,,,,,,,,https://www.w3.org/TR/json-ld11/#iana-considerations,,This profile URI is used to request or specify flattened JSON-LD document form.
