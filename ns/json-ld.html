@@ -1,0 +1,132 @@
+<html lang="en">
+  <head>
+    <meta charset='utf-8'/>
+    <title>The JSON-LD Vocabulary</title>
+    <base href="http://www.w3.org/ns/json-ld#" />
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <link href="http://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet">
+    <style type="text/css">
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    </style>
+  </head>
+  <body resource="http://www.w3.org/ns/json-ld#" typeof="owl:Ontology" prefix="jsonld: http://www.w3.org/ns/json-ld#">
+    <h1 property="rdfs:label">The JSON-LD Vocabulary</h1>
+    <p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72"></a></p>
+    <p property="rdfs:comment">This is a vocabulary document and is used to achieve certain features of the JSON-LD language.</p>
+    <p>Alternate versions of the vocabulary definition exist in
+      <a rel="alternate" href="jsonld.ttl">Turtle</a> and
+      <a rel="alternate" href="jsonld.jsonld">JSON-LD</a>,
+      which also includes the <code>@context</code> required for metadata descriptions.
+      <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
+    </p>
+    <dl>
+      <dt>Published:</dt><dd><time property="dc:date">2018-11-12</time></dd>
+      <dt>Version Info:</dt>
+      <dd><a href="https://github.com/w3c/json-ld-wg/commit/9ef51f288acf3bb2a96f197bc410e455546c8c7a" property="owl:versionInfo">https://github.com/w3c/json-ld-wg/commit/9ef51f288acf3bb2a96f197bc410e455546c8c7a</a></dd>
+      <dt>See Also:</dt>
+        <dd><a href="http://www.w3.org/TR/json-ld11" property="rdfs:seeAlso">http://www.w3.org/TR/json-ld11</a></dd>
+    </dl>
+    <section>
+      <h2>Prefix Definitions</h2>
+      <dl class="terms">
+        <dt>jsonld</dt>
+        <dd>http://www.w3.org/ns/json-ld#</dd>
+        <dt>rdf</dt>
+        <dd>http://www.w3.org/1999/02/22-rdf-syntax-ns#</dd>
+        <dt>rdfs</dt>
+        <dd>http://www.w3.org/2000/01/rdf-schema#</dd>
+        <dt>xsd</dt>
+        <dd>http://www.w3.org/2001/XMLSchema#</dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Property Definitions</h2>
+      <p>The following are property definitions in the <code>jsonld</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="context">
+          <td class="bold">context</td>
+          <td resource="jsonld:context" typeof="rdf:Property">
+            <em property="rdfs:label">context</em>
+            <span class="permalink"><a href="#context" aria-label="Permalink for context" title="Permalink for context"><span>§</span></a></span>
+            <p property="rdfs:comment">This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD.</p>
+            <p>You can read more about this feature in the <a property="rdfs:seeAlso" href="">JSON-LD Syntax specification</a>.</p>
+            
+            <span property="rdfs:isDefinedBy" resource="jsonld:"></span>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Instance Definitions</h2>
+      <p>The following are instance definitions in the <code>jsonld</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="compacted">
+          <td class="bold">compacted</td>
+          <td resource="jsonld:compacted" typeof="owl:NamedIndividual">
+            <em property="rdfs:label">compacted</em>
+            <span class="permalink"><a href="#compacted" aria-label="Permalink for compacted" title="Permalink for compacted"><span>§</span></a></span>
+            <p property="rdfs:comment">This profile IRI is used to request or specify compacted JSON-LD document form.</p>
+            <p>You can read more about this feature in the <a property="rdfs:seeAlso" href="">JSON-LD Syntax specification</a>.</p>
+            
+            <span property="rdfs:isDefinedBy" resource="jsonld:"></span>
+          </td>
+        </tr>
+        <tr id="expanded">
+          <td class="bold">expanded</td>
+          <td resource="jsonld:expanded" typeof="owl:NamedIndividual">
+            <em property="rdfs:label">expanded</em>
+            <span class="permalink"><a href="#expanded" aria-label="Permalink for expanded" title="Permalink for expanded"><span>§</span></a></span>
+            <p property="rdfs:comment">This profile URI is used to request or specify expanded JSON-LD document form.</p>
+            <p>You can read more about this feature in the <a property="rdfs:seeAlso" href="">JSON-LD Syntax specification</a>.</p>
+            
+            <span property="rdfs:isDefinedBy" resource="jsonld:"></span>
+          </td>
+        </tr>
+        <tr id="flattened">
+          <td class="bold">flattened</td>
+          <td resource="jsonld:flattened" typeof="owl:NamedIndividual">
+            <em property="rdfs:label">flattened</em>
+            <span class="permalink"><a href="#flattened" aria-label="Permalink for flattened" title="Permalink for flattened"><span>§</span></a></span>
+            <p property="rdfs:comment">This profile URI is used to request or specify flattened JSON-LD document form.</p>
+            <p>You can read more about this feature in the <a property="rdfs:seeAlso" href="">JSON-LD Syntax specification</a>.</p>
+            
+            <span property="rdfs:isDefinedBy" resource="jsonld:"></span>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Term Definitions</h2>
+      <dl class="terms">
+        <dt>compacted</dt>
+        <dd>
+            jsonld:compacted
+        </dd>
+        <dt>context</dt>
+        <dd>
+            jsonld:context
+        </dd>
+        <dt>expanded</dt>
+        <dd>
+            jsonld:expanded
+        </dd>
+        <dt>flattened</dt>
+        <dd>
+            jsonld:flattened
+        </dd>
+      </dl>
+    </section>
+  </body>
+</html>
