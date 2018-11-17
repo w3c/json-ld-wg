@@ -4,8 +4,60 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Context": {
+      "@id": "jsonld:Context"
+    },
+    "ExpandedTermDefinition": {
+      "@id": "jsonld:ExpandedTermDefinition"
+    },
+    "TermDefinition": {
+      "@id": "jsonld:TermDefinition"
+    },
+    "base": {
+      "@id": "jsonld:base",
+      "@type": "@id"
+    },
+    "container": {
+      "@id": "jsonld:container",
+      "@type": "@id"
+    },
     "context": {
-      "@id": "jsonld:context"
+      "@id": "jsonld:context",
+      "@type": "@id"
+    },
+    "definition": {
+      "@id": "jsonld:definition",
+      "@type": "@id"
+    },
+    "iri": {
+      "@id": "jsonld:iri"
+    },
+    "language": {
+      "@id": "jsonld:language",
+      "@language": null
+    },
+    "prefix": {
+      "@id": "jsonld:prefix",
+      "@type": "xsd:boolean"
+    },
+    "reverse": {
+      "@id": "jsonld:reverse"
+    },
+    "term": {
+      "@id": "jsonld:term",
+      "@language": null
+    },
+    "type": {
+      "@id": "jsonld:type",
+      "@type": "@id"
+    },
+    "version": {
+      "@id": "jsonld:version",
+      "@type": "xsd:decimal"
+    },
+    "vocab": {
+      "@id": "jsonld:vocab",
+      "@type": "@id"
     },
     "compacted": {
       "@id": "jsonld:compacted"
@@ -15,12 +67,31 @@
     },
     "flattened": {
       "@id": "jsonld:flattened"
+    },
+    "graph": {
+      "@id": "jsonld:graph"
+    },
+    "id": {
+      "@id": "jsonld:id"
+    },
+    "index": {
+      "@id": "jsonld:index"
+    },
+    "list": {
+      "@id": "jsonld:list"
+    },
+    "set": {
+      "@id": "jsonld:set"
     }
   },
   "@graph": {
     "@context": {
       "id": "@id",
       "type": "@type",
+      "dc": "http://purl.org/dc/terms/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "dc:title": {
         "@container": "@language"
       },
@@ -93,10 +164,6 @@
     },
     "@id": "http://www.w3.org/ns/json-ld#",
     "@type": "owl:Ontology",
-    "dc": "http://purl.org/dc/terms/",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dc:title": {
       "en": "The JSON-LD Vocabulary"
     },
@@ -104,27 +171,245 @@
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
     "dc:date": "2018-11-12",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/9ef51f288acf3bb2a96f197bc410e455546c8c7a",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/954ff25455599a41bf7a8a4a268fdb9447456818",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
+    "rdfs_classes": [
+      {
+        "@id": "jsonld:Context",
+        "@type": [
+          "rdfs:Class"
+        ],
+        "rdfs:label": {
+          "en": "Context"
+        },
+        "rdfs:comment": {
+          "en": "Defines term definitions and other aspects of a JSON-LD `Context`."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:ExpandedTermDefinition",
+        "@type": [
+          "rdfs:Class"
+        ],
+        "rdfs:label": {
+          "en": "Expanded Term Definition"
+        },
+        "rdfs:comment": {
+          "en": "An [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions), is a [term definition](#TermDefinition) where the value is a dictionary containing one or more keyword keys to define the associated absolute IRI, if this is a reverse property, the type associated with string values, and a container mapping."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions"
+      },
+      {
+        "@id": "jsonld:TermDefinition",
+        "@type": [
+          "rdfs:Class"
+        ],
+        "rdfs:label": {
+          "en": "Term Definition"
+        },
+        "rdfs:comment": {
+          "en": "A [term definition](http://www.w3.org/TR/json-ld11/#dfn-term-definitions) is an entry in a [context](#Context), where the key defines a term which may be used within a dictionary as a key, type, or elsewhere that a string is interpreted as a vocabulary item. Its value is either a string ([simple term definition](http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions)), expanding to an absolute IRI, or an [Expanded Term Definition](#ExpandedTermDefinition)."
+        },
+        "rdfs:subClassOf": "jsonld:TermDefinition",
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-term-definitions"
+      }
+    ],
     "rdfs_properties": [
       {
+        "@id": "jsonld:base",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "base"
+        },
+        "rdfs:comment": {
+          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) has an `@base` key, its value MUST be an _absolute IRI_, a _relative IRI_, or `null`."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
+        "rdfs:domain": "jsonld:Context"
+      },
+      {
+        "@id": "jsonld:container",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "container"
+        },
+        "rdfs:comment": {
+          "en": "The associated `@container` value in an Expanded Term Definition."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
+        "rdfs:domain": "jsonld:ExpandedTermDefinition",
+        "rdfs:range": "jsonld:ContainerType"
+      },
+      {
         "@id": "jsonld:context",
-        "@type": "rdf:Property",
+        "@type": [
+          "rdf:Property"
+        ],
         "rdfs:label": {
           "en": "context"
         },
         "rdfs:comment": {
-          "en": "This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD."
+          "en": "As an IRI, this link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD. As a Context, defines an inline `context definition`."
         },
-        "rdfs:seeAlso": "http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld"
+        "rdfs:seeAlso": "http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld",
+        "rdfs:domain": {
+          "owl:unionOf": [
+            "rdfs:Resource",
+            "jsonld:ExpandedTermDefinition"
+          ]
+        },
+        "rdfs:range": "jsonld:Context"
+      },
+      {
+        "@id": "jsonld:definition",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "definition"
+        },
+        "rdfs:comment": {
+          "en": "Term definition(s) associated with this context."
+        },
+        "rdfs:domain": "jsonld:Context",
+        "rdfs:range": "jsonld:TermDefinition"
+      },
+      {
+        "@id": "jsonld:iri",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "iri"
+        },
+        "rdfs:comment": {
+          "en": "The `@id` mapping of a [term definition](#TermDefinition)."
+        },
+        "rdfs:domain": "jsonld:TermDefinition"
+      },
+      {
+        "@id": "jsonld:language",
+        "@type": [
+          "rdf:Property",
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": "language"
+        },
+        "rdfs:comment": {
+          "en": "The default language is set in the context using the @language key whose value MUST be a string representing a [BCP47] language code or null."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#default-language",
+        "rdfs:domain": {
+          "owl:unionOf": [
+            "jsonld:Context",
+            "jsonld:ExpandedTermDefinition"
+          ]
+        },
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "jsonld:prefix",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "prefix"
+        },
+        "rdfs:comment": {
+          "en": "With the value `true`, allows this term to be used to construct a compact IRI when compacting."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
+        "rdfs:domain": "jsonld:ExpandedTermDefinition",
+        "rdfs:range": "xsd:boolean"
+      },
+      {
+        "@id": "jsonld:reverse",
+        "@type": [
+          "rdf:Property",
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": "reverse"
+        },
+        "rdfs:comment": {
+          "en": "The `@reverse` mapping of an [expanded term definition](#ExpandedTermDefinition)."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#reverse-properties",
+        "rdfs:domain": "jsonld:ExpandedTermDefinition"
+      },
+      {
+        "@id": "jsonld:term",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "term"
+        },
+        "rdfs:comment": {
+          "en": "The term associated with a [term definition](#TermDefinition)."
+        },
+        "rdfs:domain": "jsonld:TermDefinition",
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "jsonld:type",
+        "@type": [
+          "rdf:Property",
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": "type"
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](#ExpandedTermDefinition) contains the `@type` keyword, its value MUST be an _absolute IRI_, a _compact IRI_, a _term_, `null`, or one of the keywords `@id` or `@vocab`."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
+        "rdfs:domain": "jsonld:ExpandedTermDefinition"
+      },
+      {
+        "@id": "jsonld:version",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "version"
+        },
+        "rdfs:comment": {
+          "en": "The [processing mode](https://www.w3.org/TR/json-ld11/#dfn-processing-mode) defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with [JSON-LD 1.0](http://www.w3.org/TR/json-ld-syntax). By defining a different version using the `@version` member in a [context](#Context), or via explicit API option, other processing modes can be accessed. This specification defines extensions for the `json-ld-1.1` processing mode."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-processing-mode",
+        "rdfs:domain": "jsonld:Context",
+        "rdfs:range": "xsd:decimal"
+      },
+      {
+        "@id": "jsonld:vocab",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "vocab"
+        },
+        "rdfs:comment": {
+          "en": "Used to expand properties and values in `@type` with a common prefix IRI."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#default-vocabulary",
+        "rdfs:domain": "jsonld:Context"
       }
     ],
     "rdfs_instances": [
       {
         "@id": "jsonld:compacted",
-        "@type": "owl:NamedIndividual",
+        "@type": [
+          "owl:NamedIndividual"
+        ],
         "rdfs:label": {
           "en": "compacted"
         },
@@ -135,7 +420,9 @@
       },
       {
         "@id": "jsonld:expanded",
-        "@type": "owl:NamedIndividual",
+        "@type": [
+          "owl:NamedIndividual"
+        ],
         "rdfs:label": {
           "en": "expanded"
         },
@@ -146,7 +433,9 @@
       },
       {
         "@id": "jsonld:flattened",
-        "@type": "owl:NamedIndividual",
+        "@type": [
+          "owl:NamedIndividual"
+        ],
         "rdfs:label": {
           "en": "flattened"
         },
@@ -154,6 +443,71 @@
           "en": "This profile URI is used to request or specify flattened JSON-LD document form."
         },
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+      },
+      {
+        "@id": "jsonld:graph",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](#ExpandedTermDefinition) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:id",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](#ExpandedTermDefinition) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:index",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](#ExpandedTermDefinition) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:list",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](#ExpandedTermDefinition) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:set",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": ""
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](#ExpandedTermDefinition) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
       }
     ]
   }
