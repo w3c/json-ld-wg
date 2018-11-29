@@ -92,17 +92,23 @@
     "flattened": {
       "@id": "jsonld:flattened"
     },
-    "graph": {
-      "@id": "jsonld:graph"
+    "graphContainerType": {
+      "@id": "jsonld:graphContainerType"
     },
-    "index": {
-      "@id": "jsonld:index"
+    "idContainerType": {
+      "@id": "jsonld:idContainerType"
     },
-    "list": {
-      "@id": "jsonld:list"
+    "indexContainerType": {
+      "@id": "jsonld:indexContainerType"
     },
-    "set": {
-      "@id": "jsonld:set"
+    "listContainerType": {
+      "@id": "jsonld:listContainerType"
+    },
+    "setContainerType": {
+      "@id": "jsonld:setContainerType"
+    },
+    "typeContainerType": {
+      "@id": "jsonld:typeContainerType"
     }
   },
   "@graph": {
@@ -191,8 +197,8 @@
     "dc:description": {
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
-    "dc:date": "2018-11-17",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/ad5e8a54fa1604876bd6ae8f742bef0aba1e680c",
+    "dc:date": "2018-11-19",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/0deae7c1b53da31f33520c7762a1cd0cdf91b164",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
@@ -216,7 +222,7 @@
           "rdfs:Class"
         ],
         "rdfs:label": {
-          "en": "Prefix Definitino"
+          "en": "Prefix Definition"
         },
         "rdfs:comment": {
           "en": "A string ([simple term definition](http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions)), expanding to an absolute IRI."
@@ -309,8 +315,7 @@
       {
         "@id": "jsonld:id",
         "@type": [
-          "rdf:Property",
-          "ContainerType"
+          "rdf:Property"
         ],
         "rdfs:label": {
           "en": "id"
@@ -400,8 +405,7 @@
       {
         "@id": "jsonld:type",
         "@type": [
-          "rdf:Property",
-          "ContainerType"
+          "rdf:Property"
         ],
         "rdfs:label": {
           "en": "type"
@@ -490,12 +494,12 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
       },
       {
-        "@id": "jsonld:graph",
+        "@id": "jsonld:graphContainerType",
         "@type": [
           "ContainerType"
         ],
         "rdfs:label": {
-          "en": ""
+          "en": "@graph"
         },
         "rdfs:comment": {
           "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
@@ -503,12 +507,12 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
       },
       {
-        "@id": "jsonld:index",
+        "@id": "jsonld:idContainerType",
         "@type": [
           "ContainerType"
         ],
         "rdfs:label": {
-          "en": ""
+          "en": "@id"
         },
         "rdfs:comment": {
           "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
@@ -516,12 +520,12 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
       },
       {
-        "@id": "jsonld:list",
+        "@id": "jsonld:indexContainerType",
         "@type": [
           "ContainerType"
         ],
         "rdfs:label": {
-          "en": ""
+          "en": "@index"
         },
         "rdfs:comment": {
           "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
@@ -529,12 +533,38 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
       },
       {
-        "@id": "jsonld:set",
+        "@id": "jsonld:listContainerType",
         "@type": [
           "ContainerType"
         ],
         "rdfs:label": {
-          "en": ""
+          "en": "@list"
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:setContainerType",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": "@set"
+        },
+        "rdfs:comment": {
+          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:typeContainerType",
+        "@type": [
+          "ContainerType"
+        ],
+        "rdfs:label": {
+          "en": "@type"
         },
         "rdfs:comment": {
           "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
@@ -556,9 +586,9 @@ and <a href='jsonld.jsonld' rel='alternate'>JSON-LD</a>.
 </p>
 <dl>
 <dt>Published:</dt>
-<dd><time>2018-11-17</time></dd>
+<dd><time>2018-11-19</time></dd>
 <dt>Version Info:</dt>
-<dd><a href='https://github.com/w3c/json-ld-wg/commit/ad5e8a54fa1604876bd6ae8f742bef0aba1e680c'>https://github.com/w3c/json-ld-wg/commit/ad5e8a54fa1604876bd6ae8f742bef0aba1e680c</a></dd>
+<dd><a href='https://github.com/w3c/json-ld-wg/commit/0deae7c1b53da31f33520c7762a1cd0cdf91b164'>https://github.com/w3c/json-ld-wg/commit/0deae7c1b53da31f33520c7762a1cd0cdf91b164</a></dd>
 </dl>
 <section>
 <h2>Introduction</h2>
@@ -620,15 +650,17 @@ namespace:
 <em>Context</em>
 <span class='permalink'><a href='#Context' title='Permalink for Context'>§</a></span>
 <p>Defines term definitions and other aspects of a JSON-LD <code>Context</code>.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='PrefixDefinition'>
 <td class='bold'>PrefixDefinition</td>
 <td>
-<em>Prefix Definitino</em>
-<span class='permalink'><a href='#PrefixDefinition' title='Permalink for Prefix Definitino'>§</a></span>
+<em>Prefix Definition</em>
+<span class='permalink'><a href='#PrefixDefinition' title='Permalink for Prefix Definition'>§</a></span>
 <p>A string (<a href="http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions">simple term definition</a>), expanding to an absolute IRI.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -638,6 +670,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>Term Definition</em>
 <span class='permalink'><a href='#TermDefinition' title='Permalink for Term Definition'>§</a></span>
 <p>A <a href="http://www.w3.org/TR/json-ld11/#dfn-term-definitions">term definition</a> is an entry in a <a href="#Context">context</a>, where the key defines a term which may be used within a dictionary as a key, type, or elsewhere that a string is interpreted as a vocabulary item. Its value is an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -658,6 +691,7 @@ namespace:
 <em>base</em>
 <span class='permalink'><a href='#base' title='Permalink for base'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> has an <code>@base</code> key, its value MUST be an <em>absolute IRI</em>, a <em>relative IRI</em>, or <code>null</code>.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -673,6 +707,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>container</em>
 <span class='permalink'><a href='#container' title='Permalink for container'>§</a></span>
 <p>The associated <code>@container</code> value in an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>..</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -688,6 +723,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>context</em>
 <span class='permalink'><a href='#context' title='Permalink for context'>§</a></span>
 <p>As an IRI, this link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD. As a Context, defines an inline <code>context definition</code>.</p>
+
 You can read more about this feature in the <a href='http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -704,6 +740,7 @@ jsonld:Context xsd:anyUri
 <em>definition</em>
 <span class='permalink'><a href='#definition' title='Permalink for definition'>§</a></span>
 <p>Term definition(s) associated with this context.</p>
+
 <dl class='terms'>
 <dt>rdfs:range</dt>
 <dd>
@@ -722,6 +759,7 @@ jsonld:TermDefinition jsonld:PrefixDefinition
 <span class='permalink'><a href='#id' title='Permalink for id'>§</a></span>
 <p>The <code>@id</code> mapping of a <a href="#TermDefinition">term definition</a>.</p>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -739,7 +777,8 @@ jsonld:TermDefinition jsonld:PrefixDefinition
 <td>
 <em>language</em>
 <span class='permalink'><a href='#language' title='Permalink for language'>§</a></span>
-<p>The default language is set in the context using the <span class="citation">@language</span> key whose value MUST be a string representing a [BCP47] language code or null.</p>
+<p>The default language is set in the context using the @language key whose value MUST be a string representing a [BCP47] language code or null.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#default-language'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -758,6 +797,7 @@ jsonld:Context jsonld:TermDefinition
 <em>prefix</em>
 <span class='permalink'><a href='#prefix' title='Permalink for prefix'>§</a></span>
 <p>With the value <code>true</code>, allows this term to be used to construct a compact IRI when compacting.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -773,6 +813,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>reverse</em>
 <span class='permalink'><a href='#reverse' title='Permalink for reverse'>§</a></span>
 <p>The <code>@reverse</code> mapping of an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#reverse-properties'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -788,6 +829,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>term</em>
 <span class='permalink'><a href='#term' title='Permalink for term'>§</a></span>
 <p>The term associated with a <a href="#TermDefinition">term definition</a>.</p>
+
 <dl class='terms'>
 <dt>rdfs:range</dt>
 <dd>xsd:string</dd>
@@ -805,6 +847,7 @@ jsonld:TermDefinition jsonld:PrefixDefinition
 <em>type</em>
 <span class='permalink'><a href='#type' title='Permalink for type'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@type</code> keyword, its value MUST be an <em>absolute IRI</em>, a <em>compact IRI</em>, a <em>term</em>, <code>null</code>, or one of the keywords <code>@id</code> or <code>@vocab</code>.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -823,6 +866,7 @@ xsd:anyUri xsd:string
 <em>version</em>
 <span class='permalink'><a href='#version' title='Permalink for version'>§</a></span>
 <p>The <a href="https://www.w3.org/TR/json-ld11/#dfn-processing-mode">processing mode</a> defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with <a href="http://www.w3.org/TR/json-ld-syntax">JSON-LD 1.0</a>. By defining a different version using the <code>@version</code> member in a <a href="#Context">context</a>, or via explicit API option, other processing modes can be accessed. This specification defines extensions for the <code>json-ld-1.1</code> processing mode.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-processing-mode'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -838,6 +882,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>vocab</em>
 <span class='permalink'><a href='#vocab' title='Permalink for vocab'>§</a></span>
 <p>Used to expand properties and values in <code>@type</code> with a common prefix IRI.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#default-vocabulary'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>rdfs:range</dt>
@@ -864,6 +909,7 @@ namespace:
 <em>compacted</em>
 <span class='permalink'><a href='#compacted' title='Permalink for compacted'>§</a></span>
 <p>This profile IRI is used to request or specify compacted JSON-LD document form.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -873,6 +919,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>expanded</em>
 <span class='permalink'><a href='#expanded' title='Permalink for expanded'>§</a></span>
 <p>This profile URI is used to request or specify expanded JSON-LD document form.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -882,42 +929,67 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>flattened</em>
 <span class='permalink'><a href='#flattened' title='Permalink for flattened'>§</a></span>
 <p>This profile URI is used to request or specify flattened JSON-LD document form.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
-<tr id='graph'>
-<td class='bold'>graph</td>
+<tr id='graphContainerType'>
+<td class='bold'>graphContainerType</td>
 <td>
-<em></em>
-<span class='permalink'><a href='#graph' title='Permalink for '>§</a></span>
+<em>@graph</em>
+<span class='permalink'><a href='#graphContainerType' title='Permalink for @graph'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
-<tr id='index'>
-<td class='bold'>index</td>
+<tr id='idContainerType'>
+<td class='bold'>idContainerType</td>
 <td>
-<em></em>
-<span class='permalink'><a href='#index' title='Permalink for '>§</a></span>
+<em>@id</em>
+<span class='permalink'><a href='#idContainerType' title='Permalink for @id'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
-<tr id='list'>
-<td class='bold'>list</td>
+<tr id='indexContainerType'>
+<td class='bold'>indexContainerType</td>
 <td>
-<em></em>
-<span class='permalink'><a href='#list' title='Permalink for '>§</a></span>
+<em>@index</em>
+<span class='permalink'><a href='#indexContainerType' title='Permalink for @index'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
-<tr id='set'>
-<td class='bold'>set</td>
+<tr id='listContainerType'>
+<td class='bold'>listContainerType</td>
 <td>
-<em></em>
-<span class='permalink'><a href='#set' title='Permalink for '>§</a></span>
+<em>@list</em>
+<span class='permalink'><a href='#listContainerType' title='Permalink for @list'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
+You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+</td>
+</tr>
+<tr id='setContainerType'>
+<td class='bold'>setContainerType</td>
+<td>
+<em>@set</em>
+<span class='permalink'><a href='#setContainerType' title='Permalink for @set'>§</a></span>
+<p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
+You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+</td>
+</tr>
+<tr id='typeContainerType'>
+<td class='bold'>typeContainerType</td>
+<td>
+<em>@type</em>
+<span class='permalink'><a href='#typeContainerType' title='Permalink for @type'>§</a></span>
+<p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
+
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -974,9 +1046,9 @@ jsonld:expanded
 <dd>
 jsonld:flattened
 </dd>
-<dt>graph</dt>
+<dt>graphContainerType</dt>
 <dd>
-jsonld:graph
+jsonld:graphContainerType
 </dd>
 <dt>id</dt>
 <dd>
@@ -984,17 +1056,21 @@ jsonld:id
 with string values interpreted as
 @id
 </dd>
-<dt>index</dt>
+<dt>idContainerType</dt>
 <dd>
-jsonld:index
+jsonld:idContainerType
+</dd>
+<dt>indexContainerType</dt>
+<dd>
+jsonld:indexContainerType
 </dd>
 <dt>language</dt>
 <dd>
 jsonld:language
 </dd>
-<dt>list</dt>
+<dt>listContainerType</dt>
 <dd>
-jsonld:list
+jsonld:listContainerType
 </dd>
 <dt>prefix</dt>
 <dd>
@@ -1008,9 +1084,9 @@ jsonld:reverse
 with string values interpreted as
 xsd:anyUri
 </dd>
-<dt>set</dt>
+<dt>setContainerType</dt>
 <dd>
-jsonld:set
+jsonld:setContainerType
 </dd>
 <dt>term</dt>
 <dd>
@@ -1021,6 +1097,10 @@ jsonld:term
 jsonld:type
 with string values interpreted as
 @id
+</dd>
+<dt>typeContainerType</dt>
+<dd>
+jsonld:typeContainerType
 </dd>
 <dt>version</dt>
 <dd>
