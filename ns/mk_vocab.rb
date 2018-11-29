@@ -239,7 +239,7 @@ class Vocab
     output << %(  dc:title "#{TITLE}"@en;)
     output << %(  dc:description """#{DESCRIPTION}"""@en;)
     output << %(  dc:date "#{date}"^^xsd:date;)
-    output << %(  dc:imports #{imports.map {|i| '<' + i + '>'}.join(", ")};) if imports
+    output << %(  dc:imports #{imports.map {|i| '<' + i + '>'}.join(", ")};) if imports.length > 0
     output << %(  owl:versionInfo <#{commit}>;)
     output << %(  rdfs:seeAlso #{seeAlso.map {|i| '<' + i + '>'}.join(", ")} .)
 
