@@ -79,13 +79,10 @@ class Vocab
       "rdfs:seeAlso": {"@type": "@id"},
       "rdfs:subClassOf": {"@type": "@id"},
       "rdfs:subPropertyOf": {"@type": "@id"},
-      "owl:equivalentClass": {"@type": "@vocab"},
-      "owl:equivalentProperty": {"@type": "@vocab"},
-      "owl:oneOf": {"@container": "@list", "@type": "@vocab"},
       "owl:imports": {"@type": "@id"},
       "owl:versionInfo": {"@type": "@id"},
-      "owl:inverseOf": {"@type": "@vocab"},
-      "owl:unionOf": {"@type": "@vocab", "@container": "@list"},
+      "schema:domainIncludes": {"@type": "@vocab", "@container": "@set"},
+      "schema:rangeIncludes": {"@type": "@vocab", "@container": "@set"},
       "rdfs_classes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
       "rdfs_properties": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
       "rdfs_datatypes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
@@ -149,15 +146,15 @@ class Vocab
       domains = entry[:domain].to_s.split(',')
       case domains.length
       when 0  then ;
-      when 1  then node['rdfs:domain'] = namespaced(domains.first)
-      else         node['rdfs:domain'] = {'owl:unionOf' => domains.map {|d| namespaced(d)}}
+      when 1  then node['schema:domainIncludes'] = namespaced(domains.first)
+      else         node['schema:domainIncludes'] = domains.map {|d| namespaced(d)}
       end
 
       ranges = entry[:range].to_s.split(',')
       case ranges.length
       when 0  then ;
-      when 1  then node['rdfs:range'] = namespaced(ranges.first)
-      else         node['rdfs:range'] = {'owl:unionOf' => ranges.map {|r| namespaced(r)}}
+      when 1  then node['schema:rangeIncludes'] = namespaced(ranges.first)
+      else         node['schema:rangeIncludes'] = ranges.map {|r| namespaced(r)}
       end
 
       rdfs_properties << node
@@ -231,15 +228,16 @@ class Vocab
       "owl"  => {subClassOf: "http://www.w3.org/2002/07/owl#"},
       "rdf"  => {subClassOf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"},
       "rdfs" => {subClassOf: "http://www.w3.org/2000/01/rdf-schema#"},
+      "schema" => {subClassOf: "http://schema.org/"},
     }.merge(@prefixes).dup
     prefixes.each {|id, entry| output << "@prefix #{id}: <#{entry[:subClassOf]}> ."}
 
-    output << "\n# JSON-LD Ontology definition"
+    output << "\n# JSON-LD Vocabulary definition"
     output << "jsonld: a owl:Ontology;"
     output << %(  dc:title "#{TITLE}"@en;)
     output << %(  dc:description """#{DESCRIPTION}"""@en;)
     output << %(  dc:date "#{date}"^^xsd:date;)
-    output << %(  dc:imports #{imports.map {|i| '<' + i + '>'}.join(", ")};) if imports.length > 0
+    output << %(  dc:imports #{imports.map {|i| '<' + i + '>'}.join(", ")};) unless Array(imports).empty?
     output << %(  owl:versionInfo <#{commit}>;)
     output << %(  rdfs:seeAlso #{seeAlso.map {|i| '<' + i + '>'}.join(", ")} .)
 
@@ -265,17 +263,15 @@ class Vocab
         domains = entry[:domain].to_s.split(',')
         case domains.length
         when 0  then ;
-        when 1  then output << %(  rdfs:domain #{namespaced(entry[:domain])};)
         else
-          output << %(  rdfs:domain [ owl:unionOf (#{domains.map {|d| namespaced(d)}.join(' ')})];)
+          output << %(  schema:domainIncludes #{domains.map {|d| namespaced(d)}.join(', ')})
         end
 
         ranges = entry[:range].to_s.split(',')
         case ranges.length
         when 0  then ;
-        when 1  then output << %(  rdfs:range #{namespaced(entry[:range])};)
         else
-          output << %(  rdfs:range [ owl:unionOf (#{ranges.map {|d| namespaced(d)}.join(' ')})];)
+          output << %(  schema:rangeIncludes #{domains.map {|d| namespaced(d)}.join(', ')})
         end
         output << %(  rdfs:seeAlso <#{entry[:seeAlso]}>;) if entry[:seeAlso]
         output << %(  rdfs:isDefinedBy jsonld: .)

@@ -112,18 +112,12 @@
                   = " "
                   %a{href: defn['rdfs:seeAlso']}<>= "JSON-LD Syntax Specification"
                   = "."
-                - if %w(rdfs:subClassOf rdfs:subPropertyOf rdfs:range rdfs:domain).any? { |p| defn.has_key?(p)}
+                - if %w(rdfs:subClassOf rdfs:subPropertyOf schema:rangeIncludes schema:domainIncludes).any? { |p| defn.has_key?(p)}
                   %dl{class: :terms}
-                    - %w(rdfs:subClassOf rdfs:subPropertyOf rdfs:range rdfs:domain).each do |p|
+                    - %w(rdfs:subClassOf rdfs:subPropertyOf schema:rangeIncludes schema:domainIncludes).each do |p|
                       - if defn.has_key?(p)
                         %dt<=p
-                        - Array(defn[p]).each do |v|
-                          - if v.is_a?(Array) && v.first == 'owl:unionOf'
-                            %dd
-                              Union of
-                              = v.last.join(' ')
-                          - else
-                            %dd<= v
+                        %dd<= Array(defn[p]).join(", ")
     %section
       %h2<="Term Definitions"
       %dl{class: :terms}
