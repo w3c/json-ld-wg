@@ -1,0 +1,146 @@
+%html{lang: :en}
+  %head
+    %meta{charset: 'utf-8'}
+    %title<= ont['dc:title']['en']
+    %link{href: "http://www.w3.org/StyleSheets/TR/W3C-ED", rel: :stylesheet}
+    :css
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    %script{type: 'application/ld+json'}
+      = source
+  %body
+    %h1<=ont["dc:title"]["en"]
+    %p<
+      %a{href: 'http://www.w3.org/'}<
+        %img(src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72")
+    %p
+      Alternate versions of the vocabulary definition exist in
+      %a(rel="alternate" href="jsonld.ttl")<="Turtle"
+      and
+      = " "
+      %a(rel="alternate" href="jsonld.jsonld")<>="JSON-LD"
+      = "."
+    %dl
+      %dt<="Published:"
+      %dd<
+        %time<= ont['dc:date']
+      - unless Array(ont['owl:imports']).empty?
+        %dt<="Imports"
+        - Array(ont["owl:imports"]).each do |ref|
+          %dd<
+            %a{href: ref}<= ref
+      %dt<="Version Info:"
+      %dd<
+        %a{href: ont['owl:versionInfo']}<= ont['owl:versionInfo']
+    %section
+      %h2<="Introduction"
+      %p
+        This document, and the associated documents in alternative formats, defines the JSON-LD Namespace.
+        This includes URIs required for HTTP Profile and media-type profile definitions,
+        Link relations used for locating JSON-LD context files,
+        and a vocabulary that can be used for representing JSON-LD contexts in RDF.
+      %p
+        For example, the following Turtle defines a subset of the terms defined in the JSON-LD vocabulary context definition:
+
+      %pre.example
+        :plain
+          @prefix : &lt;http://www.w3.org/ns/jsonld&gt; .
+          [ a :Context
+            :version 1.1;
+            :definition [
+              a :PrefixDefinition;
+              :term "jsonld";
+              :iri &lt;http://www.w3.org/ns/json-ld#&gt;;
+            ], [
+              a :ExpandedTermDefinition;
+              :term "Context";
+              :iri :Context
+            ], [
+              a :ExpandedTermDefinition;
+              :term "base";
+              :iri :base;
+              :type "@id"
+            ]
+          ] .
+    %section
+      %h2<="Prefix Definitions"
+      %dl{class: :terms}
+        - context.keys.sort.each do |term|
+          - defn = context[term]
+          - next unless defn.is_a?(String)
+          %dt<=term
+          %dd<=defn
+    :ruby
+      sect_defs = [{ heading: "Class Definitions", key: "rdfs_classes"},     
+       { heading: "Property Definitions", key: "rdfs_properties"},
+       { heading: "Datatype Definitions", key: "rdfs_datatypes"},
+       { heading: "Instance Definitions", key: "rdfs_instances"} 
+      ]
+    - sect_defs.each do |sect|
+      - next unless ont[sect[:key]]
+      %section
+      %h2<= sect[:heading]
+      %p
+        The following are
+        = sect[:heading].downcase
+        in the
+        %code<="jsonld"
+        namespace:
+        %table{class: 'rdfs-definition'}
+          - Array(ont[sect[:key]]).each do |defn|
+            %tr{id: defn['@id'].sub('jsonld:', '')}
+              %td{class: :bold}<= defn['@id'].sub('jsonld:', '')
+              %td
+                %em<= defn['rdfs:label']['en']
+                %span{class: :permalink}<
+                  %a{href: "##{defn['@id'].sub('jsonld:', '')}", title: "Permalink for #{defn['rdfs:label']['en']}"}<="§"
+                :markdown
+                  #{defn['rdfs:comment']['en']}
+                -if defn['rdfs:seeAlso']
+                  You can read more about this feature in the
+                  = " "
+                  %a{href: defn['rdfs:seeAlso']}<>= "JSON-LD Syntax Specification"
+                  = "."
+                - if %w(rdfs:subClassOf rdfs:subPropertyOf schema:rangeIncludes schema:domainIncludes).any? { |p| defn.has_key?(p)}
+                  %dl{class: :terms}
+                    - %w(rdfs:subClassOf rdfs:subPropertyOf schema:rangeIncludes schema:domainIncludes).each do |p|
+                      - if defn.has_key?(p)
+                        %dt<=p
+                        %dd<= Array(defn[p]).join(", ")
+    %section
+      %h2<="Term Definitions"
+      %dl{class: :terms}
+        - context.keys.sort.each do |term|
+          - defn = context[term]
+          - next if defn.is_a?(String)
+          %dt<= term
+          %dd
+            - if defn['@id']
+              = defn['@id']
+            - elsif defn['@reverse']
+              reverse of
+              = defn['@reverse']
+            - else
+              = term
+            - if defn.is_a?(Hash) && defn['@type']
+              with string values interpreted as
+              = defn['@type']
+            - if defn.is_a?(Hash) && defn['@container']
+              - if defn['@container'] == '@language'
+                with object values interpreted as language-specific, indexed by language
+              - elsif lsif defn['@container'] == '@index'
+                with object values interpreted indexed by index
+              - else
+                with array values interpreted as
+                = defn['@container']

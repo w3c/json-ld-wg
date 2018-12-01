@@ -4,7 +4,7 @@
 require 'getoptlong'
 require 'csv'
 require 'json'
-require 'erubis'
+require 'haml'
 
 class Vocab
   JSON_STATE = JSON::State.new(
@@ -38,7 +38,7 @@ class Vocab
       # Create entry as object indexed by symbolized column name
       line.each_with_index {|v, i| entry[columns[i]] = v ? v.gsub("\r", "\n").gsub("\\", "\\\\") : nil}
 
-      case entry[:type]
+      case entry[:type].to_s.split(',').first
       when 'prefix'         then @prefixes[entry[:id]] = entry
       when 'term'           then @terms[entry[:id]] = entry
       when 'rdf:Property'   then @properties[entry[:id]] = entry
@@ -65,6 +65,10 @@ class Vocab
     rdfs_context = ::JSON.parse %({
       "id": "@id",
       "type": "@type",
+      "dc": "http://purl.org/dc/terms/",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "dc:title": {"@container": "@language"},
       "dc:description": {"@container": "@language"},
       "dc:date": {"@type": "xsd:date"},
@@ -75,13 +79,10 @@ class Vocab
       "rdfs:seeAlso": {"@type": "@id"},
       "rdfs:subClassOf": {"@type": "@id"},
       "rdfs:subPropertyOf": {"@type": "@id"},
-      "owl:equivalentClass": {"@type": "@vocab"},
-      "owl:equivalentProperty": {"@type": "@vocab"},
-      "owl:oneOf": {"@container": "@list", "@type": "@vocab"},
       "owl:imports": {"@type": "@id"},
       "owl:versionInfo": {"@type": "@id"},
-      "owl:inverseOf": {"@type": "@vocab"},
-      "owl:unionOf": {"@type": "@vocab", "@container": "@list"},
+      "schema:domainIncludes": {"@type": "@vocab", "@container": "@set"},
+      "schema:rangeIncludes": {"@type": "@vocab", "@container": "@set"},
       "rdfs_classes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
       "rdfs_properties": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
       "rdfs_datatypes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
@@ -107,7 +108,7 @@ class Vocab
       # Class definition
       node = {
         '@id' => namespaced(id),
-        '@type' => 'rdfs:Class',
+        '@type' => entry[:type].split(/\s*,\s*/),
         'rdfs:label' => {"en" => entry[:label].to_s},
         'rdfs:comment' => {"en" => entry[:comment].to_s},
       }
@@ -135,7 +136,7 @@ class Vocab
       # Property definition
       node = {
         '@id' => namespaced(id),
-        '@type' => 'rdf:Property',
+        '@type' => entry[:type].split(/\s*,\s*/),
         'rdfs:label' => {"en" => entry[:label].to_s},
         'rdfs:comment' => {"en" => entry[:comment].to_s},
       }
@@ -145,15 +146,15 @@ class Vocab
       domains = entry[:domain].to_s.split(',')
       case domains.length
       when 0  then ;
-      when 1  then node['rdfs:domain'] = namespaced(domains.first)
-      else         node['rdfs:domain'] = {'owl:unionOf' => domains.map {|d| namespaced(d)}}
+      when 1  then node['schema:domainIncludes'] = namespaced(domains.first)
+      else         node['schema:domainIncludes'] = domains.map {|d| namespaced(d)}
       end
 
       ranges = entry[:range].to_s.split(',')
       case ranges.length
       when 0  then ;
-      when 1  then node['rdfs:range'] = namespaced(ranges.first)
-      else         node['rdfs:range'] = {'owl:unionOf' => ranges.map {|r| namespaced(r)}}
+      when 1  then node['schema:rangeIncludes'] = namespaced(ranges.first)
+      else         node['schema:rangeIncludes'] = ranges.map {|r| namespaced(r)}
       end
 
       rdfs_properties << node
@@ -165,7 +166,7 @@ class Vocab
       # Datatype definition
       node = {
         '@id' => namespaced(id),
-        '@type' => 'rdfs:Datatype',
+        '@type' => entry[:type].split(/\s*,\s*/),
         'rdfs:label' => {"en" => entry[:label].to_s},
         'rdfs:comment' => {"en" => entry[:comment].to_s},
       }
@@ -179,7 +180,7 @@ class Vocab
       # Instance definition
       node = {
         '@id' => namespaced(id),
-        '@type' => entry[:type],
+        '@type' => entry[:type].split(/\s*,\s*/),
         'rdfs:label' => {"en" => entry[:label].to_s},
         'rdfs:comment' => {"en" => entry[:comment].to_s},
       }
@@ -193,10 +194,6 @@ class Vocab
       "@context" => rdfs_context,
       "@id" => prefixes["jsonld"][:subClassOf],
       "@type" => "owl:Ontology",
-      "dc": "http://purl.org/dc/terms/",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "dc:title" => {"en" => TITLE},
       "dc:description" => {"en" => DESCRIPTION},
       "dc:date" => date,
@@ -217,8 +214,10 @@ class Vocab
 
   def to_html
     json = JSON.parse(to_jsonld)
-    eruby = Erubis::Eruby.new(File.read("template.html"))
-    eruby.result(ont: json['@graph'], context: json['@context'])
+    template = File.read("template.haml")
+    html = Haml::Engine.new(template, format: :html5)
+            .render(Object.new, ont: json['@graph'], context: json['@context'], source: json.to_json(JSON_STATE))
+    html
   end
 
   def to_ttl
@@ -229,23 +228,23 @@ class Vocab
       "owl"  => {subClassOf: "http://www.w3.org/2002/07/owl#"},
       "rdf"  => {subClassOf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#"},
       "rdfs" => {subClassOf: "http://www.w3.org/2000/01/rdf-schema#"},
+      "schema" => {subClassOf: "http://schema.org/"},
     }.merge(@prefixes).dup
     prefixes.each {|id, entry| output << "@prefix #{id}: <#{entry[:subClassOf]}> ."}
 
-    output << "\n# JSON-LD Ontology definition"
+    output << "\n# JSON-LD Vocabulary definition"
     output << "jsonld: a owl:Ontology;"
     output << %(  dc:title "#{TITLE}"@en;)
     output << %(  dc:description """#{DESCRIPTION}"""@en;)
     output << %(  dc:date "#{date}"^^xsd:date;)
-    output << %(  dc:imports #{imports.map {|i| '<' + i + '>'}.join(", ")};) if imports
+    output << %(  dc:imports #{imports.map {|i| '<' + i + '>'}.join(", ")};) unless Array(imports).empty?
     output << %(  owl:versionInfo <#{commit}>;)
-    output << %(  rdfs:seeAlso #{seeAlso.map {|i| '<' + i + '>'}.join(", ")};)
-    output << "  .\n"
+    output << %(  rdfs:seeAlso #{seeAlso.map {|i| '<' + i + '>'}.join(", ")} .)
 
     unless @classes.empty?
       output << "\n# Class definitions"#{
       @classes.each do |id, entry|
-        output << "jsonld:#{id} a rdfs:Class;"
+        output << "jsonld:#{id} a #{entry[:type].split(/\s*,\s*/).map {|t| namespaced(t)}.join(', ')};"
         output << %(  rdfs:label "#{entry[:label]}"@en;)
         output << %(  rdfs:comment """#{entry[:comment]}"""@en;)
         output << %(  rdfs:subClassOf #{namespaced(entry[:subClassOf])};) if entry[:subClassOf]
@@ -257,24 +256,22 @@ class Vocab
     unless @properties.empty?
       output << "\n# Property definitions"
       @properties.each do |id, entry|
-        output << "jsonld:#{id} a rdf:Property;"
+        output << "jsonld:#{id} a #{entry[:type].split(/\s*,\s*/).map {|t| namespaced(t)}.join(', ')};"
         output << %(  rdfs:label "#{entry[:label]}"@en;)
         output << %(  rdfs:comment """#{entry[:comment]}"""@en;)
         output << %(  rdfs:subPropertyOf #{namespaced(entry[:subClassOf])};) if entry[:subClassOf]
         domains = entry[:domain].to_s.split(',')
         case domains.length
         when 0  then ;
-        when 1  then output << %(  rdfs:domain #{namespaced(entry[:domain])};)
         else
-          output << %(  rdfs:domain [ owl:unionOf (#{domains.map {|d| namespaced(d)}.join(' ')})];)
+          output << %(  schema:domainIncludes #{domains.map {|d| namespaced(d)}.join(', ')})
         end
 
         ranges = entry[:range].to_s.split(',')
         case ranges.length
         when 0  then ;
-        when 1  then output << %(  rdfs:range #{namespaced(entry[:range])};)
         else
-          output << %(  rdfs:range [ owl:unionOf (#{ranges.map {|d| namespaced(d)}.join(' ')})];)
+          output << %(  schema:rangeIncludes #{domains.map {|d| namespaced(d)}.join(', ')})
         end
         output << %(  rdfs:seeAlso <#{entry[:seeAlso]}>;) if entry[:seeAlso]
         output << %(  rdfs:isDefinedBy jsonld: .)
@@ -284,7 +281,7 @@ class Vocab
     unless @datatypes.empty?
       output << "\n# Datatype definitions"
       @datatypes.each do |id, entry|
-        output << "jsonld:#{id} a rdfs:Datatype;"
+        output << "jsonld:#{id} a #{entry[:type].split(/\s*,\s*/).map {|t| namespaced(t)}.join(', ')};"
         output << %(  rdfs:label "#{entry[:label]}"@en;)
         output << %(  rdfs:comment """#{entry[:comment]}"""@en;)
         output << %(  rdfs:subClassOf #{namespaced(entry[:subClassOf])};) if entry[:subClassOf]
@@ -296,7 +293,7 @@ class Vocab
     unless @instances.empty?
       output << "\n# Instance definitions"
       @instances.each do |id, entry|
-        output << "jsonld:#{id} a #{namespaced(entry[:type])};"
+        output << "jsonld:#{id} a #{entry[:type].split(/\s*,\s*/).map {|t| namespaced(t)}.join(', ')};"
         output << %(  rdfs:label "#{entry[:label]}"@en;)
         output << %(  rdfs:comment """#{entry[:comment]}"""@en;)
         output << %(  rdfs:seeAlso <#{entry[:seeAlso]}>;) if entry[:subClassOf]
