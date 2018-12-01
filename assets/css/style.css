@@ -123,7 +123,7 @@ a:hover, a:focus {
 }
 
 a[rel="external"]:after {
-  content: " 🗗"
+  content: " ❐"
 }
 
 /*** header ***/
