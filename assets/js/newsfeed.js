@@ -42,6 +42,9 @@
 
 				var desc_p = article.appendChild(document.createElement("p"));
 				desc_p.innerHTML = desc;
+				var a = desc_p.appendChild(document.createElement("a"));
+				a.textContent = ' Continue reading →';
+				a.href = link;
 
 				body.appendChild(article);
 			}
