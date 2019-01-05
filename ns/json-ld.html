@@ -52,9 +52,12 @@
       "@id": "jsonld:definition",
       "@type": "@id"
     },
-    "id": {
-      "@id": "jsonld:id",
+    "frame": {
+      "@id": "jsonld:frame",
       "@type": "@id"
+    },
+    "id": {
+      "@id": "jsonld:id"
     },
     "language": {
       "@id": "jsonld:language",
@@ -92,6 +95,9 @@
     },
     "flattened": {
       "@id": "jsonld:flattened"
+    },
+    "framed": {
+      "@id": "jsonld:framed"
     },
     "graphContainerType": {
       "@id": "jsonld:graphContainerType"
@@ -189,8 +195,8 @@
     "dc:description": {
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
-    "dc:date": "2018-11-29",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/e5fac0a01a0cda11628ede074574b60167ccec7f",
+    "dc:date": "2018-11-30",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/5e2c7bcf723bbb2e5dccb012caf106f3a862456d",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
@@ -275,9 +281,9 @@
           "en": "context"
         },
         "rdfs:comment": {
-          "en": "As an IRI, this link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD. As a Context, defines an inline `context definition`."
+          "en": "As an IRI, this link relation is used to associate a JSON-LD context with a JSON document so that it can be interpreted as JSON-LD. In an HTTP request header, specifies the location of a context to use for compaction. As a Context, defines an inline `context definition`."
         },
-        "rdfs:seeAlso": "http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld",
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld",
         "schema:rangeIncludes": [
           "jsonld:Context",
           "xsd:anyUri"
@@ -299,6 +305,20 @@
           "jsonld:TermDefinition",
           "jsonld:PrefixDefinition"
         ]
+      },
+      {
+        "@id": "jsonld:frame",
+        "@type": [
+          "rdf:Property"
+        ],
+        "rdfs:label": {
+          "en": "frame"
+        },
+        "rdfs:comment": {
+          "en": "As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
+        "schema:rangeIncludes": "xsd:anyUri"
       },
       {
         "@id": "jsonld:id",
@@ -474,6 +494,19 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
       },
       {
+        "@id": "jsonld:framed",
+        "@type": [
+          "owl:NamedIndividual"
+        ],
+        "rdfs:label": {
+          "en": "framed"
+        },
+        "rdfs:comment": {
+          "en": "This profile URI is used to request or specify framed JSON-LD document form."
+        },
+        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+      },
+      {
         "@id": "jsonld:graphContainerType",
         "@type": [
           "ContainerType"
@@ -485,6 +518,19 @@
           "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
         },
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+      },
+      {
+        "@id": "jsonld:id",
+        "@type": [
+          "type"
+        ],
+        "rdfs:label": {
+          "en": "label"
+        },
+        "rdfs:comment": {
+          "en": "comment"
+        },
+        "rdfs:seeAlso": "seeAlso"
       },
       {
         "@id": "jsonld:idContainerType",
@@ -566,9 +612,9 @@ and <a href='jsonld.jsonld' rel='alternate'>JSON-LD</a>.
 </p>
 <dl>
 <dt>Published:</dt>
-<dd><time>2018-11-29</time></dd>
+<dd><time>2018-11-30</time></dd>
 <dt>Version Info:</dt>
-<dd><a href='https://github.com/w3c/json-ld-wg/commit/e5fac0a01a0cda11628ede074574b60167ccec7f'>https://github.com/w3c/json-ld-wg/commit/e5fac0a01a0cda11628ede074574b60167ccec7f</a></dd>
+<dd><a href='https://github.com/w3c/json-ld-wg/commit/5e2c7bcf723bbb2e5dccb012caf106f3a862456d'>https://github.com/w3c/json-ld-wg/commit/5e2c7bcf723bbb2e5dccb012caf106f3a862456d</a></dd>
 </dl>
 <section>
 <h2>Introduction</h2>
@@ -704,9 +750,9 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <td>
 <em>context</em>
 <span class='permalink'><a href='#context' title='Permalink for context'>§</a></span>
-<p>As an IRI, this link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD. As a Context, defines an inline <code>context definition</code>.</p>
+<p>As an IRI, this link relation is used to associate a JSON-LD context with a JSON document so that it can be interpreted as JSON-LD. In an HTTP request header, specifies the location of a context to use for compaction. As a Context, defines an inline <code>context definition</code>.</p>
 
-You can read more about this feature in the <a href='http://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>jsonld:Context, xsd:anyUri</dd>
@@ -728,12 +774,27 @@ You can read more about this feature in the <a href='http://www.w3.org/TR/json-l
 </dl>
 </td>
 </tr>
+<tr id='frame'>
+<td class='bold'>frame</td>
+<td>
+<em>frame</em>
+<span class='permalink'><a href='#frame' title='Permalink for frame'>§</a></span>
+<p>As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing.</p>
+
+You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+<dl class='terms'>
+<dt>schema:rangeIncludes</dt>
+<dd>xsd:anyUri</dd>
+</dl>
+</td>
+</tr>
 <tr id='id'>
 <td class='bold'>id</td>
 <td>
 <em>id</em>
 <span class='permalink'><a href='#id' title='Permalink for id'>§</a></span>
 <p>The <code>@id</code> mapping of a <a href="#TermDefinition">term definition</a>.</p>
+
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
@@ -897,6 +958,16 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
+<tr id='framed'>
+<td class='bold'>framed</td>
+<td>
+<em>framed</em>
+<span class='permalink'><a href='#framed' title='Permalink for framed'>§</a></span>
+<p>This profile URI is used to request or specify framed JSON-LD document form.</p>
+
+You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
+</td>
+</tr>
 <tr id='graphContainerType'>
 <td class='bold'>graphContainerType</td>
 <td>
@@ -905,6 +976,16 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+</td>
+</tr>
+<tr id='id'>
+<td class='bold'>id</td>
+<td>
+<em>label</em>
+<span class='permalink'><a href='#id' title='Permalink for label'>§</a></span>
+<p>comment</p>
+
+You can read more about this feature in the <a href='seeAlso'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='idContainerType'>
@@ -1010,6 +1091,16 @@ jsonld:expanded
 <dd>
 jsonld:flattened
 </dd>
+<dt>frame</dt>
+<dd>
+jsonld:frame
+with string values interpreted as
+@id
+</dd>
+<dt>framed</dt>
+<dd>
+jsonld:framed
+</dd>
 <dt>graphContainerType</dt>
 <dd>
 jsonld:graphContainerType
@@ -1017,8 +1108,6 @@ jsonld:graphContainerType
 <dt>id</dt>
 <dd>
 jsonld:id
-with string values interpreted as
-@id
 </dd>
 <dt>idContainerType</dt>
 <dd>
