@@ -11,7 +11,7 @@ layout: default
 
 {% assign yearly_minutes = site.minutes | group_by_exp: "item", "item.date | date: '%Y'" %}
 
-{% for year in yearly_minutes %}
+{% for year in yearly_minutes reversed %}
 
 ## {{ year.name }}
 
