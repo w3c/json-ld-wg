@@ -14,7 +14,8 @@
 },
 {
     "nick": ["pchampin"],
-    "name": "Pierre-Antoine Champin"
+    "name": "Pierre-Antoine Champin",
+    "github": "pchampin"
 },
 {
     "nick": [
@@ -125,7 +126,8 @@
     "nick": [
         "hsolbrig"
     ],
-    "name": "Harold Solbrig"
+    "name": "Harold Solbrig",
+    "github": "hsolbrig"
 },
 {
     "nick": [
