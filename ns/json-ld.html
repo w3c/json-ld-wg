@@ -195,8 +195,8 @@
     "dc:description": {
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
-    "dc:date": "2018-11-30",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/5e2c7bcf723bbb2e5dccb012caf106f3a862456d",
+    "dc:date": "2019-01-04",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/f8ca95bda51a6c7bc8ccd7f63b150d602010c478",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
@@ -612,9 +612,9 @@ and <a href='jsonld.jsonld' rel='alternate'>JSON-LD</a>.
 </p>
 <dl>
 <dt>Published:</dt>
-<dd><time>2018-11-30</time></dd>
+<dd><time>2019-01-04</time></dd>
 <dt>Version Info:</dt>
-<dd><a href='https://github.com/w3c/json-ld-wg/commit/5e2c7bcf723bbb2e5dccb012caf106f3a862456d'>https://github.com/w3c/json-ld-wg/commit/5e2c7bcf723bbb2e5dccb012caf106f3a862456d</a></dd>
+<dd><a href='https://github.com/w3c/json-ld-wg/commit/f8ca95bda51a6c7bc8ccd7f63b150d602010c478'>https://github.com/w3c/json-ld-wg/commit/f8ca95bda51a6c7bc8ccd7f63b150d602010c478</a></dd>
 </dl>
 <section>
 <h2>Introduction</h2>
@@ -635,11 +635,11 @@ For example, the following Turtle defines a subset of the terms defined in the J
     :term "jsonld";
     :iri &lt;http://www.w3.org/ns/json-ld#&gt;;
   ], [
-    a :ExpandedTermDefinition;
+    a :TermDefinition;
     :term "Context";
     :iri :Context
   ], [
-    a :ExpandedTermDefinition;
+    a :TermDefinition;
     :term "base";
     :iri :base;
     :type "@id"
@@ -678,7 +678,6 @@ namespace:
 <em>Context</em>
 <span class='permalink'><a href='#Context' title='Permalink for Context'>§</a></span>
 <p>Defines term definitions and other aspects of a JSON-LD <code>Context</code>.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -688,7 +687,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>Prefix Definition</em>
 <span class='permalink'><a href='#PrefixDefinition' title='Permalink for Prefix Definition'>§</a></span>
 <p>A string (<a href="http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions">simple term definition</a>), expanding to an absolute IRI.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -698,7 +696,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>Term Definition</em>
 <span class='permalink'><a href='#TermDefinition' title='Permalink for Term Definition'>§</a></span>
 <p>A <a href="http://www.w3.org/TR/json-ld11/#dfn-term-definitions">term definition</a> is an entry in a <a href="#Context">context</a>, where the key defines a term which may be used within a dictionary as a key, type, or elsewhere that a string is interpreted as a vocabulary item. Its value is an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -719,7 +716,6 @@ namespace:
 <em>base</em>
 <span class='permalink'><a href='#base' title='Permalink for base'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> has an <code>@base</code> key, its value MUST be an <em>absolute IRI</em>, a <em>relative IRI</em>, or <code>null</code>.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -735,7 +731,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>container</em>
 <span class='permalink'><a href='#container' title='Permalink for container'>§</a></span>
 <p>The associated <code>@container</code> value in an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>..</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -751,7 +746,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>context</em>
 <span class='permalink'><a href='#context' title='Permalink for context'>§</a></span>
 <p>As an IRI, this link relation is used to associate a JSON-LD context with a JSON document so that it can be interpreted as JSON-LD. In an HTTP request header, specifies the location of a context to use for compaction. As a Context, defines an inline <code>context definition</code>.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -765,7 +759,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>definition</em>
 <span class='permalink'><a href='#definition' title='Permalink for definition'>§</a></span>
 <p>Term definition(s) associated with this context.</p>
-
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>jsonld:TermDefinition, jsonld:PrefixDefinition</dd>
@@ -780,7 +773,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>frame</em>
 <span class='permalink'><a href='#frame' title='Permalink for frame'>§</a></span>
 <p>As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -794,9 +786,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>id</em>
 <span class='permalink'><a href='#id' title='Permalink for id'>§</a></span>
 <p>The <code>@id</code> mapping of a <a href="#TermDefinition">term definition</a>.</p>
-
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -811,8 +801,7 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <td>
 <em>language</em>
 <span class='permalink'><a href='#language' title='Permalink for language'>§</a></span>
-<p>The default language is set in the context using the @language key whose value MUST be a string representing a [BCP47] language code or null.</p>
-
+<p>The default language is set in the context using the <span class="citation">@language</span> key whose value MUST be a string representing a [BCP47] language code or null.</p>
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#default-language'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -828,7 +817,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>prefix</em>
 <span class='permalink'><a href='#prefix' title='Permalink for prefix'>§</a></span>
 <p>With the value <code>true</code>, allows this term to be used to construct a compact IRI when compacting.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -844,7 +832,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>reverse</em>
 <span class='permalink'><a href='#reverse' title='Permalink for reverse'>§</a></span>
 <p>The <code>@reverse</code> mapping of an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#reverse-properties'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -860,7 +847,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>term</em>
 <span class='permalink'><a href='#term' title='Permalink for term'>§</a></span>
 <p>The term associated with a <a href="#TermDefinition">term definition</a>.</p>
-
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:string</dd>
@@ -875,7 +861,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>type</em>
 <span class='permalink'><a href='#type' title='Permalink for type'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@type</code> keyword, its value MUST be an <em>absolute IRI</em>, a <em>compact IRI</em>, a <em>term</em>, <code>null</code>, or one of the keywords <code>@id</code> or <code>@vocab</code>.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -891,7 +876,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>version</em>
 <span class='permalink'><a href='#version' title='Permalink for version'>§</a></span>
 <p>The <a href="https://www.w3.org/TR/json-ld11/#dfn-processing-mode">processing mode</a> defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with <a href="http://www.w3.org/TR/json-ld-syntax">JSON-LD 1.0</a>. By defining a different version using the <code>@version</code> member in a <a href="#Context">context</a>, or via explicit API option, other processing modes can be accessed. This specification defines extensions for the <code>json-ld-1.1</code> processing mode.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-processing-mode'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -907,7 +891,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>vocab</em>
 <span class='permalink'><a href='#vocab' title='Permalink for vocab'>§</a></span>
 <p>Used to expand properties and values in <code>@type</code> with a common prefix IRI.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#default-vocabulary'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
@@ -934,7 +917,6 @@ namespace:
 <em>compacted</em>
 <span class='permalink'><a href='#compacted' title='Permalink for compacted'>§</a></span>
 <p>This profile IRI is used to request or specify compacted JSON-LD document form.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -944,7 +926,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>expanded</em>
 <span class='permalink'><a href='#expanded' title='Permalink for expanded'>§</a></span>
 <p>This profile URI is used to request or specify expanded JSON-LD document form.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -954,7 +935,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>flattened</em>
 <span class='permalink'><a href='#flattened' title='Permalink for flattened'>§</a></span>
 <p>This profile URI is used to request or specify flattened JSON-LD document form.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -964,7 +944,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>framed</em>
 <span class='permalink'><a href='#framed' title='Permalink for framed'>§</a></span>
 <p>This profile URI is used to request or specify framed JSON-LD document form.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -974,7 +953,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>@graph</em>
 <span class='permalink'><a href='#graphContainerType' title='Permalink for @graph'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -984,7 +962,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>label</em>
 <span class='permalink'><a href='#id' title='Permalink for label'>§</a></span>
 <p>comment</p>
-
 You can read more about this feature in the <a href='seeAlso'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -994,7 +971,6 @@ You can read more about this feature in the <a href='seeAlso'>JSON-LD Syntax Spe
 <em>@id</em>
 <span class='permalink'><a href='#idContainerType' title='Permalink for @id'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -1004,7 +980,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>@index</em>
 <span class='permalink'><a href='#indexContainerType' title='Permalink for @index'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -1014,7 +989,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>@list</em>
 <span class='permalink'><a href='#listContainerType' title='Permalink for @list'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -1024,7 +998,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>@set</em>
 <span class='permalink'><a href='#setContainerType' title='Permalink for @set'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
@@ -1034,7 +1007,6 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <em>@type</em>
 <span class='permalink'><a href='#typeContainerType' title='Permalink for @type'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
