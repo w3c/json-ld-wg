@@ -5,3 +5,4 @@ _site
 node_modules/
 .jekyll-metadata
 .vscode/
+assets/scribejs_config_local.json
