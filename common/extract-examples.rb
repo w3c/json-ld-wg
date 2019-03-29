@@ -17,6 +17,11 @@ require 'colorize'
 require 'yaml'
 require 'cgi'
 
+# FIXME: This is here until the rdf:JSON is added in RDF.rb
+unless RDF::RDFV.properties.include?( RDF.to_uri + 'JSON')
+  RDF::RDFV.property :JSON, label: "JSON", comment: "JSON datatype"
+end
+
 PREFIXES = {
   dc:     "http://purl.org/dc/terms/",
   cred:   "https://w3id.org/credentials#",
@@ -206,7 +211,6 @@ ARGV.each do |input|
         ext = case element.attr('data-content-type')
         when nil, '', 'application/ld+json' then "jsonld"
         when 'application/json' then 'json'
-        when 'application/ld-frame+json' then 'jsonldf'
         when 'application/n-quads', 'nq' then 'nq'
         when 'text/html', 'html' then 'html'
         when 'text/turtle', 'ttl' then 'ttl'
@@ -302,7 +306,7 @@ ARGV.each do |input|
 
     # Perform example syntactic validation based on extension
     case ex[:ext]
-    when 'json', 'jsonld', 'jsonldf'
+    when 'json', 'jsonld'
       begin
         ::JSON.parse(content)
       rescue JSON::ParserError => exception
@@ -325,8 +329,9 @@ ARGV.each do |input|
         html_base = doc.at_xpath('/html/head/base/@href')
         ex[:base] = html_base.to_s if html_base
 
-        script_content = doc.at_xpath(xpath)
-        content = script_content.inner_html if script_content          
+        #script_content = doc.at_xpath(xpath)
+        #content = script_content.inner_html if script_content
+        content
       rescue Nokogiri::XML::SyntaxError => exception
         errors << "Example #{ex[:number]} at line #{ex[:line]} parse error: #{exception.message}"
         $stdout.write "F".colorize(:red)
@@ -358,6 +363,12 @@ ARGV.each do |input|
       end
     end
 
+    if content.is_a?(String)
+      content = StringIO.new(content)
+      # Set content_type so it can be parsed properly
+      content.define_singleton_method(:content_type) {ex[:content_type]} if ex[:content_type]
+    end
+
     options = ex[:options].to_s.split(',').inject({}) do |memo, pair|
       k, v = pair.split('=')
       v = case v
@@ -367,6 +378,7 @@ ARGV.each do |input|
       end
       memo.merge(k.to_sym => v)
     end
+    options[:validate] = true
 
     # Set API to use
     method = case
@@ -390,7 +402,7 @@ ARGV.each do |input|
       end
 
       method = :frame
-      args = [StringIO.new(examples[ex[:frame_for]][:content]), StringIO.new(content), options]
+      args = [StringIO.new(examples[ex[:frame_for]][:content]), content, options]
     elsif ex[:context_for]
       unless examples[ex[:context_for]]
         errors << "Example Context #{ex[:number]} at line #{ex[:line]} references unknown example #{ex[:context_for].inspect}"
@@ -401,12 +413,12 @@ ARGV.each do |input|
       # Either exapand with this external context, or compact using it
       case method
       when :expand
-        options[:externalContext] = StringIO.new(content)
+        options[:externalContext] = content
         options[:base] = ex[:base] if ex[:base]
         args = [StringIO.new(examples[ex[:context_for]][:content]), options]
       when :compact, :flatten, nil
         options[:base] = ex[:base] if ex[:base]
-        args = [StringIO.new(examples[ex[:context_for]][:content]), StringIO.new(content), options]
+        args = [StringIO.new(examples[ex[:context_for]][:content]), content, options]
       end
     elsif %w(jsonld html).include?(ex[:ext])
       # Either exapand with this external context, or compact using it
@@ -414,14 +426,14 @@ ARGV.each do |input|
       when :expand, :toRdf, :fromRdf
         options[:externalContext] = StringIO.new(ex[:context]) if ex[:context]
         options[:base] = ex[:base] if ex[:base]
-        args = [StringIO.new(content), options]
+        args = [content, options]
       when :compact, :flatten
         # Fixme how to find context?
         options[:base] = ex[:base] if ex[:base]
-        args = [StringIO.new(content), (StringIO.new(ex[:context]) if ex[:context]), options]
+        args = [content, (StringIO.new(ex[:context]) if ex[:context]), options]
       end
     else
-      args = [StringIO.new(content), options]
+      args = [content, options]
     end
 
     if ex[:result_for]
@@ -448,7 +460,7 @@ ARGV.each do |input|
           $stdout.write "F".colorize(:red)
           next
         end
-        StringIO.new(script_content.inner_html)
+        StringIO.new(examples[ex[:result_for]][:content])
       elsif examples[ex[:result_for]][:ext] == 'html' && ex[:target]
         # Only use the targeted script
         doc = Nokogiri::HTML.parse(examples[ex[:result_for]][:content])
@@ -461,6 +473,10 @@ ARGV.each do |input|
         StringIO.new(script_content.to_html)
       else
         StringIO.new(examples[ex[:result_for]][:content])
+      end
+
+      if examples[ex[:result_for]][:content_type]
+        args[0].define_singleton_method(:content_type) {examples[ex[:result_for]][:content_type]}
       end
 
       # :frame option indicates the frame to use on the referenced content
@@ -514,13 +530,7 @@ ARGV.each do |input|
         args[0] = RDF::Reader.for(file_extension: ext).new(args[0])
         JSON::LD::API.fromRdf(*args)
       when :toRdf
-        if ext == 'html'
-          # If the referenced example is HTML, read it using the RDFa reader
-          # FIXME: the API may be updated to provide a native mechanism for this
-          RDF::Dataset.new statements: RDF::RDFa::Reader.new(*args)
-        else
-          RDF::Dataset.new statements: JSON::LD::API.toRdf(*args)
-        end
+        RDF::Dataset.new statements: JSON::LD::API.toRdf(*args)
       else
         JSON::LD::API.method(method).call(*args)
       end
@@ -543,7 +553,7 @@ ARGV.each do |input|
         # Compare to expected to result
         case ex[:ext]
         when 'ttl', 'trig', 'nq', 'html'
-          reader = RDF::Reader.for(file_extension: ex[:ext]).new(StringIO.new(content))
+          reader = RDF::Reader.for(file_extension: ex[:ext]).new(content)
           expected = RDF::Dataset.new(statements: reader)
           $stderr.puts "expected:\n" + expected.to_trig if verbose
         when 'table'
@@ -564,7 +574,7 @@ ARGV.each do |input|
             end
           end
         else
-          expected = ::JSON.parse(content)
+          expected = ::JSON.parse(content.read)
           $stderr.puts "expected: " + expected.to_json(JSON::LD::JSON_STATE) if verbose
         end
 
