@@ -49,7 +49,7 @@ repositories other documents.
 If you need to make edits to the IRC log before generating the output (due to
 incorrect scribenick or similar), you can download the W3C logs from URLs such
 as `https://www.w3.org/2018/07/06-json-ld-irc.txt`. Once downloaded, you can
-reference that input document directly (rather than using the automagic
+reference that input document directly (rather than using the automatic
 date-based retrieval).
 
 For example:
@@ -61,6 +61,8 @@ $ npm run scribejs -- 2018-07-06-json-ld-irc.txt -d 2018-07-06 -o _minutes/2018-
 Edit the .txt file and repeat the `npm run scribejs` line as necessary. Once
 finished, you can commit the `.md` file and delete the `.txt` file (or keep it
 for your records).
+
+Alternatively, you can also use the [browser interface to scribejs](https://w3c.github.io/scribejs/BrowserView/) relying on your local clone of the WG's repository.
 
 ### Jekyll
 

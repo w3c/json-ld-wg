@@ -1,5 +1,10 @@
 {
-  "group": "json-ld",
-  "nicknames": "assets/nicknames.json",
-  "jekyll": "kd"
+    "jekyll": "kd",
+    "ghrepo": "w3c/json-ld-wg",
+    "ghpath": "_minutes",
+    "ghbranch": "master",
+    "group": "json-ld",
+    "nicknames": "https://www.w3.org/2018/json-ld-wg/assets/nicknames.json",
+    "acrepo": "w3c/json-ld-wg",
+    "acurlpattern": "https://www.w3.org/2018/json-ld-wg/Meetings/Minutes/%YEAR%/%DATE%-json-ld"
 }
