@@ -2,6 +2,84 @@
 layout: minutes
 date: 2019-04-05
 title: JSON-LD Working Group Telco — 2019-04-05
+json-ld | {
+    "@context": "https://schema.org/",
+    "@type": "CreativeWork",
+    "url": "https://www.w3.org/2018/json-ld-wg/Meetings/Minutes/2019/2019-04-05-json-ld",
+    "name": "JSON-LD Working Group Telco — Minutes",
+    "about": "JSON-LD Working Group Telco",
+    "dateCreated": "2019-04-05",
+    "genre": "Meeting Minutes",
+    "publisher": {
+        "@type": "Organization",
+        "name": "World Wide Web Consortium",
+        "url": "https://www.w3.org/"
+    },
+    "recordedAt": {
+        "@type": "Event",
+        "name": "JSON-LD Working Group Telco",
+        "startDate": "2019-04-05",
+        "endDate": "2019-04-05",
+        "attendee": [
+            {
+                "@type": "OrganizationRole",
+                "roleName": "chair",
+                "attendee": [
+                    {
+                        "@type": "Person",
+                        "name": "Benjamin Young"
+                    }
+                ]
+            },
+            {
+                "@type": "Role",
+                "roleName": "scribe",
+                "attendee": [
+                    {
+                        "@type": "Person",
+                        "name": "Rob Sanderson"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Pierre-Antoine Champin"
+                    },
+                    {
+                        "@type": "Person",
+                        "name": "Benjamin Young"
+                    }
+                ]
+            },
+            {
+                "@type": "Person",
+                "name": "Simon Steyskal"
+            },
+            {
+                "@type": "Person",
+                "name": "Ivan Herman"
+            },
+            {
+                "@type": "Person",
+                "name": "Adam Soroka"
+            },
+            {
+                "@type": "Person",
+                "name": "Jeff Mixter"
+            },
+            {
+                "@type": "Person",
+                "name": "Harold Solbrig"
+            },
+            {
+                "@type": "Person",
+                "name": "David I. Lehn"
+            },
+            {
+                "@type": "Person",
+                "name": "Tim Cole"
+            }
+        ]
+    }
+}
 ---
 
 # JSON-LD Working Group Telco — Minutes
