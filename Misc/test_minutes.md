@@ -2,7 +2,8 @@
 layout: minutes
 date: 2019-04-05
 title: JSON-LD Working Group Telco — 2019-04-05
-json-ld: {
+json-ld: |
+{
     "@context": "https://schema.org/",
     "@type": "CreativeWork",
     "url": "https://www.w3.org/2018/json-ld-wg/Meetings/Minutes/2019/2019-04-05-json-ld",
