@@ -1,0 +1,9 @@
+{
+    "documents" : {
+        "json-ld-syntax" : {
+            "id": "107714",
+            "explicit_list": "https://raw.githubusercontent.com/w3c/json-ld-syntax/master/common//ack-script/separate_acks.json",
+            "html_pattern": "https://raw.githubusercontent.com/w3c/json-ld-syntax/master/common/ack-script/ack_pattern.html"
+        }
+    }
+}
