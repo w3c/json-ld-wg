@@ -2,8 +2,18 @@
     "documents" : {
         "json-ld-syntax" : {
             "id": "107714",
-            "explicit_list": "https://raw.githubusercontent.com/w3c/json-ld-syntax/master/common//ack-script/separate_acks.json",
-            "html_pattern": "https://raw.githubusercontent.com/w3c/json-ld-syntax/master/common/ack-script/ack_pattern.html"
+            "explicit_list": "https://raw.githubusercontent.com/w3c/json-ld-syntax/master/ack-script/separate_acks.json",
+            "html_pattern": "https://raw.githubusercontent.com/w3c/json-ld-syntax/master/ack-script/ack_pattern.html"
+        },
+        "json-ld-api" : {
+            "id": "107714",
+            "explicit_list": "https://raw.githubusercontent.com/w3c/json-ld-api/master/ack-script/separate_acks.json",
+            "html_pattern": "https://raw.githubusercontent.com/w3c/json-ld-api/master/ack-script/ack_pattern.html"
+        },
+        "json-ld-framing" : {
+            "id": "107714",
+            "explicit_list": "https://raw.githubusercontent.com/w3c/json-ld-framing/master/ack-script/separate_acks.json",
+            "html_pattern": "https://raw.githubusercontent.com/w3c/json-ld-framing/master/ack-script/ack_pattern.html"
         }
     }
 }
