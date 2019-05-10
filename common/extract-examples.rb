@@ -238,7 +238,7 @@ ARGV.each do |input|
           context_for: element.attr('data-context-for'),
           context: element.attr('data-context'),
           base: element.attr('data-base'),
-          ignore: element.attr('data-ignore'),
+          ignore: element.attr('data-ignore') || element.attr('class').include?('illegal-example'),
           flatten: element.attr('data-flatten'),
           compact: element.attr('data-compact'),
           fromRdf: element.attr('data-from-rdf'),
