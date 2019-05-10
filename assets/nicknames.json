@@ -140,7 +140,7 @@
     "github": "ajs6f"
 },
 {
-    "nick": [],
+    "nick": ["manu"],
     "name": "Manu Sporny",
     "github": "msporny"
 },
@@ -160,13 +160,4 @@
     ],
     "github": "rubensworks",
     "name": "Ruben Taelman"
-
-},
-{
-    "name" : "Luc Audrain",
-    "nick" : [
-        "laudrain",
-        "luc"
-    ]
-
 }]
