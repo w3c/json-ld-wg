@@ -21,6 +21,7 @@ The Group also uses IRC for during the calls for minute taking, queue control, a
 
 ## F2F meetings
 
+* 2019 - [September 19-10, Fukuoka, Japan](./F2F/2019.09.Fuk)
 * 2019 - [February 7-8, Washington, DC, USA](./F2F/2019.02.DC)
 * 2018 - [October 25-26, Lyon, France](./F2F/2018.10.Lyon)
 
@@ -42,6 +43,6 @@ Minute taking and cleanup is greatly helped by:
 
 ### Updating the minutes
 
-The minutes themselves are stored, in Markdown (more exactly in “Kramdown”) on the WG’s core [github repository](https://github.com/w3c/json-ld-wg) in the `Meetings/Minutes/2018`, `Meetings/Minutes/2019`, etc., folders.
+The minutes themselves are stored, in Markdown (more exactly in “Kramdown”) on the WG’s core [github repository](https://github.com/w3c/json-ld-wg) in the `_minutes_` folder.
 
 As described in the [separate page on our working mode](../WorkMode/index#telco), meeting minutes are considered as “Draft” until officially approved after five business days, usually at the subsequent meeting. During that period, if a participant requests a change in the minutes, he/she can issue, for example, a Pull Request with the proposed changes.
