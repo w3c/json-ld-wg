@@ -1,0 +1,15 @@
+Subject: [DRAFT HPN] Candidate Recommendations published for JSON-LD 1.1
+
+----------------------------
+
+<p>The <a href="https://www.w3.org/2018/json-ld-wg/">JSON-LD Working Group</a> has just published a Candidate Recommendations for three documents, namely:</p>
+
+<ul>
+<li><a href="https://www.w3.org/TR/2019/CR-json-ld11-20191212/">JSON-LD 1.1</a>—This specification defines JSON-LD 1.1, a JSON-based format to serialize Linked Data. The syntax is designed to easily integrate into deployed systems that already use JSON, and provides a smooth upgrade path from JSON to JSON-LD. It is primarily intended to be a way to use Linked Data in Web-based programming environments, to build interoperable Web services, and to store Linked Data in JSON-based storage engines.</li>
+<li><a href="https://www.w3.org/TR/2019/CR-json-ld11-api-20191212/">JSON-LD API</a>—This specification defines a set of algorithms for programmatic transformations of JSON-LD documents. Restructuring data according to the defined transformations often dramatically simplifies its usage. Furthermore, this document proposes an Application Programming Interface (API) for developers implementing the specified algorithms.</li>
+<li><a href="https://www.w3.org/TR/2019/CR-json-ld11-framing-20191212/">JSON-LD 1.1 Framing</a>—JSON-LD Framing allows developers to query by example and force a specific tree layout to a JSON-LD document.</li>
+</ul>
+
+<p>Candidate Recommendation means that the Working Group considers the technical design to be complete, and is seeking implementation feedback on the documents. The group is keen to get comments and implementation experiences on these specifications as issues raised in the documents’ respective Github repositories (see the document headers for the exact references).</p>
+
+<p>The group expects to satisfy the implementation goals (i.e., at least two, independent implementations for each of the test cases) by February 17, 2020.</p>
