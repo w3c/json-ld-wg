@@ -22,13 +22,13 @@ The Editors’ drafts are managed in GitHub repositories; the list of those repo
 
 * JSON-LD 1.1:
     * First Public Working Draft (FPWD): September 2018 (✓)
-    * Candidate Recommendation (CR): Q4 2019
+    * Candidate Recommendation (CR): Q4 2019 (✓)
     * Recommendation (REC): June 2020.
 * JSON-LD 1.1 Processing Algorithms and API:
     * First Public Working Draft (FPWD): September 2018 (✓)
-    * Candidate Recommendation (CR): Q4 2019
+    * Candidate Recommendation (CR): Q4 2019 (✓)
     * Recommendation (REC): June 2020.
 * JSON-LD 1.1 Framing:
     * First Public Working Draft (FPWD): September 2018 (✓)
-    * Candidate Recommendation (CR): Q4 2019
+    * Candidate Recommendation (CR): Q4 2019 (✓)
     * Recommendation (REC): June 2020.
