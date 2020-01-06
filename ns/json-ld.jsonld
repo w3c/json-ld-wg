@@ -198,7 +198,7 @@
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
     "dc:date": "2020-01-03",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/c5b6145b2182aab77b17db65d8367118c1a19b19",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/606458561d3761dad00912b4ac7b1959302ef304",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
