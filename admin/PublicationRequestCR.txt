@@ -4,22 +4,20 @@ To be sent to the webmaster, comm team, coralie, xueyuan, & WG chairs when the D
 
 Denis,
 
-This is an official publication request for the publication of three Candidate Recommendations on behalf of the JSON-LD Working Group. The publication date is the 12 of December, 2019. The transition request for CR has been issued in:
-	- https://github.com/w3c/transitions/issues/194
+This is an official publication request for the publication of three Candidate Recommendations on behalf of the JSON-LD Working Group. The publication date is the 05 of March, 2020. The transition request for CR has been issued in:
+	- https://github.com/w3c/transitions/issues/230
 
 the Director's approval is in:
-	- https://github.com/w3c/transitions/issues/194#issuecomment-562726297
+	- hhttps://github.com/w3c/transitions/issues/230#issuecomment-591221873
 
 
 The documents are as follows:
 ----------------------------
 
 - JSON-LD 1.1
-	https://www.w3.org/TR/2019/CR-json-ld11-20191212/
+	https://www.w3.org/TR/2020/CR-json-ld11-20200305/
 - JSON-LD 1.1 Processing Algorithms and API
-	https://www.w3.org/TR/2019/CR-json-ld11-api-20191212/
-- JSON-LD 1.1 Framing
-	https://www.w3.org/TR/2019/CR-json-ld11-framing-20191212/
+	https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/
 
 
 Abstract and Status Sections
@@ -27,7 +25,7 @@ Abstract and Status Sections
 
 See the previous URL-s.
 
-The documents have already been installed. 
+The documents will be installed by Wednesday at the latest. 
 
 Thanks!
 

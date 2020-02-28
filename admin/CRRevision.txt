@@ -1,0 +1,70 @@
+[DRAFT] JSON LD 1.1 Candidate Recommendations revised (Call for Implementations)
+--------------------------------------------------------------------------------
+
+
+Dear Advisory Committee Representative,
+Chairs,
+
+I am pleased to announce that the following have been updated as Candidate Recommendations:
+
+JSON-LD 1.1
+	https://www.w3.org/TR/2020/CR-json-ld11-20200305/
+
+JSON-LD 1.1 Processing Algorithms and API
+	https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/
+
+
+The approval and publication are in response to this transition request:
+   	https://github.com/w3c/transitions/issues/230
+
+
+The group welcomes feedback by 30 March 2020 via issues raised in:
+    https://github.com/w3c/json-ld-syntax/issues/
+    https://github.com/w3c/json-ld-api/issues/
+
+
+Patent disclosures relevant to this specification may be found on the 
+Publishing Working Group's patent disclosure page in conformance 
+with W3C policy:
+    https://www.w3.org/2004/01/pp-impl/107714/status
+
+This Call for Implementations follows section 6.4 "Candidate 
+Recommendation" of the W3C Process Document:
+    https://www.w3.org/2019/Process-20190301/#candidate-rec
+
+
+Thank you,
+
+For Tim Berners-Lee, Director, and
+Philippe Le Hégaret, Project Management Lead;
+Xueyuan Jia, W3C Marketing & Communications
+
+=============================
+Quoting from
+JSON-LD 1.1
+W3C Candidate Recommendation 02 March 2020
+
+This version:
+     https://www.w3.org/TR/2020/CR-json-ld11-20200305/
+Latest published version:
+     https://www.w3.org/TR/json-ld11/
+
+Abstract:
+JSON is a useful data serialization and messaging format. This specification defines JSON-LD 1.1, a JSON-based format to serialize Linked Data. The syntax is designed to easily integrate into deployed systems that already use JSON, and provides a smooth upgrade path from JSON to JSON-LD. It is primarily intended to be a way to use Linked Data in Web-based programming environments, to build interoperable Web services, and to store Linked Data in JSON-based storage engines.
+
+This specification describes a superset of the features defined in JSON-LD 1.0 [JSON-LD10] and, except where noted, documents created using the 1.0 version of this specification remain compatible with JSON-LD 1.1.
+
+Quoting from
+JSON-LD 1.1 Processing Algorithms and API
+W3C Candidate Recommendation 02 March 2020
+
+This version:
+     https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/
+Latest published version:
+     https://www.w3.org/TR/json-ld11-api/
+
+Abstract:
+This specification defines a set of algorithms for programmatic transformations of JSON-LD documents. Restructuring data according to the defined transformations often dramatically simplifies its usage. Furthermore, this document proposes an Application Programming Interface (API) for developers implementing the specified algorithms.
+
+This specification describes a superset of the features defined in JSON-LD 1.0 Processing Algorithms And API [JSON-LD10-API] and, except where noted, the algorithms described in this specification are fully compatible with documents created using JSON-LD 1.0 [JSON-LD10].
+
