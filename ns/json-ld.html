@@ -137,6 +137,9 @@
     "setContainerType": {
       "@id": "jsonld:setContainerType"
     },
+    "streaming": {
+      "@id": "jsonld:streaming"
+    },
     "typeContainerType": {
       "@id": "jsonld:typeContainerType"
     }
@@ -219,7 +222,7 @@
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
     "dc:date": "2020-01-03",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/606458561d3761dad00912b4ac7b1959302ef304",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/b0d71216df19ce6cde0b0c467f9951db5f165df7",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
@@ -694,6 +697,19 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
       },
       {
+        "@id": "jsonld:streaming",
+        "@type": [
+          "owl:NamedIndividual"
+        ],
+        "rdfs:label": {
+          "en": "streaming"
+        },
+        "rdfs:comment": {
+          "en": "This profile URI is used to request or specify streaming JSON-LD document form."
+        },
+        "rdfs:seeAlso": "https://w3c.github.io/json-ld-streaming/#streaming-profile"
+      },
+      {
         "@id": "jsonld:typeContainerType",
         "@type": [
           "ContainerType"
@@ -723,7 +739,7 @@ and <a href='json-ld.jsonld' rel='alternate'>JSON-LD</a>.
 <dt>Published:</dt>
 <dd><time>2020-01-03</time></dd>
 <dt>Version Info:</dt>
-<dd><a href='https://github.com/w3c/json-ld-wg/commit/606458561d3761dad00912b4ac7b1959302ef304'>https://github.com/w3c/json-ld-wg/commit/606458561d3761dad00912b4ac7b1959302ef304</a></dd>
+<dd><a href='https://github.com/w3c/json-ld-wg/commit/b0d71216df19ce6cde0b0c467f9951db5f165df7'>https://github.com/w3c/json-ld-wg/commit/b0d71216df19ce6cde0b0c467f9951db5f165df7</a></dd>
 </dl>
 <section>
 <h2>Introduction</h2>
@@ -1226,6 +1242,16 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
+<tr id='streaming'>
+<td class='bold'>streaming</td>
+<td>
+<em>streaming</em>
+<span class='permalink'><a href='#streaming' title='Permalink for streaming'>§</a></span>
+<p>This profile URI is used to request or specify streaming JSON-LD document form.</p>
+
+You can read more about this feature in the <a href='https://w3c.github.io/json-ld-streaming/#streaming-profile'>JSON-LD Syntax Specification</a>.
+</td>
+</tr>
 <tr id='typeContainerType'>
 <td class='bold'>typeContainerType</td>
 <td>
@@ -1368,6 +1394,10 @@ xsd:anyUri
 <dt>setContainerType</dt>
 <dd>
 jsonld:setContainerType
+</dd>
+<dt>streaming</dt>
+<dd>
+jsonld:streaming
 </dd>
 <dt>term</dt>
 <dd>
