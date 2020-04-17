@@ -47,3 +47,4 @@ expanded,owl:NamedIndividual,expanded,,,,,https://www.w3.org/TR/json-ld11/#iana-
 flattened,owl:NamedIndividual,flattened,,,,,https://www.w3.org/TR/json-ld11/#iana-considerations,This profile URI is used to request or specify flattened JSON-LD document form.,
 frame,owl:NamedIndividual,frame,,,xsd:anyUri,@id,https://www.w3.org/TR/json-ld11/#iana-considerations,"As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing.",
 framed,owl:NamedIndividual,framed,,,,,https://www.w3.org/TR/json-ld11/#iana-considerations,This profile URI is used to request or specify framed JSON-LD document form.,
+streaming,owl:NamedIndividual,streaming,,,,,https://www.w3.org/TR/json-ld11-streaming/#streaming-profile,This profile URI is used to request or specify streaming JSON-LD document form.,
