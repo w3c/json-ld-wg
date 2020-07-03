@@ -1,0 +1,34 @@
+[DRAFT] JSON_LD 1.1 are W3C Recommendations 
+-------------------------------------------
+
+
+Dear Advisory Committee Representative,
+Chairs,
+
+It is my pleasure to announce that Trace Context is now a W3C Recommendation::
+
+JSON-LD 1.1
+	https://www.w3.org/TR/2020/REC-json-ld11-20200716/
+
+JSON-LD 1.1 Processing Algorithms and API
+	https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/
+
+JSON-LD 1.1 Framing
+	https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/
+    
+
+This specification defines JSON-LD 1.1, a JSON-based format to serialize Linked Data. The syntax is designed to easily integrate into deployed systems that already use JSON, and provides a smooth upgrade path from JSON to JSON-LD. It is primarily intended to be a way to use Linked Data in Web-based programming environments, to build interoperable Web services, and to store Linked Data in JSON-based storage engines. This version of the specification describes a superset of the features defined in JSON-LD 1.0 and, except where noted, documents created using the 1.0 version of this specification remain compatible with JSON-LD 1.1.
+
+Most Members who responded to the Call for Review [1] of the Proposed Recommendation showed support or abstained. One member opposed the publication but did not raise a formal objection while two members raised formal objections. The issue that led to these objections was common to all three comments and concerned the relationships of JSON-LD and the run-time environments of browsers. The Working Group made some last minute technical changes on the document that addressed these issues adequately.
+
+Please join us in congratulating the W3C JSON-LD Working Group [2] on this achievement.
+
+Thank you,
+
+For Tim Berners-Lee, Director, and
+Philippe Le Hégaret, Project Management Lead;
+Xueyuan Jia, W3C Marketing & Communications
+
+
+[1] https://www.w3.org/2002/09/wbs/33280/json-ld11/
+[2] https://www.w3.org/2018/json-ld-wg/
