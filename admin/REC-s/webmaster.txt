@@ -1,4 +1,4 @@
-To be sent to the webmaster, coralie, xueyuan, 
+To be sent to the webmaster, coralie, xueyuan,
 Cc PlH and Ralph, gregg, PA, comm team, benjamin
 
 (provisional) Publication Request.
@@ -7,7 +7,7 @@ Cc PlH and Ralph, gregg, PA, comm team, benjamin
 
 Denis,
 
-This is an provisional but nevertheless official publication request for the publication of three Recommendations on behalf of the JSON-LD Working Group. The publication date is the 16 of July, 2020. The three documents are:
+This is an provisional official publication request for the publication of three Recommendations on behalf of the JSON-LD Working Group. The publication date is the 16 of July, 2020. The three documents are:
 
 - JSON-LD 1.1
 	https://www.w3.org/TR/2020/REC-json-ld11-20200716/
@@ -18,19 +18,17 @@ This is an provisional but nevertheless official publication request for the pub
 
 These documents have already been installed.
 
-
-The 'provisional' nature is due to the following two issues. 
+The 'provisional' nature is due to the following two issues.
 
     (1) the PR review has led to some formal objections on the documents. The WG has considered these and proposed some changes; a mail has been sent to the voters in:
 
         https://lists.w3.org/Archives/Team/w3t-archive/2020Jul/0025.html
-    
+
     with a response deadline on the 13th of July,
 
     (2) I am on vacations starting the 13th of July
 
-
-The process Ralph, Philippe, and I agreed upon is that would install the documents themselves, ready to be published, so that you can check and that we could handle the possible problems. I presume we can do that before the end of the week (ie, before the week end of the 10th of July). Provided that the commenters do not raise new issues, the official transition request to Ralph and Philippe will be sent out by one of the co-editors, Gregg Kellogg (cc-d) on the 14th to complete the process.
+The process Ralph, Philippe, and I agreed upon is that I would install the documents themselves, ready to be published, so that you can check and that we could handle the possible problems. I presume we can do that before the end of this week. Provided that the commenters do not raise new issues, the official transition request to Ralph and Philippe will be sent out by one of the co-editors, Gregg Kellogg (cc-d) on the 14th to complete the process, and Philippe will cc you the formal director's decision so that you can effectively publish in the 16th.
 
 I hope that is all right with you.
 
