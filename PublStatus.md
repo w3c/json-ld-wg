@@ -20,7 +20,7 @@ The Editors’ drafts are managed in GitHub repositories; the list of those repo
 
 ## Major milestones
 
-* [JSON-LD 1.1](ttps://www.w3.org/TR/json-ld11-api/):
+* [JSON-LD 1.1](https://www.w3.org/TR/json-ld11-api/):
     * First Public Working Draft (FPWD): September 2018
     * Candidate Recommendation (CR): Q4 2019
     * Recommendation (REC): July 2020 
