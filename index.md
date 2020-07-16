@@ -16,10 +16,6 @@ json-ld: |
           "roleName": "Co-Chair",
           "member": [{
               "@type": "Person",
-              "name": "Rob Sanderson",
-              "email": "azaroth42@gmail.com"
-          },{
-              "@type": "Person",
               "name": "Benjamin Young",
               "email": "byoung@bigbluehat.com"
           }]
@@ -33,7 +29,10 @@ json-ld: |
   }
 ---
 
-The mission of the JSON-LD Working Group is to update the [JSON-LD 1.0](https://www.w3.org/TR/2014/REC-json-ld-20140116/) specifications to address specific usability or technical issues based on the community's experiences, implementer feedback, and requests for new features.
 
+The group has completed its work and is currently in maintenance mode. The Working Group has published the following documents (also available as a single [digital book](./assets/json-ld-1.1.epub) in EPUB 3):
 
-The Co-Chairs of the Working Group are [Rob Sanderson](mailto:azaroth42@gmail.com) (Invited Expert), and [Benjamin Young](mailto:byoung@bigbluehat.com) (Wiley). The W3C Staff Contact for the Working Group is [Ivan Herman](mailto:ivan@w3.org). The group is chartered until the 15th of June, 2020.
+* [JSON-LD 1.1](ttps://www.w3.org/TR/json-ld11-api/) (W3C Recommendation)
+* [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/) (W3C Recommendation)
+* [JSON-LD 1.1 Framing](https://www.w3.org/TR/json-ld11-framing/) (W3C Recommendation)
+* [Streaming JSON-LD](https://www.w3.org/TR/json-ld11-streaming/) (W3C Working Group Note)

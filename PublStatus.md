@@ -18,17 +18,17 @@ layout: default
 
 The Editors’ drafts are managed in GitHub repositories; the list of those repositories is available on the [GitHub index page](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories).
 
-## Major planned milestones (from the charter)
+## Major milestones
 
-* JSON-LD 1.1:
-    * First Public Working Draft (FPWD): September 2018 (✓)
-    * Candidate Recommendation (CR): Q4 2019 (✓)
-    * Recommendation (REC): June 2020.
-* JSON-LD 1.1 Processing Algorithms and API:
-    * First Public Working Draft (FPWD): September 2018 (✓)
-    * Candidate Recommendation (CR): Q4 2019 (✓)
-    * Recommendation (REC): June 2020.
-* JSON-LD 1.1 Framing:
-    * First Public Working Draft (FPWD): September 2018 (✓)
-    * Candidate Recommendation (CR): Q4 2019 (✓)
-    * Recommendation (REC): June 2020.
+* [JSON-LD 1.1](https://www.w3.org/TR/json-ld11-api/):
+    * First Public Working Draft (FPWD): September 2018
+    * Candidate Recommendation (CR): Q4 2019
+    * Recommendation (REC): July 2020 
+* [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/):
+    * First Public Working Draft (FPWD): September 2018
+    * Candidate Recommendation (CR): Q4 2019
+    * Recommendation (REC): July 2020
+* [JSON-LD 1.1 Framing](https://www.w3.org/TR/json-ld11-framing/):
+    * First Public Working Draft (FPWD): September 2018
+    * Candidate Recommendation (CR): Q4 2019
+    * Recommendation (REC): July 2020
