@@ -30,7 +30,7 @@ json-ld: |
 ---
 
 
-The group has completed its work and is currently in maintenance mode. The Working Group has published the following documents (also available as a single [digital book](./assets/json-ld-1.1.epub) in EPUB 3):
+The group has completed its work and is currently in maintenance mode. The Working Group has published the following documents (also available as a single [digital book](./assets/json-ld-1.1.epub) in EPUB 3 format):
 
 * [JSON-LD 1.1](https://www.w3.org/TR/json-ld11/) (W3C Recommendation)
 * [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/) (W3C Recommendation)

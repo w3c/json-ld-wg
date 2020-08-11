@@ -10,8 +10,7 @@ layout: default
 
 ## Teleconferences
 
-
-The weekly teleconferences are held _every week on Fridays_, at *noon US Eastern time* (see the [time zone calculator](https://tinyurl.com/y8vzfzgp) for the exact timing for your time zone). See the [separate page](./webex) for the dial-in information.
+The group does not hold any regular teleconferences; they are set up as needed by the Working Group chair.
 
 The Group also uses IRC for during the calls for minute taking, queue control, and general chit-chat. See the [separate page at W3C](https://www.w3.org/Project/IRC/) for further details. This Working Group uses the `#json-ld` channel, and makes use of two bots on IRC:
 
@@ -24,6 +23,8 @@ The Group also uses IRC for during the calls for minute taking, queue control, a
 * 2019 - [September 19-10, Fukuoka, Japan](./F2F/2019.09.Fuk)
 * 2019 - [February 7-8, Washington, DC, USA](./F2F/2019.02.DC)
 * 2018 - [October 25-26, Lyon, France](./F2F/2018.10.Lyon)
+
+No F2F meetings are planned at this time.
 
 ## Meeting Minutes
 
