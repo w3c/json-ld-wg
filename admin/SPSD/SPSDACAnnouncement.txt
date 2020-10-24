@@ -1,0 +1,32 @@
+Dear Advisory Committee Representative,
+Chairs,
+
+It is my pleasure to announce that JSON-LD 1.0 and JSON LD 1.0 API are now a W3C Superseded Recommendations:
+   
+   https://www.w3.org/TR/2020/SPSD-json-ld-20201103/
+   https://www.w3.org/TR/2020/SPSD-json-ld-api-20201103/
+
+
+Both documents are Superseded Recommendations because newer specifications exists, namely:
+
+    https://www.w3.org/TR/2020/REC-json-ld11-20200716/
+    https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/
+
+
+These newer documents provide 1.0 compatibility. They are recommended for new adoption in place of the 1.0 specification. Implementers and users should refer to the newer versions of the specifications.
+
+The AC review for this publication was unanimously in favor.
+
+Please join us in congratulating the W3C JSON-LD Working Group [2] on this achievement.
+
+This announcement follows section 7.1.2 of the W3C Process Document:
+  https://www.w3.org/2020/Process-20200915/#ACReviewAfter
+
+Thank you,
+
+For Tim Berners-Lee, Director,
+Ivan Herman, JSON-LD WG Team Contact;
+Xueyuan Jia, W3C Marketing & Communications
+
+[1] https://www.w3.org/2002/09/wbs/33280/jsonld10-sup/
+[2] https://www.w3.org/2018/json-ld-wg/

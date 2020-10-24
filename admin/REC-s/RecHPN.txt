@@ -1,4 +1,4 @@
-Subject: [DRAFT HPN] Candidate Recommendations published for JSON-LD 1.1
+Subject: [DRAFT HPN] Recommendations published for JSON-LD 1.1
 
 ----------------------------
 

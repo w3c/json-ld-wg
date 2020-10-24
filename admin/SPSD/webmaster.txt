@@ -1,0 +1,27 @@
+To be sent to the webmaster, coralie, xueyuan,
+Cc PlH and Ralph, gregg, comm team, benjamin
+
+Publication Request.
+
+----
+
+Denis,
+
+This is an official publication request for the publication of two Superseded Recommendations on behalf of the JSON-LD Working Group. The publication date is the 3rd of November, 2020. The two documents are below; they have been edited based on the original Recommendations and modified following the guidelines for SPSD-s. The URL-s and the the diff files are:
+
+- JSON-LD 1.0
+	new version: https://www.w3.org/TR/2020/SPSD-json-ld-20201103/
+	diff compared to the last Rec: https://tinyurl.com/y2ua38mt
+
+- JSON-LD 1.0 Processing Algorithms and API
+	new version: https://www.w3.org/TR/2020/SPSD-json-ld-api-20201103/
+	diff compared to the last Rec: https://tinyurl.com/y3v9mpjr
+
+The Director's Decision is here:
+    https://github.com/w3c/transitions/issues/278#issuecomment-715538454
+
+Xueyuan, I will send you a separate mail on the draft announcements for the 3rd.
+
+Thanks!
+
+Ivan

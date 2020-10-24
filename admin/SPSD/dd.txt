@@ -1,0 +1,14 @@
+Philippe, Ralph,
+
+the AC Review for the JSON-LD 1.0 Superseded Recommendations:
+
+https://www.w3.org/2002/09/wbs/33280/jsonld10-sup/
+
+have ended yesterday. All (24) reviews are in favor of publishing the Superseded Recommendations. Do I have your approval to go ahead?
+
+FYI, the publication is planned for the 3rd of November.
+
+Thanks
+
+Ivan
+
