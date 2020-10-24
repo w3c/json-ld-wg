@@ -2,6 +2,7 @@ Dear Advisory Committee Representative,
 Chairs,
 
 It is my pleasure to announce that JSON-LD 1.0 and JSON LD 1.0 API are now a W3C Superseded Recommendations:
+   
    https://www.w3.org/TR/2020/SPSD-json-ld-20201103/
    https://www.w3.org/TR/2020/SPSD-json-ld-api-20201103/
 
