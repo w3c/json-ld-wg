@@ -19,6 +19,9 @@ Non rec-track document
 {: .footer}
 <!-- <div data-apiary="specifications"></div> -->
 
+Note: these documents can also be downloaded as an [EPUB 3.2 publication](https://www.w3.org/2018/json-ld-wg/assets/json-ld-1.1.epub) containing all four specifications.
+
+
 The Editors’ drafts are managed in GitHub repositories; the list of those repositories is available on the [GitHub index page](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories).
 
 ## Major milestones
