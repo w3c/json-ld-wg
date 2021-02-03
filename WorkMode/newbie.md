@@ -27,7 +27,7 @@ You should also "link" your GitHub account to your W3C account; this can be done
 
 ## IRC
 
-Meetings usually use [IRC](index#irc) as a tool for queue control and minute taking (and general chit-chat). **You should also send to ivan@w3.org your preferred IRC nickname (or nicknames, if you use several of those).** The goal is to improve the readability of the meeting minutes, so that third parties could also understand whose comments and remarks are in the minutes. Actually, in case you are already a seasoned GitHub user: the nicknames are stored (of course:-) in [file on GitHub](https://github.com/w3c/json-ld-wg/blob/master/assets/nicknames.json), meaning that you can simply make a pull request providing with with your nickname(s) instead of a mail.
+Meetings usually use [IRC](index#irc) as a tool for queue control and minute taking (and general chit-chat). **You should also send to ivan@w3.org your preferred IRC nickname (or nicknames, if you use several of those).** The goal is to improve the readability of the meeting minutes, so that third parties could also understand whose comments and remarks are in the minutes. Actually, in case you are already a seasoned GitHub user: the nicknames are stored (of course:-) in [file on GitHub](https://github.com/w3c/json-ld-wg/blob/main/assets/nicknames.json), meaning that you can simply make a pull request providing with with your nickname(s) instead of a mail.
 
 ## Specifications in Progress
 
