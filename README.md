@@ -3,15 +3,13 @@
 
 # JSON-LD Working Group
 
-This is the repository for the home page of the W3C JSON-LD Working Group:
+This used to be the repository for the home page of the W3C JSON-LD Working Group. This is no longer the case however and this repository is only used for other purposes, such as documentation for the Working Group. The homepage of the JSON-LD Working Group is available at
 
-https://www.w3.org/2018/json-ld-wg/
-
-(That URL is redirected to the `w3c.github.io` view of this repository.)
+  https://www.w3.org/groups/wg/json-ld
 
 ## Specifications
 
-GitHub repositories are linked from each specification. There is a separate [list of repos of this WG](https://github.com/search?q=topic%3Ajson-ld-wg+org%3Aw3c&type=Repositories).
+GitHub repositories are linked from each specification. There is a separate [list of repos of this WG](https://www.w3.org/groups/wg/json-ld/tools).
 
 All repositories for spec development share the same set of labels; inspired by the [labels organized for W3C specification](https://w3c.github.io/issue-metadata.html).
 
@@ -63,12 +61,3 @@ finished, you can commit the `.md` file and delete the `.txt` file (or keep it
 for your records).
 
 Alternatively, you can also use the [browser interface to scribejs](https://w3c.github.io/scribejs/BrowserView/) relying on your local clone of the WG's repository.
-
-### Jekyll
-
-This site is built for [Jekyll](https://jekyllrb.com/). If you have Jekyll
-and npm installed, you can run `npm run serve` to have Jekyll watch the
-working directory for changes and compile the templates (etc) incrementally.
-
-Once run, you can browse the site at `http://localhost:4000/2018/json-ld-wg/`
-(the extra path information is *required* to match the w3.org hosting location).
