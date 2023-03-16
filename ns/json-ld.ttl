@@ -155,7 +155,7 @@ If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-
   rdfs:isDefinedBy jsonld: .
 jsonld:version a rdf:Property;
   rdfs:label "version"@en;
-  rdfs:comment """The [processing mode](https://www.w3.org/TR/json-ld11/#dfn-processing-mode) defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with [JSON-LD 1.1`](http://www.w3.org/TR/json-ld11). By defining a different version via explicit API option, other processing modes can be accessed. This specification defines extensions for the `json-ld-1.1` processing mode."""@en;
+  rdfs:comment """The [processing mode](https://www.w3.org/TR/json-ld11/#dfn-processing-mode) defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with [JSON-LD 1.1](http://www.w3.org/TR/json-ld11). By defining a different version via explicit API option, other processing modes can be accessed. This specification defines extensions for the `json-ld-1.1` processing mode."""@en;
   schema:domainIncludes jsonld:Context
   schema:rangeIncludes jsonld:Context
   rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#dfn-processing-mode>;
