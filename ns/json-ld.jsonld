@@ -65,7 +65,7 @@
     },
     "reverse": {
       "@id": "jsonld:reverse",
-      "@type": "xsd:anyUri"
+      "@type": "xsd:anyURI"
     },
     "term": {
       "@id": "jsonld:term",
@@ -200,8 +200,8 @@
     "dc:description": {
       "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
     },
-    "dc:date": "2020-03-30",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3",
+    "dc:date": "2023-07-13",
+    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/01fbfacb60d6739a83ac9a043c71f3d8775d98b1",
     "rdfs:seeAlso": [
       "http://www.w3.org/TR/json-ld11"
     ],
@@ -260,7 +260,7 @@
         },
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
         "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:anyUri"
+        "schema:rangeIncludes": "xsd:anyURI"
       },
       {
         "@id": "jsonld:container",
@@ -291,7 +291,7 @@
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld",
         "schema:rangeIncludes": [
           "jsonld:Context",
-          "xsd:anyUri"
+          "xsd:anyURI"
         ]
       },
       {
@@ -345,7 +345,7 @@
           "jsonld:TermDefinition",
           "jsonld:PrefixDefinition"
         ],
-        "schema:rangeIncludes": "xsd:anyUri"
+        "schema:rangeIncludes": "xsd:anyURI"
       },
       {
         "@id": "jsonld:import",
@@ -360,7 +360,7 @@
         },
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
         "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:anyUri"
+        "schema:rangeIncludes": "xsd:anyURI"
       },
       {
         "@id": "jsonld:language",
@@ -459,7 +459,7 @@
         },
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#expanded-term-definition",
         "schema:domainIncludes": "jsonld:TermDefinition",
-        "schema:rangeIncludes": "xsd:anyUri"
+        "schema:rangeIncludes": "xsd:anyURI"
       },
       {
         "@id": "jsonld:term",
@@ -496,7 +496,7 @@
           "jsonld:TermDefinition"
         ],
         "schema:rangeIncludes": [
-          "xsd:anyUri",
+          "xsd:anyURI",
           "xsd:string"
         ]
       },
@@ -528,7 +528,7 @@
         },
         "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#default-vocabulary",
         "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:anyUri"
+        "schema:rangeIncludes": "xsd:anyURI"
       }
     ],
     "rdfs_instances": [

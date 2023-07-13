@@ -10,8 +10,8 @@
 jsonld: a owl:Ontology;
   dc:title "The JSON-LD Vocabulary"@en;
   dc:description """This is a vocabulary document and is used to achieve certain features of the JSON-LD language."""@en;
-  dc:date "2020-03-30"^^xsd:date;
-  owl:versionInfo <https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3>;
+  dc:date "2023-07-13"^^xsd:date;
+  owl:versionInfo <https://github.com/w3c/json-ld-wg/commit/01fbfacb60d6739a83ac9a043c71f3d8775d98b1>;
   rdfs:seeAlso <http://www.w3.org/TR/json-ld11> .
 
 # Class definitions

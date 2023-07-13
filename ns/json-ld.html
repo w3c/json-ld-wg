@@ -20,707 +20,707 @@
 </style>
 <script type='application/ld+json'>
 {
-  "@context": {
-    "jsonld": "http://www.w3.org/ns/json-ld#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "schema": "http://schema.org/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "Context": {
-      "@id": "jsonld:Context"
+  &quot;@context&quot;: {
+    &quot;jsonld&quot;: &quot;http://www.w3.org/ns/json-ld#&quot;,
+    &quot;owl&quot;: &quot;http://www.w3.org/2002/07/owl#&quot;,
+    &quot;rdf&quot;: &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;,
+    &quot;rdfs&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#&quot;,
+    &quot;schema&quot;: &quot;http://schema.org/&quot;,
+    &quot;xsd&quot;: &quot;http://www.w3.org/2001/XMLSchema#&quot;,
+    &quot;Context&quot;: {
+      &quot;@id&quot;: &quot;jsonld:Context&quot;
     },
-    "PrefixDefinition": {
-      "@id": "jsonld:PrefixDefinition"
+    &quot;PrefixDefinition&quot;: {
+      &quot;@id&quot;: &quot;jsonld:PrefixDefinition&quot;
     },
-    "TermDefinition": {
-      "@id": "jsonld:TermDefinition"
+    &quot;TermDefinition&quot;: {
+      &quot;@id&quot;: &quot;jsonld:TermDefinition&quot;
     },
-    "base": {
-      "@id": "jsonld:base",
-      "@type": "@id"
+    &quot;base&quot;: {
+      &quot;@id&quot;: &quot;jsonld:base&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "container": {
-      "@id": "jsonld:container",
-      "@type": "@id"
+    &quot;container&quot;: {
+      &quot;@id&quot;: &quot;jsonld:container&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "context": {
-      "@id": "jsonld:context",
-      "@type": "@id"
+    &quot;context&quot;: {
+      &quot;@id&quot;: &quot;jsonld:context&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "definition": {
-      "@id": "jsonld:definition",
-      "@type": "@id"
+    &quot;definition&quot;: {
+      &quot;@id&quot;: &quot;jsonld:definition&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "direction": {
-      "@id": "jsonld:direction",
-      "@language": null
+    &quot;direction&quot;: {
+      &quot;@id&quot;: &quot;jsonld:direction&quot;,
+      &quot;@language&quot;: null
     },
-    "id": {
-      "@id": "jsonld:id",
-      "@type": "@id"
+    &quot;id&quot;: {
+      &quot;@id&quot;: &quot;jsonld:id&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "import": {
-      "@id": "jsonld:import",
-      "@type": "@id"
+    &quot;import&quot;: {
+      &quot;@id&quot;: &quot;jsonld:import&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "language": {
-      "@id": "jsonld:language",
-      "@language": null
+    &quot;language&quot;: {
+      &quot;@id&quot;: &quot;jsonld:language&quot;,
+      &quot;@language&quot;: null
     },
-    "nest": {
-      "@id": "jsonld:nest",
-      "@language": null
+    &quot;nest&quot;: {
+      &quot;@id&quot;: &quot;jsonld:nest&quot;,
+      &quot;@language&quot;: null
     },
-    "prefix": {
-      "@id": "jsonld:prefix",
-      "@type": "xsd:boolean"
+    &quot;prefix&quot;: {
+      &quot;@id&quot;: &quot;jsonld:prefix&quot;,
+      &quot;@type&quot;: &quot;xsd:boolean&quot;
     },
-    "propagate": {
-      "@id": "jsonld:propagate",
-      "@type": "xsd:boolean"
+    &quot;propagate&quot;: {
+      &quot;@id&quot;: &quot;jsonld:propagate&quot;,
+      &quot;@type&quot;: &quot;xsd:boolean&quot;
     },
-    "protected": {
-      "@id": "jsonld:protected",
-      "@type": "xsd:boolean"
+    &quot;protected&quot;: {
+      &quot;@id&quot;: &quot;jsonld:protected&quot;,
+      &quot;@type&quot;: &quot;xsd:boolean&quot;
     },
-    "reverse": {
-      "@id": "jsonld:reverse",
-      "@type": "xsd:anyUri"
+    &quot;reverse&quot;: {
+      &quot;@id&quot;: &quot;jsonld:reverse&quot;,
+      &quot;@type&quot;: &quot;xsd:anyURI&quot;
     },
-    "term": {
-      "@id": "jsonld:term",
-      "@language": null
+    &quot;term&quot;: {
+      &quot;@id&quot;: &quot;jsonld:term&quot;,
+      &quot;@language&quot;: null
     },
-    "type": {
-      "@id": "jsonld:type",
-      "@type": "@id"
+    &quot;type&quot;: {
+      &quot;@id&quot;: &quot;jsonld:type&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "version": {
-      "@id": "jsonld:version",
-      "@type": "xsd:decimal"
+    &quot;version&quot;: {
+      &quot;@id&quot;: &quot;jsonld:version&quot;,
+      &quot;@type&quot;: &quot;xsd:decimal&quot;
     },
-    "vocab": {
-      "@id": "jsonld:vocab",
-      "@type": "@id"
+    &quot;vocab&quot;: {
+      &quot;@id&quot;: &quot;jsonld:vocab&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
     },
-    "compacted": {
-      "@id": "jsonld:compacted"
+    &quot;compacted&quot;: {
+      &quot;@id&quot;: &quot;jsonld:compacted&quot;
     },
-    "expanded": {
-      "@id": "jsonld:expanded"
+    &quot;expanded&quot;: {
+      &quot;@id&quot;: &quot;jsonld:expanded&quot;
     },
-    "flattened": {
-      "@id": "jsonld:flattened"
+    &quot;flattened&quot;: {
+      &quot;@id&quot;: &quot;jsonld:flattened&quot;
     },
-    "frame": {
-      "@id": "jsonld:frame"
+    &quot;frame&quot;: {
+      &quot;@id&quot;: &quot;jsonld:frame&quot;
     },
-    "framed": {
-      "@id": "jsonld:framed"
+    &quot;framed&quot;: {
+      &quot;@id&quot;: &quot;jsonld:framed&quot;
     },
-    "graphContainerType": {
-      "@id": "jsonld:graphContainerType"
+    &quot;graphContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:graphContainerType&quot;
     },
-    "idContainerType": {
-      "@id": "jsonld:idContainerType"
+    &quot;idContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:idContainerType&quot;
     },
-    "indexContainerType": {
-      "@id": "jsonld:indexContainerType"
+    &quot;indexContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:indexContainerType&quot;
     },
-    "languageContainerType": {
-      "@id": "jsonld:languageContainerType"
+    &quot;languageContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:languageContainerType&quot;
     },
-    "listContainerType": {
-      "@id": "jsonld:listContainerType"
+    &quot;listContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:listContainerType&quot;
     },
-    "setContainerType": {
-      "@id": "jsonld:setContainerType"
+    &quot;setContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:setContainerType&quot;
     },
-    "streaming": {
-      "@id": "jsonld:streaming"
+    &quot;streaming&quot;: {
+      &quot;@id&quot;: &quot;jsonld:streaming&quot;
     },
-    "typeContainerType": {
-      "@id": "jsonld:typeContainerType"
+    &quot;typeContainerType&quot;: {
+      &quot;@id&quot;: &quot;jsonld:typeContainerType&quot;
     }
   },
-  "@graph": {
-    "@context": {
-      "id": "@id",
-      "type": "@type",
-      "dc": "http://purl.org/dc/terms/",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "dc:title": {
-        "@container": "@language"
+  &quot;@graph&quot;: {
+    &quot;@context&quot;: {
+      &quot;id&quot;: &quot;@id&quot;,
+      &quot;type&quot;: &quot;@type&quot;,
+      &quot;dc&quot;: &quot;http://purl.org/dc/terms/&quot;,
+      &quot;owl&quot;: &quot;http://www.w3.org/2002/07/owl#&quot;,
+      &quot;rdf&quot;: &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;,
+      &quot;rdfs&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#&quot;,
+      &quot;dc:title&quot;: {
+        &quot;@container&quot;: &quot;@language&quot;
       },
-      "dc:description": {
-        "@container": "@language"
+      &quot;dc:description&quot;: {
+        &quot;@container&quot;: &quot;@language&quot;
       },
-      "dc:date": {
-        "@type": "xsd:date"
+      &quot;dc:date&quot;: {
+        &quot;@type&quot;: &quot;xsd:date&quot;
       },
-      "rdfs:comment": {
-        "@container": "@language"
+      &quot;rdfs:comment&quot;: {
+        &quot;@container&quot;: &quot;@language&quot;
       },
-      "rdfs:domain": {
-        "@type": "@id"
+      &quot;rdfs:domain&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs:label": {
-        "@container": "@language"
+      &quot;rdfs:label&quot;: {
+        &quot;@container&quot;: &quot;@language&quot;
       },
-      "rdfs:range": {
-        "@type": "@id"
+      &quot;rdfs:range&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs:seeAlso": {
-        "@type": "@id"
+      &quot;rdfs:seeAlso&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs:subClassOf": {
-        "@type": "@id"
+      &quot;rdfs:subClassOf&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs:subPropertyOf": {
-        "@type": "@id"
+      &quot;rdfs:subPropertyOf&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "owl:imports": {
-        "@type": "@id"
+      &quot;owl:imports&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "owl:versionInfo": {
-        "@type": "@id"
+      &quot;owl:versionInfo&quot;: {
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "schema:domainIncludes": {
-        "@type": "@vocab",
-        "@container": "@set"
+      &quot;schema:domainIncludes&quot;: {
+        &quot;@type&quot;: &quot;@vocab&quot;,
+        &quot;@container&quot;: &quot;@set&quot;
       },
-      "schema:rangeIncludes": {
-        "@type": "@vocab",
-        "@container": "@set"
+      &quot;schema:rangeIncludes&quot;: {
+        &quot;@type&quot;: &quot;@vocab&quot;,
+        &quot;@container&quot;: &quot;@set&quot;
       },
-      "rdfs_classes": {
-        "@reverse": "rdfs:isDefinedBy",
-        "@type": "@id"
+      &quot;rdfs_classes&quot;: {
+        &quot;@reverse&quot;: &quot;rdfs:isDefinedBy&quot;,
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs_properties": {
-        "@reverse": "rdfs:isDefinedBy",
-        "@type": "@id"
+      &quot;rdfs_properties&quot;: {
+        &quot;@reverse&quot;: &quot;rdfs:isDefinedBy&quot;,
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs_datatypes": {
-        "@reverse": "rdfs:isDefinedBy",
-        "@type": "@id"
+      &quot;rdfs_datatypes&quot;: {
+        &quot;@reverse&quot;: &quot;rdfs:isDefinedBy&quot;,
+        &quot;@type&quot;: &quot;@id&quot;
       },
-      "rdfs_instances": {
-        "@reverse": "rdfs:isDefinedBy",
-        "@type": "@id"
+      &quot;rdfs_instances&quot;: {
+        &quot;@reverse&quot;: &quot;rdfs:isDefinedBy&quot;,
+        &quot;@type&quot;: &quot;@id&quot;
       }
     },
-    "@id": "http://www.w3.org/ns/json-ld#",
-    "@type": "owl:Ontology",
-    "dc:title": {
-      "en": "The JSON-LD Vocabulary"
+    &quot;@id&quot;: &quot;http://www.w3.org/ns/json-ld#&quot;,
+    &quot;@type&quot;: &quot;owl:Ontology&quot;,
+    &quot;dc:title&quot;: {
+      &quot;en&quot;: &quot;The JSON-LD Vocabulary&quot;
     },
-    "dc:description": {
-      "en": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language."
+    &quot;dc:description&quot;: {
+      &quot;en&quot;: &quot;This is a vocabulary document and is used to achieve certain features of the JSON-LD language.&quot;
     },
-    "dc:date": "2020-03-30",
-    "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3",
-    "rdfs:seeAlso": [
-      "http://www.w3.org/TR/json-ld11"
+    &quot;dc:date&quot;: &quot;2023-07-13&quot;,
+    &quot;owl:versionInfo&quot;: &quot;https://github.com/w3c/json-ld-wg/commit/01fbfacb60d6739a83ac9a043c71f3d8775d98b1&quot;,
+    &quot;rdfs:seeAlso&quot;: [
+      &quot;http://www.w3.org/TR/json-ld11&quot;
     ],
-    "rdfs_classes": [
+    &quot;rdfs_classes&quot;: [
       {
-        "@id": "jsonld:Context",
-        "@type": [
-          "rdfs:Class"
+        &quot;@id&quot;: &quot;jsonld:Context&quot;,
+        &quot;@type&quot;: [
+          &quot;rdfs:Class&quot;
         ],
-        "rdfs:label": {
-          "en": "Context"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;Context&quot;
         },
-        "rdfs:comment": {
-          "en": "Defines term definitions and other aspects of a JSON-LD `Context`.\n\nA [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) MUST be a map whose keys MUST be either _terms_, _compact IRIs_, _IRIs_, or one of the keywords `@base`, `@import`, `@language`, `@propagate`, `@protected`, `@type`, `@version`, or `@vocab`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;Defines term definitions and other aspects of a JSON-LD `Context`.\n\nA [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) MUST be a map whose keys MUST be either _terms_, _compact IRIs_, _IRIs_, or one of the keywords `@base`, `@import`, `@language`, `@propagate`, `@protected`, `@type`, `@version`, or `@vocab`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:PrefixDefinition",
-        "@type": [
-          "rdfs:Class"
+        &quot;@id&quot;: &quot;jsonld:PrefixDefinition&quot;,
+        &quot;@type&quot;: [
+          &quot;rdfs:Class&quot;
         ],
-        "rdfs:label": {
-          "en": "Prefix Definition"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;Prefix Definition&quot;
         },
-        "rdfs:comment": {
-          "en": "A string ([simple term definition](http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions)), expanding to an IRI."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;A string ([simple term definition](http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions)), expanding to an IRI.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-term-definition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#dfn-term-definition&quot;
       },
       {
-        "@id": "jsonld:TermDefinition",
-        "@type": [
-          "rdfs:Class"
+        &quot;@id&quot;: &quot;jsonld:TermDefinition&quot;,
+        &quot;@type&quot;: [
+          &quot;rdfs:Class&quot;
         ],
-        "rdfs:label": {
-          "en": "Term Definition"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;Term Definition&quot;
         },
-        "rdfs:comment": {
-          "en": "A [term definition](http://www.w3.org/TR/json-ld11/#dfn-term-definitions) is an entry in a [context](#Context), where the key defines a term which may be used within a dictionary as a key, type, or elsewhere that a string is interpreted as a vocabulary item. Its value is an [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions).\n\n\n\nAn [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definition) MUST be a map composed of zero or more keys from `@id`, `@reverse`, `@type`, `@language`, `@container`, `@context`, `@prefix`, `@propagate`, or `@protected`. An expanded term definition SHOULD NOT contain any other keys."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;A [term definition](http://www.w3.org/TR/json-ld11/#dfn-term-definitions) is an entry in a [context](#Context), where the key defines a term which may be used within a dictionary as a key, type, or elsewhere that a string is interpreted as a vocabulary item. Its value is an [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions).\n\n\n\nAn [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definition) MUST be a map composed of zero or more keys from `@id`, `@reverse`, `@type`, `@language`, `@container`, `@context`, `@prefix`, `@propagate`, or `@protected`. An expanded term definition SHOULD NOT contain any other keys.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-term-definition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#dfn-term-definition&quot;
       }
     ],
-    "rdfs_properties": [
+    &quot;rdfs_properties&quot;: [
       {
-        "@id": "jsonld:base",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:base&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "base"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;base&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) has an `@base` key, its value MUST be an _IRI reference_, or `null`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) has an `@base` key, its value MUST be an _IRI reference_, or `null`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
-        "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:anyUri"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:Context&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:anyURI&quot;
       },
       {
-        "@id": "jsonld:container",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:container&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "container"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;container&quot;
         },
-        "rdfs:comment": {
-          "en": "The associated `@container` value in an [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions).\n\nIf the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an array containing exactly any one of those keywords, or a combination of `@set` and any of `@index`, `@id`, `@graph`, `@type`, `@language` in any order.\n\n`@container` may also be an array containing `@graph` along with either `@id` or `@index` and also optionally including `@set`.\n\nIf the value is `@language`, when the term is used outside of the `@context`, the associated value MUST be a language map.\n\nIf the value is `@index`, when the term is used outside of the `@context`, the associated value MUST be an index map."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;The associated `@container` value in an [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions).\n\nIf the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an array containing exactly any one of those keywords, or a combination of `@set` and any of `@index`, `@id`, `@graph`, `@type`, `@language` in any order.\n\n`@container` may also be an array containing `@graph` along with either `@id` or `@index` and also optionally including `@set`.\n\nIf the value is `@language`, when the term is used outside of the `@context`, the associated value MUST be a language map.\n\nIf the value is `@index`, when the term is used outside of the `@context`, the associated value MUST be an index map.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#expanded-term-definition",
-        "schema:domainIncludes": "jsonld:TermDefinition",
-        "schema:rangeIncludes": "jsonld:ContainerType"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#expanded-term-definition&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:TermDefinition&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;jsonld:ContainerType&quot;
       },
       {
-        "@id": "jsonld:context",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:context&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "context"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;context&quot;
         },
-        "rdfs:comment": {
-          "en": "As an IRI, this link relation is used to associate a JSON-LD context with a JSON document so that it can be interpreted as JSON-LD. In an HTTP request header, specifies the location of a context to use for compaction. As a Context, defines an inline `context definition`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;As an IRI, this link relation is used to associate a JSON-LD context with a JSON document so that it can be interpreted as JSON-LD. In an HTTP request header, specifies the location of a context to use for compaction. As a Context, defines an inline `context definition`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld",
-        "schema:rangeIncludes": [
-          "jsonld:Context",
-          "xsd:anyUri"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld&quot;,
+        &quot;schema:rangeIncludes&quot;: [
+          &quot;jsonld:Context&quot;,
+          &quot;xsd:anyURI&quot;
         ]
       },
       {
-        "@id": "jsonld:definition",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:definition&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "definition"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;definition&quot;
         },
-        "rdfs:comment": {
-          "en": "Term definition(s) associated with this context."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;Term definition(s) associated with this context.&quot;
         },
-        "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": [
-          "jsonld:TermDefinition",
-          "jsonld:PrefixDefinition"
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:Context&quot;,
+        &quot;schema:rangeIncludes&quot;: [
+          &quot;jsonld:TermDefinition&quot;,
+          &quot;jsonld:PrefixDefinition&quot;
         ]
       },
       {
-        "@id": "jsonld:direction",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:direction&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "direction"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;direction&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) has an `@direction` key, its value MUST be one of `\"ltr\"` or `\"rtl\"`, or be `null`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) has an `@direction` key, its value MUST be one of `\&quot;ltr\&quot;` or `\&quot;rtl\&quot;`, or be `null`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
-        "schema:domainIncludes": [
-          "jsonld:Context",
-          "jsonld:TermDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:Context&quot;,
+          &quot;jsonld:TermDefinition&quot;
         ],
-        "schema:rangeIncludes": "xsd:string"
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:string&quot;
       },
       {
-        "@id": "jsonld:id",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:id&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "id"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;id&quot;
         },
-        "rdfs:comment": {
-          "en": "The `@id` mapping of a [term definition](#TermDefinition)."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;The `@id` mapping of a [term definition](#TermDefinition).&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#expanded-term-definition",
-        "schema:domainIncludes": [
-          "jsonld:TermDefinition",
-          "jsonld:PrefixDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#expanded-term-definition&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:TermDefinition&quot;,
+          &quot;jsonld:PrefixDefinition&quot;
         ],
-        "schema:rangeIncludes": "xsd:anyUri"
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:anyURI&quot;
       },
       {
-        "@id": "jsonld:import",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:import&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "import"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;import&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@import` keyword, its value MUST be an _IRI reference_. When used as a reference from an `@import`, the referenced context definition MUST NOT include an `@import` key, itself."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@import` keyword, its value MUST be an _IRI reference_. When used as a reference from an `@import`, the referenced context definition MUST NOT include an `@import` key, itself.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
-        "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:anyUri"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:Context&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:anyURI&quot;
       },
       {
-        "@id": "jsonld:language",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:language&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "language"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;language&quot;
         },
-        "rdfs:comment": {
-          "en": "The [default language](https://www.w3.org/TR/json-ld11/#dfn-default-language) is set in the context using the `@language` key whose value MUST be a string representing a [BCP47](https://tools.ietf.org/html/bcp47) language code or null."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;The [default language](https://www.w3.org/TR/json-ld11/#dfn-default-language) is set in the context using the `@language` key whose value MUST be a string representing a [BCP47](https://tools.ietf.org/html/bcp47) language code or null.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-default-language",
-        "schema:domainIncludes": [
-          "jsonld:Context",
-          "jsonld:TermDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#dfn-default-language&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:Context&quot;,
+          &quot;jsonld:TermDefinition&quot;
         ],
-        "schema:rangeIncludes": "xsd:string"
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:string&quot;
       },
       {
-        "@id": "jsonld:nest",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:nest&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "nest"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;nest&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@nest` keyword, its value MUST be either `@nest`, or a _term_ which expands to `@nest`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@nest` keyword, its value MUST be either `@nest`, or a _term_ which expands to `@nest`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#expanded-term-definition",
-        "schema:domainIncludes": "jsonld:TermDefinition",
-        "schema:rangeIncludes": "xsd:string"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#expanded-term-definition&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:TermDefinition&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:string&quot;
       },
       {
-        "@id": "jsonld:prefix",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:prefix&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "prefix"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;prefix&quot;
         },
-        "rdfs:comment": {
-          "en": "With the value `true`, allows this term to be used to construct a compact IRI when compacting."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;With the value `true`, allows this term to be used to construct a compact IRI when compacting.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#expanded-term-definition",
-        "schema:domainIncludes": "jsonld:TermDefinition",
-        "schema:rangeIncludes": "xsd:boolean"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#expanded-term-definition&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:TermDefinition&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:boolean&quot;
       },
       {
-        "@id": "jsonld:propagate",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:propagate&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "propagate"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;propagate&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@propagate` keyword, its value MUST be `true` or `false`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@propagate` keyword, its value MUST be `true` or `false`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
-        "schema:domainIncludes": [
-          "jsonld:Context",
-          "jsonld:TermDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:Context&quot;,
+          &quot;jsonld:TermDefinition&quot;
         ],
-        "schema:rangeIncludes": "xsd:boolean"
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:boolean&quot;
       },
       {
-        "@id": "jsonld:protected",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:protected&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "protected"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;protected&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@protected` keyword, its value MUST be `true` or `false`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@protected` keyword, its value MUST be `true` or `false`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
-        "schema:domainIncludes": [
-          "jsonld:Context",
-          "jsonld:TermDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:Context&quot;,
+          &quot;jsonld:TermDefinition&quot;
         ],
-        "schema:rangeIncludes": "xsd:boolean"
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:boolean&quot;
       },
       {
-        "@id": "jsonld:reverse",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:reverse&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "reverse"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;reverse&quot;
         },
-        "rdfs:comment": {
-          "en": "The `@reverse` mapping of an [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions)."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;The `@reverse` mapping of an [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions).&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#expanded-term-definition",
-        "schema:domainIncludes": "jsonld:TermDefinition",
-        "schema:rangeIncludes": "xsd:anyUri"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#expanded-term-definition&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:TermDefinition&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:anyURI&quot;
       },
       {
-        "@id": "jsonld:term",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:term&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "term"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;term&quot;
         },
-        "rdfs:comment": {
-          "en": "The term associated with a [term definition](#TermDefinition)."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;The term associated with a [term definition](#TermDefinition).&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-term",
-        "schema:domainIncludes": [
-          "jsonld:TermDefinition",
-          "jsonld:PrefixDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#dfn-term&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:TermDefinition&quot;,
+          &quot;jsonld:PrefixDefinition&quot;
         ],
-        "schema:rangeIncludes": "xsd:string"
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:string&quot;
       },
       {
-        "@id": "jsonld:type",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:type&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "type"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;type&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@type` keyword, its value MUST be a map with only the entry `@container` set to `@set`, and optionally an entry `@protected`.\n\n\n\nIf the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@type` keyword, its value MUST be an _IRI reference_, a _term_, `null`, or one of the keywords `@id`, `@json`, `@none`, or `@vocab`."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) contains the `@type` keyword, its value MUST be a map with only the entry `@container` set to `@set`, and optionally an entry `@protected`.\n\n\n\nIf the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@type` keyword, its value MUST be an _IRI reference_, a _term_, `null`, or one of the keywords `@id`, `@json`, `@none`, or `@vocab`.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions",
-        "schema:domainIncludes": [
-          "jsonld:Context",
-          "jsonld:TermDefinition"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;,
+        &quot;schema:domainIncludes&quot;: [
+          &quot;jsonld:Context&quot;,
+          &quot;jsonld:TermDefinition&quot;
         ],
-        "schema:rangeIncludes": [
-          "xsd:anyUri",
-          "xsd:string"
+        &quot;schema:rangeIncludes&quot;: [
+          &quot;xsd:anyURI&quot;,
+          &quot;xsd:string&quot;
         ]
       },
       {
-        "@id": "jsonld:version",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:version&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "version"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;version&quot;
         },
-        "rdfs:comment": {
-          "en": "The [processing mode](https://www.w3.org/TR/json-ld11/#dfn-processing-mode) defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with [JSON-LD 1.1](http://www.w3.org/TR/json-ld11). By defining a different version via explicit API option, other processing modes can be accessed. This specification defines extensions for the `json-ld-1.1` processing mode."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;The [processing mode](https://www.w3.org/TR/json-ld11/#dfn-processing-mode) defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with [JSON-LD 1.1](http://www.w3.org/TR/json-ld11). By defining a different version via explicit API option, other processing modes can be accessed. This specification defines extensions for the `json-ld-1.1` processing mode.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#dfn-processing-mode",
-        "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:decimal"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#dfn-processing-mode&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:Context&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:decimal&quot;
       },
       {
-        "@id": "jsonld:vocab",
-        "@type": [
-          "rdf:Property"
+        &quot;@id&quot;: &quot;jsonld:vocab&quot;,
+        &quot;@type&quot;: [
+          &quot;rdf:Property&quot;
         ],
-        "rdfs:label": {
-          "en": "vocab"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;vocab&quot;
         },
-        "rdfs:comment": {
-          "en": "Used to expand properties and values in `@type` with a common prefix IRI."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;Used to expand properties and values in `@type` with a common prefix IRI.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#default-vocabulary",
-        "schema:domainIncludes": "jsonld:Context",
-        "schema:rangeIncludes": "xsd:anyUri"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#default-vocabulary&quot;,
+        &quot;schema:domainIncludes&quot;: &quot;jsonld:Context&quot;,
+        &quot;schema:rangeIncludes&quot;: &quot;xsd:anyURI&quot;
       }
     ],
-    "rdfs_instances": [
+    &quot;rdfs_instances&quot;: [
       {
-        "@id": "jsonld:compacted",
-        "@type": [
-          "owl:NamedIndividual"
+        &quot;@id&quot;: &quot;jsonld:compacted&quot;,
+        &quot;@type&quot;: [
+          &quot;owl:NamedIndividual&quot;
         ],
-        "rdfs:label": {
-          "en": "compacted"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;compacted&quot;
         },
-        "rdfs:comment": {
-          "en": "This profile IRI is used to request or specify compacted JSON-LD document form."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;This profile IRI is used to request or specify compacted JSON-LD document form.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#iana-considerations&quot;
       },
       {
-        "@id": "jsonld:expanded",
-        "@type": [
-          "owl:NamedIndividual"
+        &quot;@id&quot;: &quot;jsonld:expanded&quot;,
+        &quot;@type&quot;: [
+          &quot;owl:NamedIndividual&quot;
         ],
-        "rdfs:label": {
-          "en": "expanded"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;expanded&quot;
         },
-        "rdfs:comment": {
-          "en": "This profile URI is used to request or specify expanded JSON-LD document form."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;This profile URI is used to request or specify expanded JSON-LD document form.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#iana-considerations&quot;
       },
       {
-        "@id": "jsonld:flattened",
-        "@type": [
-          "owl:NamedIndividual"
+        &quot;@id&quot;: &quot;jsonld:flattened&quot;,
+        &quot;@type&quot;: [
+          &quot;owl:NamedIndividual&quot;
         ],
-        "rdfs:label": {
-          "en": "flattened"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;flattened&quot;
         },
-        "rdfs:comment": {
-          "en": "This profile URI is used to request or specify flattened JSON-LD document form."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;This profile URI is used to request or specify flattened JSON-LD document form.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#iana-considerations&quot;
       },
       {
-        "@id": "jsonld:frame",
-        "@type": [
-          "owl:NamedIndividual"
+        &quot;@id&quot;: &quot;jsonld:frame&quot;,
+        &quot;@type&quot;: [
+          &quot;owl:NamedIndividual&quot;
         ],
-        "rdfs:label": {
-          "en": "frame"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;frame&quot;
         },
-        "rdfs:comment": {
-          "en": "As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#iana-considerations&quot;
       },
       {
-        "@id": "jsonld:framed",
-        "@type": [
-          "owl:NamedIndividual"
+        &quot;@id&quot;: &quot;jsonld:framed&quot;,
+        &quot;@type&quot;: [
+          &quot;owl:NamedIndividual&quot;
         ],
-        "rdfs:label": {
-          "en": "framed"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;framed&quot;
         },
-        "rdfs:comment": {
-          "en": "This profile URI is used to request or specify framed JSON-LD document form."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;This profile URI is used to request or specify framed JSON-LD document form.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#iana-considerations"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#iana-considerations&quot;
       },
       {
-        "@id": "jsonld:graphContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:graphContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@graph"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@graph&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:idContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:idContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@id"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@id&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:indexContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:indexContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@index"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@index&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:languageContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:languageContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@language"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@language&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:listContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:listContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@list"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@list&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:setContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:setContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@set"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@set&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       },
       {
-        "@id": "jsonld:streaming",
-        "@type": [
-          "owl:NamedIndividual"
+        &quot;@id&quot;: &quot;jsonld:streaming&quot;,
+        &quot;@type&quot;: [
+          &quot;owl:NamedIndividual&quot;
         ],
-        "rdfs:label": {
-          "en": "streaming"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;streaming&quot;
         },
-        "rdfs:comment": {
-          "en": "This profile URI is used to request or specify streaming JSON-LD document form."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;This profile URI is used to request or specify streaming JSON-LD document form.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11-streaming/#streaming-profile"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11-streaming/#streaming-profile&quot;
       },
       {
-        "@id": "jsonld:typeContainerType",
-        "@type": [
-          "ContainerType"
+        &quot;@id&quot;: &quot;jsonld:typeContainerType&quot;,
+        &quot;@type&quot;: [
+          &quot;ContainerType&quot;
         ],
-        "rdfs:label": {
-          "en": "@type"
+        &quot;rdfs:label&quot;: {
+          &quot;en&quot;: &quot;@type&quot;
         },
-        "rdfs:comment": {
-          "en": "If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords."
+        &quot;rdfs:comment&quot;: {
+          &quot;en&quot;: &quot;If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.&quot;
         },
-        "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions"
+        &quot;rdfs:seeAlso&quot;: &quot;https://www.w3.org/TR/json-ld11/#context-definitions&quot;
       }
     ]
   }
@@ -733,13 +733,14 @@
 <p>
 Alternate versions of the vocabulary definition exist in
 <a href='json-ld.ttl' rel='alternate'>Turtle</a>
-and <a href='json-ld.jsonld' rel='alternate'>JSON-LD</a>.
+and
+ <a href='json-ld.jsonld' rel='alternate'>JSON-LD</a>.
 </p>
 <dl>
 <dt>Published:</dt>
-<dd><time>2020-03-30</time></dd>
+<dd><time>2023-07-13</time></dd>
 <dt>Version Info:</dt>
-<dd><a href='https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3'>https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3</a></dd>
+<dd><a href='https://github.com/w3c/json-ld-wg/commit/01fbfacb60d6739a83ac9a043c71f3d8775d98b1'>https://github.com/w3c/json-ld-wg/commit/01fbfacb60d6739a83ac9a043c71f3d8775d98b1</a></dd>
 </dl>
 <section>
 <h2>Introduction</h2>
@@ -806,7 +807,8 @@ namespace:
 
 <p>A <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> MUST be a map whose keys MUST be either <em>terms</em>, <em>compact IRIs</em>, <em>IRIs</em>, or one of the keywords <code>@base</code>, <code>@import</code>, <code>@language</code>, <code>@propagate</code>, <code>@protected</code>, <code>@type</code>, <code>@version</code>, or <code>@vocab</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='PrefixDefinition'>
@@ -816,7 +818,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#PrefixDefinition' title='Permalink for Prefix Definition'>§</a></span>
 <p>A string (<a href="http://www.w3.org/TR/json-ld11/#dfn-simple-term-definitions">simple term definition</a>), expanding to an IRI.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definition'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='TermDefinition'>
@@ -828,7 +831,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 
 <p>An <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definition">expanded term definition</a> MUST be a map composed of zero or more keys from <code>@id</code>, <code>@reverse</code>, <code>@type</code>, <code>@language</code>, <code>@container</code>, <code>@context</code>, <code>@prefix</code>, <code>@propagate</code>, or <code>@protected</code>. An expanded term definition SHOULD NOT contain any other keys.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#dfn-term-definition'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 </table>
@@ -849,10 +853,11 @@ namespace:
 <span class='permalink'><a href='#base' title='Permalink for base'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> has an <code>@base</code> key, its value MUST be an <em>IRI reference</em>, or <code>null</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>xsd:anyUri</dd>
+<dd>xsd:anyURI</dd>
 <dt>schema:domainIncludes</dt>
 <dd>jsonld:Context</dd>
 </dl>
@@ -873,7 +878,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 
 <p>If the value is <code>@index</code>, when the term is used outside of the <code>@context</code>, the associated value MUST be an index map.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>jsonld:ContainerType</dd>
@@ -889,10 +895,11 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#context' title='Permalink for context'>§</a></span>
 <p>As an IRI, this link relation is used to associate a JSON-LD context with a JSON document so that it can be interpreted as JSON-LD. In an HTTP request header, specifies the location of a context to use for compaction. As a Context, defines an inline <code>context definition</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#interpreting-json-as-json-ld'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>jsonld:Context, xsd:anyUri</dd>
+<dd>jsonld:Context, xsd:anyURI</dd>
 </dl>
 </td>
 </tr>
@@ -918,7 +925,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#direction' title='Permalink for direction'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> has an <code>@direction</code> key, its value MUST be one of <code>&quot;ltr&quot;</code> or <code>&quot;rtl&quot;</code>, or be <code>null</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:string</dd>
@@ -934,10 +942,11 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#id' title='Permalink for id'>§</a></span>
 <p>The <code>@id</code> mapping of a <a href="#TermDefinition">term definition</a>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>xsd:anyUri</dd>
+<dd>xsd:anyURI</dd>
 <dt>schema:domainIncludes</dt>
 <dd>jsonld:TermDefinition, jsonld:PrefixDefinition</dd>
 </dl>
@@ -950,10 +959,11 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#import' title='Permalink for import'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> contains the <code>@import</code> keyword, its value MUST be an <em>IRI reference</em>. When used as a reference from an <code>@import</code>, the referenced context definition MUST NOT include an <code>@import</code> key, itself.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>xsd:anyUri</dd>
+<dd>xsd:anyURI</dd>
 <dt>schema:domainIncludes</dt>
 <dd>jsonld:Context</dd>
 </dl>
@@ -966,7 +976,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#language' title='Permalink for language'>§</a></span>
 <p>The <a href="https://www.w3.org/TR/json-ld11/#dfn-default-language">default language</a> is set in the context using the <code>@language</code> key whose value MUST be a string representing a <a href="https://tools.ietf.org/html/bcp47">BCP47</a> language code or null.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-default-language'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#dfn-default-language'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:string</dd>
@@ -982,7 +993,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#nest' title='Permalink for nest'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@nest</code> keyword, its value MUST be either <code>@nest</code>, or a <em>term</em> which expands to <code>@nest</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:string</dd>
@@ -998,7 +1010,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#prefix' title='Permalink for prefix'>§</a></span>
 <p>With the value <code>true</code>, allows this term to be used to construct a compact IRI when compacting.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:boolean</dd>
@@ -1014,7 +1027,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#propagate' title='Permalink for propagate'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> contains the <code>@propagate</code> keyword, its value MUST be <code>true</code> or <code>false</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:boolean</dd>
@@ -1030,7 +1044,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#protected' title='Permalink for protected'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-context-definition">context definition</a> contains the <code>@protected</code> keyword, its value MUST be <code>true</code> or <code>false</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:boolean</dd>
@@ -1046,10 +1061,11 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#reverse' title='Permalink for reverse'>§</a></span>
 <p>The <code>@reverse</code> mapping of an <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#expanded-term-definition'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>xsd:anyUri</dd>
+<dd>xsd:anyURI</dd>
 <dt>schema:domainIncludes</dt>
 <dd>jsonld:TermDefinition</dd>
 </dl>
@@ -1062,7 +1078,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#term' title='Permalink for term'>§</a></span>
 <p>The term associated with a <a href="#TermDefinition">term definition</a>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-term'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#dfn-term'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:string</dd>
@@ -1080,10 +1097,11 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@type</code> keyword, its value MUST be an <em>IRI reference</em>, a <em>term</em>, <code>null</code>, or one of the keywords <code>@id</code>, <code>@json</code>, <code>@none</code>, or <code>@vocab</code>.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>xsd:anyUri, xsd:string</dd>
+<dd>xsd:anyURI, xsd:string</dd>
 <dt>schema:domainIncludes</dt>
 <dd>jsonld:Context, jsonld:TermDefinition</dd>
 </dl>
@@ -1096,7 +1114,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#version' title='Permalink for version'>§</a></span>
 <p>The <a href="https://www.w3.org/TR/json-ld11/#dfn-processing-mode">processing mode</a> defines how a JSON-LD document is processed. By default, all documents are assumed to be conformant with <a href="http://www.w3.org/TR/json-ld11">JSON-LD 1.1</a>. By defining a different version via explicit API option, other processing modes can be accessed. This specification defines extensions for the <code>json-ld-1.1</code> processing mode.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#dfn-processing-mode'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#dfn-processing-mode'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
 <dd>xsd:decimal</dd>
@@ -1112,10 +1131,11 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#vocab' title='Permalink for vocab'>§</a></span>
 <p>Used to expand properties and values in <code>@type</code> with a common prefix IRI.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#default-vocabulary'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#default-vocabulary'>JSON-LD Syntax Specification</a>.
 <dl class='terms'>
 <dt>schema:rangeIncludes</dt>
-<dd>xsd:anyUri</dd>
+<dd>xsd:anyURI</dd>
 <dt>schema:domainIncludes</dt>
 <dd>jsonld:Context</dd>
 </dl>
@@ -1139,7 +1159,8 @@ namespace:
 <span class='permalink'><a href='#compacted' title='Permalink for compacted'>§</a></span>
 <p>This profile IRI is used to request or specify compacted JSON-LD document form.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='expanded'>
@@ -1149,7 +1170,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#expanded' title='Permalink for expanded'>§</a></span>
 <p>This profile URI is used to request or specify expanded JSON-LD document form.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='flattened'>
@@ -1159,7 +1181,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#flattened' title='Permalink for flattened'>§</a></span>
 <p>This profile URI is used to request or specify flattened JSON-LD document form.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='frame'>
@@ -1169,7 +1192,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#frame' title='Permalink for frame'>§</a></span>
 <p>As an IRI, this link relation is used to associate a JSON-LD frame with a JSON-LD document. In an HTTP request header, specifies the location of a frame to use for framing.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='framed'>
@@ -1179,7 +1203,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#framed' title='Permalink for framed'>§</a></span>
 <p>This profile URI is used to request or specify framed JSON-LD document form.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#iana-considerations'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='graphContainerType'>
@@ -1189,7 +1214,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#graphContainerType' title='Permalink for @graph'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='idContainerType'>
@@ -1199,7 +1225,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#idContainerType' title='Permalink for @id'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='indexContainerType'>
@@ -1209,7 +1236,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#indexContainerType' title='Permalink for @index'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='languageContainerType'>
@@ -1219,7 +1247,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#languageContainerType' title='Permalink for @language'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='listContainerType'>
@@ -1229,7 +1258,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#listContainerType' title='Permalink for @list'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='setContainerType'>
@@ -1239,7 +1269,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#setContainerType' title='Permalink for @set'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='streaming'>
@@ -1249,7 +1280,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#streaming' title='Permalink for streaming'>§</a></span>
 <p>This profile URI is used to request or specify streaming JSON-LD document form.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11-streaming/#streaming-profile'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11-streaming/#streaming-profile'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 <tr id='typeContainerType'>
@@ -1259,7 +1291,8 @@ You can read more about this feature in the <a href='https://www.w3.org/TR/json-
 <span class='permalink'><a href='#typeContainerType' title='Permalink for @type'>§</a></span>
 <p>If the <a href="https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions">expanded term definition</a> contains the <code>@container</code> keyword, its value MUST be either <code>@list</code>, <code>@set</code>, <code>@language</code>, <code>@index</code>, <code>@id</code>, <code>@graph</code>, <code>@type</code>, or be <code>null</code> or an <em>array</em> containing exactly any one of those keywords.</p>
 
-You can read more about this feature in the <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
+You can read more about this feature in the
+ <a href='https://www.w3.org/TR/json-ld11/#context-definitions'>JSON-LD Syntax Specification</a>.
 </td>
 </tr>
 </table>
@@ -1389,7 +1422,7 @@ xsd:boolean
 <dd>
 jsonld:reverse
 with string values interpreted as
-xsd:anyUri
+xsd:anyURI
 </dd>
 <dt>setContainerType</dt>
 <dd>

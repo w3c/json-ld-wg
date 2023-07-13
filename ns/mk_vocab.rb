@@ -215,9 +215,12 @@ class Vocab
   def to_html
     json = JSON.parse(to_jsonld)
     template = File.read("template.haml")
-    html = Haml::Engine.new(template, format: :html5)
-            .render(Object.new, ont: json['@graph'], context: json['@context'], source: json.to_json(JSON_STATE))
-    html
+    haml_runner = if Haml::VERSION >= "6"
+      Haml::Template.new(format: :html5) {template}
+    else
+      Haml::Engine.new(template, format: :html5)
+    end
+    haml_runner.render(Object.new, ont: json['@graph'], context: json['@context'], source: json.to_json(JSON_STATE))
   end
 
   def to_ttl
