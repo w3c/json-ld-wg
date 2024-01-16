@@ -1,170 +1,192 @@
-[{
+[
+  {
     "nick": [
-        "ChristopherA"
+      "ChristopherA"
     ],
     "name": "Christopher Allen"
-},
-{
-    "nick": ["alejandra"],
+  },
+  {
+    "nick": [
+      "alejandra"
+    ],
     "name": "Alejandra Gonzalez Beltran"
-},
-{
-    "nick" : [],
-    "name" : "Steve Blackmon"
-},
-{
-    "nick": ["pchampin"],
+  },
+  {
+    "nick": [],
+    "name": "Steve Blackmon"
+  },
+  {
+    "nick": [
+      "pchampin"
+    ],
     "name": "Pierre-Antoine Champin",
     "github": "pchampin"
-},
-{
+  },
+  {
     "nick": [
-        "danbri"
+      "danbri"
     ],
     "name": "Dan Brickley",
     "github": "danbri"
-},
-{
+  },
+  {
     "nick": [],
     "name": "Victor Charpenay"
-},
-{
+  },
+  {
     "nick": [
-        "timCole",
-        "tcole"
+      "timCole",
+      "tcole"
     ],
     "name": "Tim Cole",
     "github": "tcole3"
-},
-{
+  },
+  {
     "nick": [
-        "ivan",
-        "iherman"
+      "ivan",
+      "iherman"
     ],
     "name": "Ivan Herman",
     "github": "iherman"
-},
-{
+  },
+  {
     "nick": [],
     "name": "Sebastian Käbisch"
-},
-{
+  },
+  {
     "nick": [
-        "gkellogg",
-        "gkellog"
+      "gkellogg",
+      "gkellog"
     ],
     "name": "Gregg Kellogg",
     "github": "gkellogg"
-},
-{
-    "nick" : [],
-    "name" : "Matthias Kovatsch"
-},
-{
+  },
+  {
+    "nick": [],
+    "name": "Matthias Kovatsch"
+  },
+  {
     "nick": [
-        "davidlehn",
-        "dlehn"
+      "davidlehn",
+      "dlehn"
     ],
     "name": "David I. Lehn",
     "github": "davidlehn"
-},
-{
+  },
+  {
     "nick": [
-        "dlongley",
-        "dlongley2"
+      "dlongley",
+      "dlongley2"
     ],
     "name": "Dave Longley",
     "github": "dlongley"
-},
-{
-    "nick" : [
-        "jeff",
-        "mixterj",
-        "jeff_mixter"
+  },
+  {
+    "nick": [
+      "jeff",
+      "mixterj",
+      "jeff_mixter"
     ],
     "name": "Jeff Mixter",
     "github": "mixterj"
-},
-{
+  },
+  {
     "nick": [
-        "workergnome",
-        "david_newbury"
+      "workergnome",
+      "david_newbury"
     ],
     "name": "David Newbury",
     "github": "workergnome"
-},
-{
+  },
+  {
     "nick": [
-        "AxelPolleres"
+      "AxelPolleres"
     ],
     "name": "Axel Polleres",
     "github": "AxelPolleres"
-},
-{
+  },
+  {
     "nick": [
-        "Leonard",
-        "leonardr"
+      "Leonard",
+      "leonardr"
     ],
     "name": "Leonard Rosenthol",
     "github": "lrosenthol"
-},
-{
+  },
+  {
     "nick": [
-        "azaroth",
-        "azaroth42",
-        "rsanderson"
+      "azaroth",
+      "azaroth42",
+      "rsanderson"
     ],
     "name": "Rob Sanderson",
     "github": "azaroth42"
-},
-{
+  },
+  {
     "nick": [
-        "simonstey",
-        "simon"
+      "simonstey",
+      "simon"
     ],
     "name": "Simon Steyskal",
     "github": "simonstey"
-},
-{
+  },
+  {
     "nick": [
-        "hsolbrig"
+      "hsolbrig"
     ],
     "name": "Harold Solbrig",
     "github": "hsolbrig"
-},
-{
+  },
+  {
     "nick": [
-        "ajs6f",
-        "adam"
+      "ajs6f",
+      "adam"
     ],
     "name": "Adam Soroka",
     "github": "ajs6f"
-},
-{
-    "nick": ["manu"],
+  },
+  {
+    "nick": [
+      "manu"
+    ],
     "name": "Manu Sporny",
     "github": "msporny"
-},
-{
+  },
+  {
     "nick": [
-        "bigbluehat",
-        "benjamin"
+      "bigbluehat",
+      "benjamin"
     ],
     "name": "Benjamin Young",
     "github": "BigBlueHat"
-},
-{
-    "nick" : [
-        "rubensworks",
-        "rubenworks",
-        "ruben"
+  },
+  {
+    "nick": [
+      "rubensworks",
+      "rubenworks",
+      "ruben"
     ],
     "github": "rubensworks",
     "name": "Ruben Taelman"
-},{
-    "nick" : [
-        "julie_bacon"
+  },
+  {
+    "nick": [
+      "julie_bacon"
     ],
-    "name" : "Julie Bacon"
-}
+    "name": "Julie Bacon"
+  },
+  {
+    "nick": [
+      "niklasl"
+    ],
+    "name": "Niklas Lindström",
+    "github": "niklasl"
+  },
+  {
+    "nick": [
+      "anatoly-scherbakov"
+    ],
+    "name": "Anatoly Scherbakov",
+    "github": "anatolyscherbakov"
+  }
 ]
