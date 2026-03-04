@@ -343,3 +343,8 @@ footer a, footer a:visited, footer a:focus, footer a:hover {
 		padding-bottom: 2rem;
 	}
 }
+
+#legacy {
+    border: thick solid red;
+    text-align: center;
+}
