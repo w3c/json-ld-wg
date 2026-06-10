@@ -1,13 +1,12 @@
-/* globals require */
 /* JSON-LD Working Group common spec JavaScript */
 
 /*
 * Implement tabbed examples.
 */
-require(["core/pubsubhub"], (respecEvents) => {
+document.addEventListener("DOMContentLoaded", () => {
   "use strict";
 
-  respecEvents.sub('end-all', (documentElement) => {
+  document.respec.ready.then(() => {
     // remove data-cite on where the citation is to ourselves.
     const selfDfns = Array.from(document.querySelectorAll("dfn[data-cite^='__SPEC__#']"));
     for (const dfn of selfDfns) {
