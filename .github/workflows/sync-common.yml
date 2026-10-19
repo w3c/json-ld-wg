@@ -1,0 +1,69 @@
+name: Sync common files
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "common/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Sync common/ to ${{ matrix.repo }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repo:
+          - w3c/json-ld-syntax
+          - w3c/json-ld-api
+          - w3c/json-ld-framing
+          - w3c/json-ld-bp
+          - w3c/yaml-ld
+          - w3c/cbor-ld
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v7
+        with:
+          path: source
+
+      - name: Check out ${{ matrix.repo }}
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ matrix.repo }}
+          path: target
+          persist-credentials: false
+
+      - name: Copy common/ files
+        run: |
+          mkdir -p target/common
+          cp -R source/common/. target/common/
+
+      - name: Open pull request
+        working-directory: target
+        env:
+          GH_TOKEN: ${{ secrets.COMMON_SYNC_TOKEN }}
+          REPO: ${{ matrix.repo }}
+          SOURCE_COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+        run: |
+          if [ -z "$(git status --porcelain -- common)" ]; then
+            echo "No changes for ${REPO}"
+            exit 0
+          fi
+          gh auth setup-git
+          GH_USER_LOGIN="$(gh api user --jq .login)"
+          GH_USER_ID="$(gh api user --jq .id)"
+          git config user.name "$GH_USER_LOGIN"
+          git config user.email "${GH_USER_ID}+${GH_USER_LOGIN}@users.noreply.github.com"
+          BRANCH="update-common-$(date -u +%Y%m%d%H%M%S)"
+          git switch -c "$BRANCH"
+          git add common
+          git commit -m "Update common/ files from w3c/json-ld-wg"
+          git push origin "$BRANCH"
+          gh pr create --repo "$REPO" --head "$BRANCH" \
+            --title "Sync common/ files from w3c/json-ld-wg" \
+            --body "Automated sync of \`common/\` from ${SOURCE_COMMIT_URL}."
